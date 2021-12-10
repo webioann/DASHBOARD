@@ -1,5 +1,8 @@
+.container{
+    max-width: 1400px;
+}
 .wrapper{
-    width: 100%;
+    /* width: 100%; */
     height: calc(100vh - 50px);
     background-color: #bbb;
     display: flex;

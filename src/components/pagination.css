@@ -1,9 +1,10 @@
 
 .pages {
-  grid-area: pagin;
+  min-width: 320px;
   display: flex;
-  align-content: center;
-  background-color: green;
+  justify-content: center;
+  padding: var(--y-gap);
+  /* border: 1px solid red; */
 }
 .num {
   font-size: 0.8rem;
