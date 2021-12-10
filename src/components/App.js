@@ -5,7 +5,7 @@ function App() {
 
   return (
       <div className="container app" >
-        HELLO GIT-HUB
+        HELLO GIT-HUB twitty
       </div>  
   );
 }
