@@ -13,9 +13,7 @@ function App() {
           <SideBar />
           <Main />
         </div>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </div>  
   );
 }
