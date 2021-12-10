@@ -1,6 +1,5 @@
 import React from 'react'
-import Randomuser from './Randomuser.js'
-import './app.scss'
+import './app.css'
 
 function App() {
 
