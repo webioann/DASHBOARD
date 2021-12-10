@@ -1,6 +1,6 @@
 import { useEffect,useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { fetchData } from '../Redux-toolkit/reduxSlice'
+import { fetchData } from '../Redux/reduxSlice'
 
 const useFetchData = (requestSize) => {
 

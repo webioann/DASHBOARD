@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
-import { lang } from '../CONSTANTS/multiLang' //object for use multi lang mode in App
+import { lang } from '../data/multiLang' //object for use multi lang mode in App
 
-import './app.css'
 
 function Birthday(props) {
     
@@ -32,7 +31,7 @@ function Birthday(props) {
 
     
     return (
-        <div className="col-7 col-md-12">
+        <div>
             {birthday}
         </div>
     )

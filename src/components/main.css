@@ -2,6 +2,8 @@
     flex: 4;
     display: flex;
     flex-direction: column;
+    padding: var(--wrap-pad);
+    overflow-y: scroll;
 }
 .main-title{
     display: flex;

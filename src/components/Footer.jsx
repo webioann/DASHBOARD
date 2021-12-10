@@ -1,10 +1,13 @@
 import React from 'react'
+import Pagination from './Pagination.jsx'
+import RequestSize from './RequestSize.jsx'
 import './footer.css'
 
 function Footer() {
     return (
         <div className='footer'>
-            <h3 className='test'>footer in there</h3>
+            <Pagination/>
+            <RequestSize/>
         </div>
     )
 }

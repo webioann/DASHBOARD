@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import { useDispatch,useSelector } from "react-redux"
-import { getGender } from '../Redux-toolkit/reduxSlice'
+import { getGender } from '../Redux/reduxSlice'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im"
-import './genderButton.scss'
+import './genderButton.css'
 
 function GenderButton(props) {
 

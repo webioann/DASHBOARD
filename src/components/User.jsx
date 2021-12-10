@@ -1,13 +1,13 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { putCurrentData } from '../Redux-toolkit/reduxSlice'
+import { putCurrentData } from '../Redux/reduxSlice'
 import usePagination from '../hooks/usePagination.js'
 import useFilters from '../hooks/useFilters.js'
 import Birthday from './Birthday'
 import Nationality from './Nationality.js'
 import { FaPhone} from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-import './user.scss'
+import './user.css'
 
 function User() {
     

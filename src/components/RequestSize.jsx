@@ -1,7 +1,7 @@
 import React from 'react'
 import {useDispatch,useSelector} from "react-redux"
-import { setRequestSize } from '../Redux-toolkit/reduxSlice'
-import './requstSize.scss'
+import { setRequestSize } from '../Redux/reduxSlice'
+import './requstSize.css'
 
 function RequestSize() {
 
@@ -16,18 +16,18 @@ function RequestSize() {
     const big = 550
 
     return (
-        <div className="requst-size row">
-                <div className={requestSize === small ? 'button active col-4' : 'button col-4'}
+        <div className="requst-size">
+                <div className={requestSize === small ? 'sizer active' : 'sizer'}
                     id={small}
                     onClick={setSize}>
                         {small} 
                 </div>
-                <div className={requestSize === medium ? 'button active col-4' : 'button col-4'}
+                <div className={requestSize === medium ? 'sizer active' : 'sizer'}
                     id={medium} 
                     onClick={setSize}>
                         { medium }
                 </div>
-                <div className={requestSize === big ? 'button active col-4' : 'button col-4'}
+                <div className={requestSize === big ? 'sizer active' : 'sizer'}
                     id={big} 
                     onClick={setSize}>
                         {big} 

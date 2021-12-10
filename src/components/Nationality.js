@@ -1,5 +1,5 @@
 import React from 'react';
-import nations from '../CONSTANTS/nations'
+import nations from '../data/nations'
 import './app.css'
 
 function Nationality(props) {
@@ -8,7 +8,7 @@ function Nationality(props) {
     let nationality = currentNation[0].name
 
     return (
-        <div className='nation col'>
+        <div className='nation'>
             {nationality}
         </div>
     )

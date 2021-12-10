@@ -1,9 +1,9 @@
 import React,{ useState,useEffect } from "react"
 import { useSelector,useDispatch } from "react-redux";
-import { getCurrentPage } from '../Redux-toolkit/reduxSlice'
+import { getCurrentPage } from '../Redux/reduxSlice'
 import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-icons/md"
 import usePaginSlicer from "../hooks/usePaginSlicer";
-import "./pagination.scss"
+import "./pagination.css"
 
 
 function Pagination() {
@@ -33,7 +33,7 @@ function Pagination() {
   }
 
   return (
-    <div className="pages p-2">
+    <div className="pages">
       <MdOutlineKeyboardArrowLeft 
         onClick={prevPage} 
         className={currentPage === 1 ? 'blocked-arrow' : 'arrow'} />

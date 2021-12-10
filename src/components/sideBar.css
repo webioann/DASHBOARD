@@ -1,7 +1,14 @@
 .side-bar{
     flex: 1;
     background-color: #fff;
+    padding: var(--wrap-pad);
 }
-.side-bar-title{
+.side-bar-wrapper{
+
+}
+.title{
+    display: flex;
+    justify-content: center;
+    margin: var(--y-gap);
     color: red;
 }
