@@ -1,0 +1,41 @@
+@import '../reactor.scss';
+
+.pages {
+  grid-area: pagin;
+
+  display: flex;
+  align-content: center;
+  background-color: green;
+  .num {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 4px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-weight: 800;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  .active{
+    color: $carrot;
+    background-color: #c8c8c8;
+  }
+  .arrow {
+    font-size: 1.5rem;
+    color: #212121;
+  }
+  .arrow:hover {
+    color: $carrot;
+    cursor: pointer;
+
+  }
+  .blocked-arrow {
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.2);
+  }
+  .blocked-arrow:hover {
+    cursor: not-allowed;
+  }
+}
+
+
