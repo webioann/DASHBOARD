@@ -1,4 +1,9 @@
 .main{
     flex: 4;
-    
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    justify-content: center;
 }
