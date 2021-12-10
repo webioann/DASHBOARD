@@ -8,11 +8,11 @@ function Main() {
     let gender = useSelector(state => state.redux.gender)
     return (
         <div className='main'>
-            <div className="title">
-                <h3 className='test'>main = {gender}</h3>
-            </div>
+            <h3 className="main-title">
+                main = {gender}
+            </h3>
         </div>
     )
 }
 
-export default Main
+export default Main;

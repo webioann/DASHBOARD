@@ -4,9 +4,11 @@ import './sideBar.css'
 function SideBar() {
     return (
         <div className='side-bar'>
-            <h3>sidebar</h3>
+            <h3 className="side-bar-title">
+            SIDE BAR
+            </h3>
         </div>
     )
 }
 
-export default SideBar
+export default SideBar;
