@@ -31,9 +31,9 @@ function Birthday(props) {
 
     
     return (
-        <div>
+        <>
             {birthday}
-        </div>
+        </>
     )
 }
 export default Birthday

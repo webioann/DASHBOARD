@@ -18,9 +18,9 @@ function ListOfNationalities() {
     return (
         <ul className= 'list'>
             {nations.map((nation) =>(
-            <li className={(activeNationality === nation.code) ? 'active' : ''}
+            <li className={(activeNationality === nation.code) ? 'nat active' : 'nat'}
                 key={nation.code}
-                onClick={chooseNationality}
+                onClick={chooseNationality} 
                 id={nation.code}>
                     <i>{(activeNationality === nation.code) 
                         ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}

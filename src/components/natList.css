@@ -3,12 +3,17 @@
     color: var(--text-dark);
     padding: var(--wrap-pad);
 }
-li{
+.nat{
     display: flex;
     align-items: center;
     padding: var(--sm-pad);
 
 }
+.nat:hover{
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.1);
+}
+
 i{
     margin-right: 0.5rem;
     color: var(--text-carrot);
@@ -19,8 +24,4 @@ i{
 .active:hover{
     background-color: rgba(0,0,0,0.2) ;
     cursor: not-allowed;
-}
-li:hover{
-    cursor: pointer;
-    background-color: rgba(0,0,0,0.1);
 }

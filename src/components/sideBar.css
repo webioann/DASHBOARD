@@ -3,9 +3,6 @@
     background-color: #fff;
     padding: var(--wrap-pad);
 }
-.side-bar-wrapper{
-
-}
 .button-grop{
     padding: var(--wrap-pad);
     margin: var(--y-gap);
