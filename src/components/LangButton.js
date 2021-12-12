@@ -1,13 +1,12 @@
 import React,{ useState } from 'react'
-import { useSelector,useDispatch } from 'react-redux'
-import { langToggler } from '../Redux/reduxSlice'
+import { useDispatch } from 'react-redux'
+import { langEng,langRus } from '../Redux/dialectSlice'
 
 import './langButton.css'
 
 function LangButton() {
 
     const dispatch = useDispatch()
-    const lang = useSelector((state) => state.redux.lang)
     const [margin,setMargin] = useState(0) //margin it is half of width "switcher-box"
     const [engClass,setEngClass] = useState('switcher shade')
     const [rusClass,setRusClass] = useState('switcher')
@@ -18,13 +17,13 @@ function LangButton() {
             setMargin(40)
             setEngClass('switcher')
             setRusClass('switcher shade')
-            dispatch(langToggler(id))
+            dispatch(langRus())
         }
         else if( margin === 40 && id === 'eng') {
             setMargin(0)
             setEngClass('switcher shade')
             setRusClass('switcher')
-            dispatch(langToggler(id))
+            dispatch(langEng())
         }
     }
 

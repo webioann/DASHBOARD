@@ -1,7 +1,5 @@
-import React,{ useState,useEffect } from 'react'
+import React from 'react'
 import { useSelector} from 'react-redux'
-import { multyLang } from '../data/multiLang'
-
 
 const box = {
     display: 'flex',
@@ -18,21 +16,13 @@ const massage = {
 
 function EmptyList() {
     
-    const lang = useSelector((state) => state.redux.lang)
-    const [content,setContent] = useState('')
-
-    useEffect(() => {
-        lang === 'eng' 
-            ? setContent(multyLang.eng.emptyListMessage) 
-            : setContent(multyLang.rus.emptyListMessage)
-    },[lang])
+    const lang = useSelector((state) => state.dialect.lang)
 
     return (
         <div style={box}>
-            <h2 style={massage}>{content}</h2>
+            <h2 style={massage}>{lang.emptyListMessage}</h2>
         </div>
     )
 }
 
-export default EmptyList
-// no users found by these parameters
+export default EmptyList;
