@@ -23,9 +23,6 @@ function User() {
     dispatch(putCurrentData(filteredData)) //we put the filtered data in redux.currentdata for use in a Pagination.js
     const users = usePagination(filteredData,usersOnPage,currentPage)
 
-    //FIXME: delete cl after using
-    console.log(`DATTAA = ${filteredData.length}`)
-
     if( users.length !== 0 ) {
         return (
             <ul className='users-list'>

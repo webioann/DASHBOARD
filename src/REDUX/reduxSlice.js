@@ -11,6 +11,7 @@ export const reduxSlice = createSlice({
         currentData: [],
         currentPage: 1,
         active: '',
+        lang: 'eng',
     },
     reducers: {
         getGender:(state,actions) => {state.gender = actions.payload},
@@ -20,11 +21,12 @@ export const reduxSlice = createSlice({
         putCurrentData: (state,actions) => {state.currentData = actions.payload},
         getCurrentPage: (state,actions) => {state.currentPage = actions.payload},
         activate: (state,actions) => {state.active = actions.payload},
+        langToggler: (state,actions) => {state.lang = actions.payload}
     }
 })
 
 export const 
-    { getGender,setRequestSize,getNationality,putCurrentData,fetchData,getCurrentPage,activate }
+    { getGender,setRequestSize,getNationality,putCurrentData,fetchData,getCurrentPage,activate,langToggler }
     = reduxSlice.actions
 
 export default reduxSlice.reducer

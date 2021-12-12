@@ -1,5 +1,6 @@
 export const lang = {
     eng: {
+        emptyListMessage: 'no users found by these parameters',
         month: {
             jan: 'Jan',
             feb: 'Feb',
@@ -16,6 +17,7 @@ export const lang = {
         }
     },
     rus: {
+        emptyListMessage: 'по этим параметрам не найдено ни одного пользователя',
         month: {
             jan: 'Янв',
             feb: 'Фев',

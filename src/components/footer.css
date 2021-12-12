@@ -1,5 +1,6 @@
 .footer{
     padding: 0 15px;
+    z-index: 1000;
 }
 .footer-wrapper{
     background-color: #fff;

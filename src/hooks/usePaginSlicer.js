@@ -28,10 +28,7 @@ const usePaginSlicer = (currentData) => {
 
     },[currentData])
 
-    console.log(` pageNumbersArray =>${pageNumberArray}`)
-
     return { pageNumberArray,lastPage }
-        
 }
 
 export default usePaginSlicer;

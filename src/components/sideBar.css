@@ -6,13 +6,11 @@
     /* border: 1px solid red; */
 }
 .button-grop{
-    padding: var(--wrap-pad);
+    padding: 15px;
     border-radius: 8px;
     overflow: hidden;
     background-color: #fff;
-    /* -webkit-box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.94); 
-    box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.94); */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .title{
     text-align: center;

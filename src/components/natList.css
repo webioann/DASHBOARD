@@ -1,7 +1,7 @@
 
 .list{
     color: var(--text-dark);
-    padding: var(--wrap-pad);
+    padding: 10px 0;
 }
 .nat{
     display: flex;

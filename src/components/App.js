@@ -2,6 +2,7 @@ import React from 'react'
 import SideBar from './SideBar'
 import Main from './Main'
 import Footer from './Footer'
+import LangButton from './LangButton'
 import useFetchData from '../hooks/useFetchData.js'
 import { useSelector } from "react-redux"
 

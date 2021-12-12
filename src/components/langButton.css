@@ -1,0 +1,40 @@
+.lang-button-box{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.switcher-box{
+    display: flex;
+    justify-content: space-between;
+}
+.switcher{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 3px 0;
+    font-weight: 700;
+}
+/* #rus{
+    background-color: red;
+} */
+.shade{
+    color: var(--text-carrot);
+    transition: color 200ms linear 400ms;
+
+}
+.slider-box{
+    display: flex;
+    /* justify-content: flex-end; */
+}
+.slider{
+    z-index: 1000;
+    width: 40px;
+    height: 5px;
+    background-color: var(--text-carrot);
+    transition: margin-left 400ms linear;
+}
