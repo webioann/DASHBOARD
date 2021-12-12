@@ -1,8 +1,12 @@
 .footer{
+    padding: 0 15px;
+}
+.footer-wrapper{
+    background-color: #fff;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--wrap-pad);
-    border: 1px solid red;
+    border-radius: 8px;
 }

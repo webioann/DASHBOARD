@@ -1,14 +1,15 @@
 import React from 'react'
-import SideBar from './SideBar.jsx'
-import Main from './Main.jsx'
-import Footer from './Footer.jsx'
+import SideBar from './SideBar'
+import Main from './Main'
+import Footer from './Footer'
 import useFetchData from '../hooks/useFetchData.js'
-import { useDispatch,useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 
 import './appGlobal.css'
 import './app.css'
 
 function App() {
+  
   const requestSize = useSelector(state => state.redux.requestSize) //the size of the request to the API
   const { loading,error } = useFetchData(requestSize)
 

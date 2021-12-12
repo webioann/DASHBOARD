@@ -1,10 +1,23 @@
 import React from 'react'
-import './emptyList.css'
+
+const box = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '85px',
+    borderRadius: '8px',
+    backgroundColor: '#ffffff',
+}
+const massage = {
+    textTransform: 'uppercase',
+    // color: 'darkblue',
+    letterSpacing: '2px'
+}
 
 function EmptyList() {
     return (
-        <div className="empty-list">
-            <h3 className="massage"> users not found </h3>
+        <div style={box}>
+            <h2 style={massage}> no users found by these parameters </h2>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import NatList from './NatList.jsx'
-import GenderButton from './GenderButton.jsx'
+import NatList from './NatList'
+import GenderButton from './GenderButton'
 import './sideBar.css'
 
 function SideBar() {
