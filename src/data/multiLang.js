@@ -1,6 +1,6 @@
-export const lang = {
+export const multyLang = {
     eng: {
-        emptyListMessage: 'no users found by these parameters',
+        emptyListMessage: 'nothing was found for these parameters',
         month: {
             jan: 'Jan',
             feb: 'Feb',
@@ -17,7 +17,7 @@ export const lang = {
         }
     },
     rus: {
-        emptyListMessage: 'по этим параметрам не найдено ни одного пользователя',
+        emptyListMessage: 'по этим параметрам ничего не найдено',
         month: {
             jan: 'Янв',
             feb: 'Фев',

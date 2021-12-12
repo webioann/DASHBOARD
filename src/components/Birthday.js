@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { lang } from '../data/multiLang' //object for use multi lang mode in App
+import { multyLang } from '../data/multiLang' //object for use multi lang mode in App
 
 
 function Birthday(props) {
@@ -7,7 +7,7 @@ function Birthday(props) {
     const userDobDate = props.user
     const [birthday,setBirthday] = useState('')
     let dd = new Date(userDobDate)
-    const mon = lang.eng.month
+    const mon = multyLang.eng.month
 
     let day = dd.getDate();
     let month = dd.getMonth();
