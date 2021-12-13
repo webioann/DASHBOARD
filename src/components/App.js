@@ -16,8 +16,8 @@ function App() {
 
   if ( !loading && !error ) {
     return (
-      <div className="container app" >
-        <div className="wrapper">
+      <div className="container">
+        <div className="box">
           <SideBar />
           <Main />
         </div>

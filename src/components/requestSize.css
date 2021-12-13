@@ -1,22 +1,30 @@
 
 .requst-size{
   display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
   /* border: 1px solid red; */
-  padding: var(--gap);
 }
 .sizer {
-  width: 80px;
+  min-width: 60px;
   display: flex;
   justify-content: center;
-  border-radius: 0.3rem;
-  margin-right: 10px;
-  padding: var(--sm-pad);
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-weight: 800;
+  margin: 0 5px;
+
 }
 .sizer:last-child{
   margin-right: 0;
 }
 .sizer:hover{
   background-color: rgba(0,0,0,0.1);
+  border-width: 0;
+
 }
 .active{
   background-color: rgba(0,0,0,0.2);
@@ -24,5 +32,10 @@
 .active:hover{
   background-color: rgba(0,0,0,0.2) ;
   cursor: not-allowed;
+}
+@media (min-width: 576px) {
+  .request-size{
+    margin-top: 0;
+  }
 }
 

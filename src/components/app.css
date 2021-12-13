@@ -1,11 +1,19 @@
 .container{
+    width: 100%;
     max-width: 1400px;
     background-color: #f1f3f4;
     position: relative;
+
 }
-.wrapper{
-    /* width: 100%; */
-    height: calc(100vh - 50px);
+.box{
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+
+@media (min-width: 576px) {
+    .box{
+        height: calc(100vh - 65px); /* 65px it is footer height 50px plus padding 15px*/
+
+    }
 }

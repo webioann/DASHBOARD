@@ -1,7 +1,7 @@
 import React from 'react'
 import {useDispatch,useSelector} from "react-redux"
 import { setRequestSize } from '../Redux/reduxSlice'
-import './requstSize.css'
+import './requestSize.css'
 
 function RequestSize() {
 

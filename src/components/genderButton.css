@@ -4,6 +4,7 @@
     text-align: center;
     align-items: center;
     padding: var(--sm-pad);
+    cursor: pointer;
 }
 i{
     margin-right: 0.5rem;

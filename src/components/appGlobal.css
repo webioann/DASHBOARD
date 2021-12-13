@@ -80,17 +80,10 @@ html,body{
     html,body{
     font-size: 14px;
     }
-    .container-xs{
-    max-width: auto;
-    }
 }
 @media (min-width: var(--media-sm)) {
     html,body{
         font-size: 15px;
-    }
-    .container-sm,
-    .container{
-        max-width: 540px;
     }
 }
 
@@ -98,17 +91,11 @@ html,body{
     html,body{
     font-size: 16px;
     }
-    .container {
-    max-width: 720px;
-    }
 }
 
 @media (min-width: var(992px)) {
     html,body{
     font-size: 16px;
-    }
-    .container {
-    max-width: 960px;
     }
 }
 
@@ -116,15 +103,9 @@ html,body{
     html,body{
     font-size: 17px;
     }
-    .container {
-    max-width: 1140px;
-    }
 }
 @media (min-width: var(--media-xxl)) {
     html,body{
         font-size: 17px;
-    }
-    .container {
-        max-width: 1320px;
     }
 }

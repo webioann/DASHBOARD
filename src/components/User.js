@@ -25,7 +25,7 @@ function User() {
 
     if( users.length !== 0 ) {
         return (
-            <ul className='users-list'>
+            <ul className='user-box'>
                 {users.map((user,index) => (<li className='user' key={user.login.uuid} >
                     <div className="pass">
                         <div className="avatar">
