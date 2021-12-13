@@ -1,13 +1,18 @@
-import React from 'react'
+import React,{ useState,useEffect } from 'react'
 import NatList from './NatList'
 import GenderButton from './GenderButton'
 import LangButton from './LangButton'
 import Cross from './Cross'
+import { useSelector } from "react-redux"
+
 import './sideBar.css'
 
 function SideBar() {
+
+    const panel = useSelector(state => state.redux.panel)
+ 
     return (
-        <div className='side-bar'>
+        <div className={`side-bar ${panel}`}>
             <div className="button-grop" id="top">
                 <LangButton/>
                 <Cross/>

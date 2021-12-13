@@ -5,12 +5,12 @@ import './footer.css'
 
 function Footer() {
     return (
-        <div className='footer'>
+        <footer className='footer'>
             <div className="footer-wrapper">
                 <Pagination/>
                 <RequestSize/>
             </div>
-        </div>
+        </footer>
     )
 }
 

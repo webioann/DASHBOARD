@@ -1,0 +1,8 @@
+.cross-box{
+    display: inline;
+}
+@media (min-width: 576px) {
+    .cross-box{
+        display: none;
+    }
+}

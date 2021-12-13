@@ -20,7 +20,7 @@ function EmptyList() {
 
     return (
         <div style={box}>
-            <h2 style={massage}>{lang.emptyListMessage}</h2>
+            <h3 style={massage}>{lang.emptyListMessage}</h3>
         </div>
     )
 }

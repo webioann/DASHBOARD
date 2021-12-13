@@ -3,17 +3,20 @@
     max-width: 1400px;
     background-color: #f1f3f4;
     position: relative;
+    overflow: hidden;
 
 }
 .box{
     display: flex;
     justify-content: space-between;
     position: relative;
+    /* height: calc(100vh - 90px); 90px it is footer height 75px plus padding 15px */
+    padding-bottom: 72px;
 }
 
 @media (min-width: 576px) {
     .box{
         height: calc(100vh - 65px); /* 65px it is footer height 50px plus padding 15px*/
-
+        padding-bottom: 0;
     }
 }

@@ -10,7 +10,7 @@ export const reduxSlice = createSlice({
         usersOnPage: 20,
         currentData: [],
         currentPage: 1,
-        active: '',
+        panel: 'hide',
         lang: 'eng',
     },
     reducers: {
@@ -20,13 +20,14 @@ export const reduxSlice = createSlice({
         fetchData: (state,actions) => {state.data = actions.payload},
         putCurrentData: (state,actions) => {state.currentData = actions.payload},
         getCurrentPage: (state,actions) => {state.currentPage = actions.payload},
-        activate: (state,actions) => {state.active = actions.payload},
+        panelShow: state => {state.panel = 'show'},
+        panelHide: state => {state.panel = 'hide'},
         langToggler: (state,actions) => {state.lang = actions.payload}
     }
 })
 
 export const 
-    { getGender,setRequestSize,getNationality,putCurrentData,fetchData,getCurrentPage,activate,langToggler }
+    { getGender,setRequestSize,getNationality,putCurrentData,fetchData,getCurrentPage,panelShow,panelHide,langToggler }
     = reduxSlice.actions
 
 export default reduxSlice.reducer
