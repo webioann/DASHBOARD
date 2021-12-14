@@ -8,16 +8,16 @@
 }
 i{
     margin-right: 0.5rem;
-    color: green;
+    color: var(--text-carrot);
 }
 
 .active{
-    background-color: rgba(0,0,0,0.2);
+    background-color: var(--bg-active);
 }
 .active:hover{
-    background-color: rgba(0,0,0,0.2) ;
+    background-color: var(--bg-active) ;
     cursor: not-allowed;
 }
-button:hover{
-    background-color: rgba(0,0,0,0.1);
+.button:hover{
+    background-color: var(--bg-hover);
 }

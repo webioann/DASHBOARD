@@ -13,6 +13,8 @@
 
     --bg-light: #ffffff;
     --bg-dark: #212529;
+    --bg-hover: rgba(0,0,0,0.1);
+    --bg-active: rgba(0,0,0,0.2);
 
     --top-shadow: 0px 5px 10px rgba(0,0,0,0.2);
     --bot-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);

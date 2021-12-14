@@ -10,15 +10,18 @@
   justify-content: center;
   align-items: center;
   padding: 3px 6px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--bg-hover);
   border-radius: 5px;
   font-weight: 800;
   margin: 0 5px;
   cursor: pointer;
 }
+.num:hover{
+  background-color: var(--bg-hover);
+}
 .active{
   color: var(--text-carrot);
-  background-color: #c8c8c8;
+  background-color: var(--bg-active);
 }
 .arrow {
   font-size: 1.5rem;
@@ -31,7 +34,7 @@
 }
 .blocked-arrow {
   font-size: 1.5rem;
-  color: rgba(0,0,0,0.2);
+  color: var(--bg-active);
 }
 .blocked-arrow:hover {
   cursor: not-allowed;
