@@ -1,4 +1,4 @@
-.burger-box{
+.burger-box-light{
     position: fixed;
     margin-bottom: -50px; /* must be 50px how and height this block*/
     top: 25px;
@@ -7,7 +7,7 @@
     height: 50px;
     padding: 15px;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: var(--lt-active);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,18 +15,52 @@
     z-index: 1000;
     transition: background-color 300ms linear;
 }
-.burger-box:hover{
-    background-color: rgba(0,0,0,0.3);
+.burger-box-dark{
+    position: fixed;
+    margin-bottom: -50px; /* must be 50px how and height this block*/
+    top: 25px;
+    left: 84%;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--dk-active);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 300ms linear;
 }
-.burger{
-    color: var(--text-carrot);
+
+.burger-box-light:hover{
+    background-color: var(--lt-hover);
+}
+.burger-box-dark:hover{
+    background-color: var(--dk-hover);
+}
+
+.burger-light{
+    color: var(--lt-contr);
     font-size: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.burger-dark{
+    color: var(--dk-contr);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 576px) {
-    .burger-box{
+    .burger-box-light{
         visibility: hidden;
     }
+    .burger-box-dark{
+        visibility: hidden;
+    }
+
 }

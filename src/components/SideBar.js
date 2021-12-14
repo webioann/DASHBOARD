@@ -11,7 +11,7 @@ import './sideBar.css'
 function SideBar() {
 
     const panel = useSelector(state => state.redux.panel)
- 
+
     return (
         <div className={`side-bar ${panel}`}>
             <div className="button-grop" id="top">

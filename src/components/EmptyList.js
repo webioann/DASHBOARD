@@ -1,28 +1,18 @@
-import React from 'react'
+import React,{ useState,useEffect } from 'react'
 import { useSelector} from 'react-redux'
-
-const box = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '85px',
-    borderRadius: '8px',
-    backgroundColor: '#ffffff',
-}
-const massage = {
-    textTransform: 'uppercase',
-    letterSpacing: '2px'
-}
+import './emptyList.css'
 
 function EmptyList() {
     
     const lang = useSelector((state) => state.dialect.lang)
+    const themeMode = useSelector(state => state.dialect.themeMode)
 
     return (
-        <div style={box}>
-            <h3 style={massage}>{lang.emptyListMessage}</h3>
+        <div className={`empty-list-${themeMode}`}>
+            <h3 className="massege">{lang.emptyListMessage}</h3>
         </div>
     )
 }
 
 export default EmptyList;
+

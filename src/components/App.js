@@ -2,7 +2,6 @@ import React from 'react'
 import SideBar from './SideBar'
 import Main from './Main'
 import Footer from './Footer'
-import LangButton from './LangButton'
 import useFetchData from '../hooks/useFetchData.js'
 import { useSelector } from "react-redux"
 
@@ -12,17 +11,21 @@ import './app.css'
 function App() {
   
   const requestSize = useSelector(state => state.redux.requestSize) //the size of the request to the API
+  const themeMode = useSelector(state => state.dialect.themeMode)
+
   const { loading,error } = useFetchData(requestSize)
 
   if ( !loading && !error ) {
     return (
-      <div className="container">
-        <div className="box">
-          <SideBar />
-          <Main />
-        </div>
-        <Footer />
-      </div>  
+      <div className="container-fluid">
+        <div className={`app-${themeMode} container`}>
+          <div className="box">
+            <SideBar />
+            <Main />
+          </div>
+          <Footer />
+        </div>  
+      </div>
     )
   }else if (loading) {
     return (

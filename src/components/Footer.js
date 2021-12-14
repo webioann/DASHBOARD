@@ -6,7 +6,7 @@ import './footer.css'
 function Footer() {
     return (
         <footer className='footer'>
-            <div className="footer-wrapper">
+            <div className="footer-box">
                 <Pagination/>
                 <RequestSize/>
             </div>

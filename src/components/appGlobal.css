@@ -7,14 +7,35 @@
     --font-2: 'Roboto', sans-serif;
     --font-3: 'Nunito', sans-serif;
 
-    --text-dark: hsl(0, 0%, 13%);
+    --text-dark: #212529;
     --text-light: #ffffff;
     --text-carrot: #f85904;
 
     --bg-light: #ffffff;
-    --bg-dark: #212529;
+    --bg-dark: #252526;
     --bg-hover: rgba(0,0,0,0.1);
     --bg-active: rgba(0,0,0,0.2);
+
+    /* Light Theme Colors*/
+    --lt-fluid: #ffffff;
+    --lt-app: #f1f3f4;
+    --lt-all-box-bg: #ffffff;
+    --lt-all-box-text: #252526;
+    --lt-hover: rgba(0,0,0,0.1);
+    --lt-active: rgba(0,0,0,0.2);
+    --lt-contr: #f85904;
+    --lt-box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.94);
+    /* Dark Theme Colors*/
+    --dk-fluid: #333333;
+    --dk-app: #252526;
+    --dk-all-box-bg: #04293a;
+    --dk-all-box-text: #f1f3f4;
+    --dk-hover: rgba(255,255,255,0.7);
+    --dk-active: rgba(255,255,255,0.8);
+    --dk-contr: blue;
+    --dk-box-shadow: 0px 0px 15px -8px rgba(255,255,255,0.94);
+
+    
 
     --top-shadow: 0px 5px 10px rgba(0,0,0,0.2);
     --bot-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
@@ -59,7 +80,7 @@ img{vertical-align: top;}
 
 html,body{
     font-family: var(--font-1); 
-    background-color: white;
+    background-color: #ffffff;
     width: 100%;
     scroll-behavior: smooth;
     height: 100%;
