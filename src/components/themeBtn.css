@@ -1,0 +1,9 @@
+.theme-switcher{
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    border: 2px solid var(--bg-active);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

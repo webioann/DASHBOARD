@@ -19,17 +19,12 @@
     padding: 3px 0;
     font-weight: 700;
 }
-/* #rus{
-    background-color: red;
-} */
 .shade{
     color: var(--text-carrot);
     transition: color 200ms linear 400ms;
-
 }
 .slider-box{
     display: flex;
-    /* justify-content: flex-end; */
 }
 .slider{
     z-index: 1000;

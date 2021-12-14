@@ -3,6 +3,7 @@ import NatList from './NatList'
 import GenderButton from './GenderButton'
 import LangButton from './LangButton'
 import Cross from './Cross'
+import ThemeBtn from './ThemeBtn'
 import { useSelector } from "react-redux"
 
 import './sideBar.css'
@@ -15,7 +16,9 @@ function SideBar() {
         <div className={`side-bar ${panel}`}>
             <div className="button-grop" id="top">
                 <LangButton/>
+                <ThemeBtn/>
                 <Cross/>
+
             </div>
             <div className="button-grop">
                 <p className="title"> nationality filters</p>
