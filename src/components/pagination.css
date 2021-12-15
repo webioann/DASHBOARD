@@ -19,14 +19,16 @@
   color: var(--lt-all-box-text);
 }
 .num-dark{
-  border: 1px solid var(--dk-hover);
+  /* border: 1px solid var(--dk-hover); */
   color: var(--dk-all-box-text);
+  border: 1px solid var(--dk-user-hover);
+
 }
 .num-light:hover{
   background-color: var(--lt-hover);
 }
 .num-dark:hover{
-  background-color: var(--dk-hover);
+  background-color: var(--dk-user-hover);
 }
 .active-light{
   color: var(--lt-contr);

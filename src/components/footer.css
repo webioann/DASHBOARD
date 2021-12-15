@@ -18,17 +18,17 @@
 }
 .footer-box-light{
     background-color: var(--lt-all-box-bg);
-    box-shadow: var(--lt-box-shadow);
+    border-top: 1px solid var(--lt-active);
 }
 .footer-box-dark{
     background-color: var(--dk-all-box-bg);
-    box-shadow: var(--dk-box-shadow);
+    border-top: 1px solid var(--dk-user-hover);
 }
 
 @media (min-width: 576px) {
     .footer{
         position: relative;
-        padding: 0 30px 15px 15px;
+        padding: 0 25px 15px 15px;
     }
     .footer-box-light,
     .footer-box-dark{

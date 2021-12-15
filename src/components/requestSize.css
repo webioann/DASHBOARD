@@ -23,15 +23,17 @@
   color: var(--lt-all-box-text);
 }
 .sizer-dark{
-  border: 1px solid var(--dk-hover);
+  /* border: 1px solid var(--dk-hover); */
   color: var(--dk-all-box-text);
+  border: 1px solid var(--dk-user-hover);
+
 }
 .sizer-light:hover{
   background-color: var(--lt-hover);
   border-width: 0;
 }
 .sizer-dark:hover{
-  background-color: var(--dk-hover);
+  background-color: var(--dk-user-hover);
   border-width: 0;
 }
 

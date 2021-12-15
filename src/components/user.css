@@ -12,23 +12,25 @@
 }
 .user-light{
     background-color: var(--lt-all-box-bg);
-    color: var(--lt-all-box-text)
+    color: var(--lt-all-box-text);
 }
 .user-dark{
     background-color: var(--dk-all-box-bg);
-    color: var(--dk-all-box-text)
+    color: var(--dk-all-box-text);
 }
 .user-light:last-child,
 .user-dark:last-child{
     margin-bottom: 0;
 }
 .user-light:hover{
-    -webkit-box-shadow: var(--lt-box-shadow); 
-    box-shadow: var(--lt-box-shadow);
+    background-color: var(--lt-user-hover);
+    /* -webkit-box-shadow: var(--lt-box-shadow); 
+    box-shadow: var(--lt-box-shadow); */
 }
 .user-dark:hover{
-    -webkit-box-shadow: var(--dk-box-shadow); 
-    box-shadow: var(--dk-box-shadow);
+    background-color: var(--dk-user-hover);
+    /* -webkit-box-shadow: var(--dk-box-shadow); 
+    box-shadow: var(--dk-box-shadow); */
 }
 
 .cell{

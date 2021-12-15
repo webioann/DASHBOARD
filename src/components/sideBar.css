@@ -11,6 +11,7 @@
     transition: right 700ms linear;
     z-index: 1000;
     overflow-y: auto;
+
 }
 .side-bar-light{
     background-color: var(--lt-app);
