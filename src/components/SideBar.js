@@ -11,6 +11,7 @@ function SideBar() {
 
     const panel = useSelector(state => state.redux.panel)
     const themeMode = useSelector(state => state.dialect.themeMode)
+    const lang = useSelector((state) => state.dialect.lang)
 
     return (
         <div className={`side-bar-${themeMode} ${panel}`}>
@@ -20,11 +21,16 @@ function SideBar() {
                 <Cross/>
             </div>
             <div className={`button-grop-${themeMode}`}>
-                <p className="title"> nationality filters</p>
+                <p className="title">
+                    { lang === 'eng' 
+                        ? 'nationality filters' 
+                        : 'фильтрация по национальности'}</p>
                 <NatList />
             </div>
             <div className={`button-grop-${themeMode}`}>
-                <p className="title"> gender filter </p>
+                <p className="title">
+                    { lang === 'eng' 
+                        ? 'gender filter' : 'фильтрация по полу'} </p>
                 <GenderButton id={'both-sex'}/>
                 <GenderButton id={'male'}/>
                 <GenderButton id={'female'}/>
