@@ -1,5 +1,5 @@
 import React,{ useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { langEng,langRus } from '../Redux/dialectSlice'
 
 import './langButton.css'
@@ -7,6 +7,9 @@ import './langButton.css'
 function LangButton() {
 
     const dispatch = useDispatch()
+    const themeMode = useSelector(state => state.dialect.themeMode)
+    const lang = useSelector(state => state.dialect.lang)
+
     const [margin,setMargin] = useState(0) //margin it is half of width "switcher-box"
     const [engClass,setEngClass] = useState('switcher shade')
     const [rusClass,setRusClass] = useState('switcher')
@@ -28,21 +31,21 @@ function LangButton() {
     }
 
     return (
-        <div className="lang-button-box">
+        <div className={`lang-button-${themeMode}`}>
             <div className="switcher-box">
-                <span className={engClass}
+                <span className={ lang === 'eng' ? `switcher shade-${themeMode}` : 'switcher'}
                     id = 'eng' 
                     onClick={toggler}>
                     eng
                 </span>
-                <span className={rusClass}
+                <span className={ lang === 'rus' ? `switcher shade-${themeMode}` : 'switcher'}
                     id = 'rus'
                     onClick={toggler}>
                     rus
                 </span>
             </div>
             <div className="slider-box">
-                <span className="slider" 
+                <span className={`slider-${themeMode}`} 
                     style={{marginLeft: `${margin}px`}}>
                 </span>
             </div>

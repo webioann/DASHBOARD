@@ -9,6 +9,9 @@ function ListOfNationalities() {
 
     const dispatch = useDispatch()
     const activeNationality = useSelector(state => state.redux.nationality)
+    const themeMode = useSelector(state => state.dialect.themeMode)
+    // const natActive = `nat-${themeMode} active-${themeMode}`
+    // const nat = `nat-${themeMode}`
 
     function chooseNationality (event) {
         let id = event.target.id //event.target.id it is nationality code FN,GB,CA,US...
@@ -18,11 +21,14 @@ function ListOfNationalities() {
     return (
         <ul className= 'list'>
             {nations.map((nation) =>(
-            <li className={(activeNationality === nation.code) ? 'nat active' : 'nat'}
+            <li className={activeNationality === nation.code 
+                ? `nat-${themeMode} active-${themeMode}`
+                : `nat-${themeMode}` }
                 key={nation.code}
                 onClick={chooseNationality} 
                 id={nation.code}>
-                    <i>{(activeNationality === nation.code) 
+                    <i className={`icon-${themeMode}`}>
+                        {(activeNationality === nation.code) 
                         ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                     </i>
                 {nation.name}

@@ -2,26 +2,34 @@
 .list{
     padding: 10px 0;
 }
-.nat{
+.nat-light,
+.nat-dark{
     display: flex;
     align-items: center;
     padding: var(--sm-pad);
     border-radius: 3px;
     margin-bottom: 3px;
 }
-.nat:hover{
+.nat-light:hover{
     cursor: pointer;
-    background-color: var(--bg-hover);
+    background-color: var(--lt-hover);
+}
+.nat-dark:hover{
+    cursor: pointer;
+    background-color: var(--dk-hover);
+}
+.active-light{
+    background-color: var(--lt-active);
+}
+.active-dark{
+    background-color: var(--dk-active);
 }
 
-i{
-    margin-right: 0.5rem;
-    color: var(--text-carrot);
+.active-light:hover{
+    background-color: var(--lt-active);
+    cursor: not-allowed;
 }
-.active{
-    background-color: var(--bg-active);
-}
-.active:hover{
-    background-color: var(--bg-active);
+.active-dark:hover{
+    background-color: var(--dk-active);
     cursor: not-allowed;
 }

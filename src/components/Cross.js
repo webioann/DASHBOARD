@@ -8,6 +8,7 @@ function Cross() {
 
     const dispatch = useDispatch()
     const panel = useSelector(state => state.redux.panel)
+    const themeMode = useSelector(state => state.dialect.themeMode)
 
     const hidePanel = () => {
         dispatch(panelHide())
@@ -15,8 +16,9 @@ function Cross() {
     }
 
     return (
-        <span className="cross-box">
-            <ImCross onClick={hidePanel}/>
+        <span className={`cross-box-${themeMode}`}>
+            <ImCross className={`cross-${themeMode}`}
+                onClick={hidePanel}/>
         </span>
     )
 }

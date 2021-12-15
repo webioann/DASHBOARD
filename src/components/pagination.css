@@ -5,38 +5,70 @@
   /* justify-content: center; */
   /* border: 1px solid red; */
 }
-.num {
+.num-light,
+.num-dark{
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3px 6px;
-  border: 1px solid var(--bg-hover);
   border-radius: 5px;
   font-weight: 800;
   margin: 0 5px;
   cursor: pointer;
 }
-.num:hover{
-  background-color: var(--bg-hover);
+.num-light{
+  border: 1px solid var(--lt-hover);
+  color: var(--lt-all-box-text);
 }
-.active{
-  color: var(--text-carrot);
-  background-color: var(--bg-active);
+.num-dark{
+  border: 1px solid var(--dk-hover);
+  color: var(--dk-all-box-text);
 }
-.arrow {
-  font-size: 1.5rem;
-  color: #212121;
+.num-light:hover{
+  background-color: var(--lt-hover);
 }
-.arrow:hover {
-  color: var(--text-carrot);
-  cursor: pointer;
+.num-dark:hover{
+  background-color: var(--dk-hover);
+}
 
+.active-light{
+  color: var(--lt-contr);
+  background-color: var(--lt-active);
 }
-.blocked-arrow {
+.active-dark{
+  color: var(--dk-contr);
+  background-color: var(--dk-active);
+}
+
+.arrow-light{
   font-size: 1.5rem;
-  color: var(--bg-active);
+  color: var(--lt-all-box-text);
 }
-.blocked-arrow:hover {
+.arrow-dark{
+  font-size: 1.5rem;
+  color: var(--dk-all-box-text);
+}
+
+.arrow-light:hover{
+  color: var(--lt-contr);
+  cursor: pointer;
+}
+.arrow-dark:hover{
+  color: var(--dk-contr);
+  cursor: pointer;
+}
+
+.blocked-arrow-light{
+  font-size: 1.5rem;
+  color: var(--lt-active);
+}
+.blocked-arrow-dark{
+  font-size: 1.5rem;
+  color: var(--dk-active);
+}
+
+.blocked-arrow-light:hover,
+.blocked-arrow-light:hover{
   cursor: not-allowed;
 }
 

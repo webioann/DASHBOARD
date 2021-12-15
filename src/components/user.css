@@ -1,7 +1,8 @@
 /* .user-box{
     padding-bottom: 35px;
 } */
-.user{
+.user-light,
+.user-dark{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -9,21 +10,30 @@
     border-radius: 8px;
     overflow: hidden;
     transition: all 300ms linear;
-    /* border-bottom: 1px solid rgba(0,0,0,0.1); */
-    background-color: #fff;
     padding: var(--wrap-pad);
     margin-bottom: var(--gap);
 }
-
-.user:last-child{
-    /* border-bottom: 1px solid transparent; */
+.user-light{
+    background-color: var(--lt-all-box-bg);
+    color: var(--lt-all-box-text)
+}
+.user-dark{
+    background-color: var(--dk-all-box-bg);
+    color: var(--dk-all-box-text)
+}
+.user-light:last-child,
+.user-dark:last-child{
     margin-bottom: 0;
 }
-.user:hover{
-    -webkit-box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.94); 
-    box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.94);
-
+.user-light:hover{
+    -webkit-box-shadow: var(--lt-box-shadow); 
+    box-shadow: var(--lt-box-shadow);
 }
+.user-dark:hover{
+    -webkit-box-shadow: var(--dk-box-shadow); 
+    box-shadow: var(--dk-box-shadow);
+}
+
 .cell{
     padding-top: 5px; 
     padding-left: 15px; 
@@ -80,7 +90,8 @@ display: flex;
     .user-box{
         padding-bottom: 0;
     }
-    .user:last-child{
+    .user-light:last-child,
+    .user-dark:last-child{
         margin-bottom: 10px;
     }
     .location{
@@ -95,7 +106,8 @@ display: flex;
     }
 } 
 @media (min-width: 992px) {
-    .user{
+    .user-light,
+    .user-dark {
         flex-direction: row;
     }
     .pass{

@@ -9,6 +9,8 @@ function GenderButton(props) {
     const dispatch = useDispatch()
     const id = props.id
     const activeGender = useSelector(state => state.redux.gender)
+    const themeMode = useSelector(state => state.dialect.themeMode)
+
     const[btnText,setBtnText] = useState('')
 
     useEffect(() => {
@@ -19,9 +21,10 @@ function GenderButton(props) {
 
     return (
         <div className="row">
-            <div className={(activeGender === id) ? 'button active' : 'button'}
+            <div className={(activeGender === id) 
+                ? `button-${themeMode} active-${themeMode}` : `button-${themeMode}`}
                 onClick={() => {dispatch(getGender(id))}}>
-                <i>{(activeGender === id) ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}</i>
+                <i className={`icon-${themeMode}`}>{(activeGender === id) ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}</i>
                 {btnText}
             </div>
         </div>

@@ -1,21 +1,41 @@
-.container-fluid{
+.container-fluid-light{
+    background-color: var(--lt-all-box-bg);
 }
-.app-light{
-    width: 100%;
-    max-width: 1400px;
-    background-color: #f1f3f4;
-    position: relative;
-    overflow: hidden;
-    background-color: var(--lt-app);
+.container-fluid-dark{
+    background-color: var(--dk-all-box-bg);
 }
+
+.app-light,
 .app-dark{
     width: 100%;
     max-width: 1400px;
-    background-color: #f1f3f4;
     position: relative;
     overflow: hidden;
+}
+.app-light{
+    background-color: var(--lt-app);
+}
+.app-dark{
     background-color: var(--dk-app);
 }
+.icon-light{
+    color: var(--lt-contr);
+    margin-right: 0.5rem;
+}
+.icon-dark{
+    color: var(--dk-contr);
+    margin-right: 0.5rem;    
+}
+
+.lang-icon-light{
+    color: var(--lt-contr);
+    margin: 0;
+}
+.lang-icon-dark{
+    color: var(--dk-contr);
+    margin: 0;    
+}
+
 .box{
     display: flex;
     justify-content: space-between;

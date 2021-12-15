@@ -1,9 +1,25 @@
-.theme-switcher{
+.theme-switcher-light,
+.theme-switcher-dark{
     width: 25px;
     height: 25px;
     border-radius: 3px;
-    border: 2px solid var(--bg-active);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 5px;
+}
+.theme-switcher-light{
+    /* border: 2px solid var(--lt-hover); */
+    background-color: var(--lt-hover);
+}
+.theme-switcher-dark{
+    /* border: 2px solid var(--dk-hover); */
+    background-color: var(--dk-hover);
+}
+@media (min-width: 576px) {
+    .theme-switcher-light,
+    .theme-switcher-dark{
+        margin-right: 0;
+    }
+
 }

@@ -1,8 +1,28 @@
-.cross-box{
-    display: inline;
+.cross-box-light,
+.cross-box-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
 }
+.cross-box-light{
+    background-color: var(--lt-hover);
+}
+.cross-box-dark{
+    background-color: var(--dk-hover);
+}
+.cross-light{
+    color: var(--lt-contr);
+}
+.cross-dark{
+    color: var(--dk-contr);
+}
+
 @media (min-width: 576px) {
-    .cross-box{
+    .cross-box-light,
+    .cross-box-dark{
         display: none;
     }
 }

@@ -4,12 +4,12 @@ import { multyLang } from '../data/multiLang'
 export const dialectSlice = createSlice({
     name: 'dialect',
     initialState: {
-        lang: multyLang.eng,
+        lang: 'eng',
         themeMode: 'light'
     },
     reducers: {
-        langEng: state => { state.lang = multyLang.eng },
-        langRus: state => { state.lang = multyLang.rus },
+        langEng: state => { state.lang = 'eng' },
+        langRus: state => { state.lang = 'rus' },
         lightMode: state => { state.themeMode = 'light' },
         darkMode: state => { state.themeMode = 'dark' },
     }

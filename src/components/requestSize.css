@@ -6,30 +6,46 @@
   /* align-items: center;  */
   /* border: 1px solid red; */
 }
-.sizer {
+.sizer-light,
+.sizer-dark{
   min-width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px 10px;
   cursor: pointer;
-  border: 1px solid var(--bg-hover);
   border-radius: 5px;
   font-weight: 800;
   margin: 0 5px;
 }
-/* .sizer:last-child{
-  margin-right: 0;
-} */
-.sizer:hover{
-  background-color: var(--bg-hover);
+.sizer-light{
+  border: 1px solid var(--lt-hover);
+  color: var(--lt-all-box-text);
+}
+.sizer-dark{
+  border: 1px solid var(--dk-hover);
+  color: var(--dk-all-box-text);
+}
+.sizer-light:hover{
+  background-color: var(--lt-hover);
   border-width: 0;
 }
-.active{
-  background-color: var(--bg-active);
+.sizer-dark:hover{
+  background-color: var(--dk-hover);
+  border-width: 0;
 }
-.active:hover{
-  background-color: var(--bg-active);
+
+.active-light{
+  color: var(--lt-contr);
+  background-color: var(--lt-active);
+}
+.active-dark{
+  color: var(--dk-contr);
+  background-color: var(--dk-active);
+}
+
+.active-light:hover,
+.active-dark:hover{
   cursor: not-allowed;
 }
 @media (min-width: 576px) {

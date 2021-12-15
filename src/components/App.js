@@ -17,7 +17,7 @@ function App() {
 
   if ( !loading && !error ) {
     return (
-      <div className="container-fluid">
+      <div className={`container-fluid-${themeMode}`}>
         <div className={`app-${themeMode} container`}>
           <div className="box">
             <SideBar />

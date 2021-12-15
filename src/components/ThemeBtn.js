@@ -20,11 +20,11 @@ function ThemeBtn() {
     console.log(`MODE = ${themeMode}`) //TODO: delete
 
     return (
-        <div className="theme-switcher"
+        <div className={`theme-switcher-${themeMode}`}
             onClick={switchThemeMode}>
             {themeMode === 'light' 
-                ? <FaMoon color='var(--bg-active)'/> 
-                : <FaRegSun color='var(--text-carrot)'/>}
+                ? <FaMoon className={`lang-icon-${themeMode}`}/>
+                : <FaRegSun className={`lang-icon-${themeMode}`}/>}
         </div>
     )
 }

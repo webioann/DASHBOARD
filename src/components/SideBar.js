@@ -11,20 +11,21 @@ import './sideBar.css'
 function SideBar() {
 
     const panel = useSelector(state => state.redux.panel)
+    const themeMode = useSelector(state => state.dialect.themeMode)
 
     return (
-        <div className={`side-bar ${panel}`}>
-            <div className="button-grop" id="top">
+        <div className={`side-bar-${themeMode} ${panel}`}>
+            <div className={`button-grop-${themeMode}`} id="top">
                 <LangButton/>
                 <ThemeBtn/>
                 <Cross/>
 
             </div>
-            <div className="button-grop">
+            <div className={`button-grop-${themeMode}`}>
                 <p className="title"> nationality filters</p>
                 <NatList />
             </div>
-            <div className="button-grop">
+            <div className={`button-grop-${themeMode}`}>
                 <p className="title"> gender filter </p>
                 <GenderButton id={'both-sex'}/>
                 <GenderButton id={'male'}/>

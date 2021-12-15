@@ -18,6 +18,7 @@ function User() {
     const data = useSelector((state) => state.redux.data)
     const gender = useSelector((state) => state.redux.gender)
     const nationality = useSelector((state) => state.redux.nationality)
+    const themeMode = useSelector(state => state.dialect.themeMode)
 
     const filteredData = useFilters(data,gender,nationality) //we receive the filtered data
     dispatch(putCurrentData(filteredData)) //we put the filtered data in redux.currentdata for use in a Pagination.js
@@ -26,7 +27,7 @@ function User() {
     if( users.length !== 0 ) {
         return (
             <ul className='user-box'>
-                {users.map((user,index) => (<li className='user' key={user.login.uuid} >
+                {users.map((user,index) => (<li className={`user-${themeMode}`} key={user.login.uuid} >
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
@@ -43,11 +44,11 @@ function User() {
                     </div>
                     <div className='contacts'>
                         <div className="mail cell">
-                            <i className='contact-icon'><AiOutlineMail/></i>
+                            <i className={`icon-${themeMode}`}><AiOutlineMail/></i>
                             <p>{user.email}</p>
                         </div>
                         <div className="tel cell">
-                            <i className='contact-icon'><FaPhone/></i>
+                            <i className={`icon-${themeMode}`}><FaPhone/></i>
                             <p>{user.phone}</p>
                         </div>
                     </div>

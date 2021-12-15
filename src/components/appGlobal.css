@@ -23,7 +23,7 @@
     --lt-all-box-text: #252526;
     --lt-hover: rgba(0,0,0,0.1);
     --lt-active: rgba(0,0,0,0.2);
-    --lt-contr: #f85904;
+    --lt-contr: blue;
     --lt-box-shadow: 0px 0px 15px -8px rgba(0,0,0,0.94);
     /* Dark Theme Colors*/
     --dk-fluid: #333333;
@@ -32,7 +32,7 @@
     --dk-all-box-text: #f1f3f4;
     --dk-hover: rgba(255,255,255,0.7);
     --dk-active: rgba(255,255,255,0.8);
-    --dk-contr: blue;
+    --dk-contr: #f85904;
     --dk-box-shadow: 0px 0px 15px -8px rgba(255,255,255,0.94);
 
     
@@ -94,7 +94,8 @@ html,body{
 
 }
 .container,
-.container-fluid {
+.container-fluid-light,
+.container-fluid-dark {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
