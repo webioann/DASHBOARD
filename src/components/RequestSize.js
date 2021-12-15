@@ -18,24 +18,24 @@ function RequestSize() {
 
     return (
         <div className="requst-size">
-                <div className={requestSize === small 
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                    id={small}
-                    onClick={setSize}>
-                        {small} 
-                </div>
-                <div className={requestSize === medium 
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                    id={medium} 
-                    onClick={setSize}>
-                        { medium }
-                </div>
-                <div className={requestSize === big 
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                    id={big} 
-                    onClick={setSize}>
-                        {big} 
-                </div>
+            <div className={requestSize === small 
+                ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                id={small}
+                onClick={setSize}>
+                    {small} 
+            </div>
+            <div className={requestSize === medium 
+                ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                id={medium} 
+                onClick={setSize}>
+                    { medium }
+            </div>
+            <div className={requestSize === big 
+                ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                id={big} 
+                onClick={setSize}>
+                    {big} 
+            </div>
         </div>
     )
 }

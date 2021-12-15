@@ -2,7 +2,6 @@ import React from 'react'
 import Pagination from './Pagination'
 import RequestSize from './RequestSize'
 import { useSelector } from "react-redux"
-
 import './footer.css'
 
 function Footer() {
@@ -18,5 +17,4 @@ function Footer() {
         </footer>
     )
 }
-
 export default Footer;

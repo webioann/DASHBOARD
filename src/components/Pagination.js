@@ -1,10 +1,9 @@
-import React,{ useState,useEffect } from "react"
-import { useSelector,useDispatch } from "react-redux";
+import React from "react"
+import { useSelector,useDispatch } from "react-redux"
 import { getCurrentPage } from '../Redux/reduxSlice'
 import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-icons/md"
-import usePaginSlicer from "../hooks/usePaginSlicer";
+import usePaginSlicer from "../hooks/usePaginSlicer"
 import "./pagination.css"
-
 
 function Pagination() {
 
@@ -12,10 +11,7 @@ function Pagination() {
   const currentData = useSelector((state) => state.redux.currentData)
   const currentPage = useSelector((state) => state.redux.currentPage)
   const themeMode = useSelector(state => state.dialect.themeMode)
-
   const { pageNumberArray,lastPage } = usePaginSlicer(currentData)
-  // const lastPage = currentData.length
-
 
   const goToPage = (event) => {
     dispatch(getCurrentPage(Number(event.target.id)))
@@ -55,7 +51,6 @@ function Pagination() {
     </div>
   );
 }
-
 export default Pagination;
 
 

@@ -1,12 +1,11 @@
 .burger-box-light,
 .burger-box-dark{
     position: fixed;
-    margin-bottom: -50px; /* must be 50px how and height this block*/
+    margin-bottom: -40px; /* must be 40px how and height this block*/
     top: 25px;
     left: 84%;
     width: 40px;
     height: 40px;
-    /* padding: 15px; */
     border-radius: 5px;
     background-color: var(--lt-active);
     display: flex;

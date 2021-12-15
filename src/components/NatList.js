@@ -10,8 +10,6 @@ function ListOfNationalities() {
     const dispatch = useDispatch()
     const activeNationality = useSelector(state => state.redux.nationality)
     const themeMode = useSelector(state => state.dialect.themeMode)
-    // const natActive = `nat-${themeMode} active-${themeMode}`
-    // const nat = `nat-${themeMode}`
 
     function chooseNationality (event) {
         let id = event.target.id //event.target.id it is nationality code FN,GB,CA,US...
@@ -36,5 +34,4 @@ function ListOfNationalities() {
         </ul>
     )
 }
-
 export default ListOfNationalities;

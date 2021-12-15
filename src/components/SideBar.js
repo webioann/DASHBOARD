@@ -1,11 +1,10 @@
-import React,{ useState,useEffect } from 'react'
+import React from 'react'
 import NatList from './NatList'
 import GenderButton from './GenderButton'
 import LangButton from './LangButton'
 import Cross from './Cross'
 import ThemeBtn from './ThemeBtn'
 import { useSelector } from "react-redux"
-
 import './sideBar.css'
 
 function SideBar() {
@@ -19,7 +18,6 @@ function SideBar() {
                 <LangButton/>
                 <ThemeBtn/>
                 <Cross/>
-
             </div>
             <div className={`button-grop-${themeMode}`}>
                 <p className="title"> nationality filters</p>
@@ -34,5 +32,4 @@ function SideBar() {
         </div>
     )
 }
-
 export default SideBar;

@@ -10,14 +10,8 @@ function ThemeBtn() {
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     const switchThemeMode = () => {
-        if( themeMode === 'light') {
-            dispatch(darkMode())
-        }
-        else{
-            dispatch(lightMode())
-        }
+        themeMode === 'light' ? dispatch(darkMode()) : dispatch(lightMode())
     }
-    console.log(`MODE = ${themeMode}`) //TODO: delete
 
     return (
         <div className={`theme-switcher-${themeMode}`}
@@ -28,5 +22,4 @@ function ThemeBtn() {
         </div>
     )
 }
-
 export default ThemeBtn;

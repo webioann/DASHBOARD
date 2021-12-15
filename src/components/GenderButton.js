@@ -10,7 +10,6 @@ function GenderButton(props) {
     const id = props.id
     const activeGender = useSelector(state => state.redux.gender)
     const themeMode = useSelector(state => state.dialect.themeMode)
-
     const[btnText,setBtnText] = useState('')
 
     useEffect(() => {

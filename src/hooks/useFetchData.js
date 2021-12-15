@@ -5,7 +5,6 @@ import { fetchData } from '../Redux/reduxSlice'
 const useFetchData = (requestSize) => {
 
     const dispatch = useDispatch()
-    // const[data,setData] = useState([])
     const[loading,setLoader] = useState(true)
     const[error,setErrors] = useState(false)
     let url = `https://randomuser.me/api/?page=1&results=${requestSize}`
@@ -14,8 +13,7 @@ const useFetchData = (requestSize) => {
         fetch( url )
         .then((response) => response.json())
         .then(({results}) => {
-            dispatch(fetchData(results)) //put data in storage redux.data
-            // setData(results)
+            dispatch(fetchData(results)) //put data in storage redux.data        
             setErrors(false)
             setLoader(false)
         })

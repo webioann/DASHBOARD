@@ -2,8 +2,6 @@
 .pages {
   display: flex;
   margin-bottom: 10px;
-  /* justify-content: center; */
-  /* border: 1px solid red; */
 }
 .num-light,
 .num-dark{
@@ -30,7 +28,6 @@
 .num-dark:hover{
   background-color: var(--dk-hover);
 }
-
 .active-light{
   color: var(--lt-contr);
   background-color: var(--lt-active);

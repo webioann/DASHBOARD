@@ -12,7 +12,6 @@ function Cross() {
 
     const hidePanel = () => {
         dispatch(panelHide())
-        console.log(panel)//TODO: delete soon
     }
 
     return (
@@ -22,5 +21,4 @@ function Cross() {
         </span>
     )
 }
-
 export default Cross;

@@ -21,10 +21,15 @@ function User() {
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     const filteredData = useFilters(data,gender,nationality) //we receive the filtered data
-    dispatch(putCurrentData(filteredData)) //we put the filtered data in redux.currentdata for use in a Pagination.js
+        dispatch(putCurrentData(filteredData)) //we put the filtered data in redux.currentdata for use in a Pagination.js
     const users = usePagination(filteredData,usersOnPage,currentPage)
 
-    if( users.length !== 0 ) {
+    console.log(`USERS ==> ${filteredData.length} pc/on app`) //TODO: delete this ...
+
+    if( users.length === 0 ) {        
+        return <EmptyList/>
+    }
+    else {
         return (
             <ul className='user-box'>
                 {users.map((user,index) => (<li className={`user-${themeMode}`} key={user.login.uuid} >
@@ -57,15 +62,10 @@ function User() {
                         <p className='cell'>{user.location.state} , {user.location.city}  </p>
                         <p className='cell'>{user.location.street.number},{user.location.street.name} street,</p>
                     </div>
-                    
                 </li>))}
             </ul> 
         )
     }
-    else {
-        return <EmptyList/> 
-    }
 }
-
 export default User;
 

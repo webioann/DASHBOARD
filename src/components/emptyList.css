@@ -1,4 +1,5 @@
-.empty-list-light{
+.empty-list-light,
+.empty-list-dark{
     background-color: var(--lt-all-box-bg);
     color: var(--lt-all-box-text);
     display: flex;
@@ -7,14 +8,13 @@
     height: 85px;
     border-radius: 8px;
 }
+.empty-list-light{
+    background-color: var(--lt-all-box-bg);
+    color: var(--lt-all-box-text);
+}
 .empty-list-dark{
     background-color: var(--dk-all-box-bg);
     color: var(--dk-all-box-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 85px;
-    border-radius: 8px;
 }
 
 .massege{

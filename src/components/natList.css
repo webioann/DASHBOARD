@@ -13,16 +13,10 @@
 .nat-light:hover{
     cursor: pointer;
     background-color: var(--lt-hover);
-    /* box-shadow: var(--lt-box-shadow); */
-    /* background-color: rgba(0,0,0,0.05); */
-
 }
 .nat-dark:hover{
     cursor: pointer;
     background-color: var(--dk-hover);
-    /* box-shadow: var(--dk-box-shadow); */
-    /* background-color: rgba(255,255,255,0.05); */
-
 }
 .active-light{
     background-color: var(--lt-active);
