@@ -6,6 +6,8 @@
     align-items: center;
     padding: var(--sm-pad);
     cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 3px;
 }
 .button-light:hover{
     background-color: var(--lt-hover);

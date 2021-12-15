@@ -9,19 +9,13 @@ const useFilters = (data,gender,nationality) => {
             setFilteredData( data )
         }
         else if( gender !== 'both-sex' && nationality === 'ALL') {
-            setFilteredData( data.filter(unit => 
-                unit.gender === gender
-            ))
+            setFilteredData( data.filter(unit => unit.gender === gender))
         }
         else if( gender === 'both-sex' && nationality !== 'ALL') {
-            setFilteredData( data.filter(unit => 
-                unit.nat === nationality 
-            ))
+            setFilteredData( data.filter(unit => unit.nat === nationality))
         }
         else{
-            setFilteredData( data.filter(unit => 
-                unit.gender === gender && unit.nat === nationality 
-            ))
+            setFilteredData( data.filter(unit => unit.gender === gender && unit.nat === nationality))
         }
         
     },[data,gender,nationality])
