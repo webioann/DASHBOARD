@@ -5,8 +5,8 @@
     padding: 15px;
     position: relative;
     overflow-y: auto;
-
 }
+
 .main-title{
     display: flex;
     justify-content: center;
