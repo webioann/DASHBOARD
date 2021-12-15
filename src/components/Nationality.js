@@ -5,7 +5,7 @@ import './user.css'
 function Nationality(props) {
 
     let currentNation = nations.filter(nation => nation.code === props.user.nat)
-    let nationality = currentNation[0].name
+    let nationality = currentNation[0].nameEng
 
     const bg = {
         backgroundColor: currentNation[0].color,

@@ -10,6 +10,7 @@ function ListOfNationalities() {
     const dispatch = useDispatch()
     const activeNationality = useSelector(state => state.redux.nationality)
     const themeMode = useSelector(state => state.dialect.themeMode)
+    const lang = useSelector((state) => state.dialect.lang)
 
     function chooseNationality (event) {
         let id = event.target.id //event.target.id it is nationality code FN,GB,CA,US...
@@ -29,7 +30,7 @@ function ListOfNationalities() {
                         {(activeNationality === nation.code) 
                         ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                     </i>
-                {nation.name}
+                { lang === 'eng' ? nation.nameEng : nation.nameRus }
             </li>))}   
         </ul>
     )
