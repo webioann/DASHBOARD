@@ -7,7 +7,7 @@ function Birthday(props) {
     const userDobDate = props.user
     const [birthday,setBirthday] = useState('')
     let dd = new Date(userDobDate)
-    const mon = multyLang.eng.month
+    const mon = multyLang.month.eng
 
     let day = dd.getDate();
     let month = dd.getMonth();

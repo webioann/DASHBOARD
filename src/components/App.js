@@ -4,28 +4,23 @@ import Main from './Main'
 import Footer from './Footer'
 import useFetchData from '../hooks/useFetchData.js'
 import { useSelector } from "react-redux"
-
-import './appGlobal.css'
-import './app.css'
+import ContainerFluid from './ContainerFluid'
+import Box from './Box'
 
 function App() {
   
-  const requestSize = useSelector(state => state.redux.requestSize) //the size of the request to the API
-  const themeMode = useSelector(state => state.dialect.themeMode)
-
+  const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
   const { loading,error } = useFetchData(requestSize)
 
   if ( !loading && !error ) {
     return (
-      <div className={`container-fluid-${themeMode}`}>
-        <div className={`app-${themeMode} container`}>
-          <div className="box">
-            <SideBar />
-            <Main />
-          </div>
-          <Footer />
-        </div>  
-      </div>
+      <ContainerFluid>
+        <Box>
+          <SideBar />
+          <Main />
+        </Box>
+        <Footer />
+      </ContainerFluid>
     )
   }else if (loading) {
     return (

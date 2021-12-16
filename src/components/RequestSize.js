@@ -1,12 +1,12 @@
 import React from 'react'
 import {useDispatch,useSelector} from "react-redux"
-import { setRequestSize } from '../Redux/reduxSlice'
+import { setRequestSize } from '../Redux/paginRedux'
 import './requestSize.css'
 
 function RequestSize() {
 
     const dispatch = useDispatch()
-    const requestSize = useSelector(state => state.redux.requestSize)
+    const requestSize = useSelector(state => state.pagin.requestSize)
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     const setSize = (event) =>{

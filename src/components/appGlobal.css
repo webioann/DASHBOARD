@@ -96,12 +96,46 @@ html,body{
 
 }
 .container,
+.container-light,
+.container-dark,
+.container-fluid,
 .container-fluid-light,
 .container-fluid-dark {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
+/*    ===== CUSTOM SCROLLBAR =====    */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* ============================== */
+.icon-light{
+    color: var(--lt-contr);
+    margin-right: 0.5rem;
+}
+.icon-dark{
+    color: var(--dk-contr);
+    margin-right: 0.5rem;    
+}
+
+.lang-icon-light{
+    color: var(--lt-contr);
+    margin: 0;
+}
+.lang-icon-dark{
+    color: var(--dk-contr);
+    margin: 0;    
+}
+
 
 @media (max-width: var(--media-xs)) {
     html,body{

@@ -7,6 +7,8 @@ import ThemeBtn from './ThemeBtn'
 import { useSelector } from "react-redux"
 import './sideBar.css'
 
+import Group from './Group'
+
 function SideBar() {
 
     const panel = useSelector(state => state.redux.panel)
@@ -15,18 +17,21 @@ function SideBar() {
 
     return (
         <div className={`side-bar-${themeMode} ${panel}`}>
+
             <div className={`button-grop-${themeMode}`} id="top">
                 <LangButton/>
                 <ThemeBtn/>
                 <Cross/>
             </div>
+
             <div className={`button-grop-${themeMode}`}>
-                <p className="title">
+                <p className="title"> 
                     { lang === 'eng' 
                         ? 'nationality filters' 
-                        : 'фильтрация по национальности'}</p>
+                        : 'фильтрация по национальности'}</p> 
                 <NatList />
             </div>
+
             <div className={`button-grop-${themeMode}`}>
                 <p className="title">
                     { lang === 'eng' 
@@ -35,6 +40,7 @@ function SideBar() {
                 <GenderButton id={'male'}/>
                 <GenderButton id={'female'}/>
             </div>
+            
         </div>
     )
 }

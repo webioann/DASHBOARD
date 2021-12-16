@@ -1,6 +1,5 @@
 import React from 'react'
-import { useSelector,useDispatch } from 'react-redux'
-import { putCurrentData } from '../Redux/reduxSlice'
+import { useSelector } from 'react-redux'
 import usePagination from '../hooks/usePagination.js'
 import useFilters from '../hooks/useFilters.js'
 import Birthday from './Birthday'
@@ -11,20 +10,10 @@ import { AiOutlineMail } from "react-icons/ai"
 import './user.css'
 
 function User() {
-    
-    const dispatch = useDispatch()
-    const usersOnPage = useSelector((state) => state.redux.usersOnPage)
-    const currentPage = useSelector((state) => state.redux.currentPage)
-    const data = useSelector((state) => state.redux.data)
-    const gender = useSelector((state) => state.redux.gender)
-    const nationality = useSelector((state) => state.redux.nationality)
+
     const themeMode = useSelector(state => state.dialect.themeMode)
-
-    const filteredData = useFilters(data,gender,nationality) //we receive the filtered data
-        dispatch(putCurrentData(filteredData)) //we put the filtered data in redux.currentdata for use in a Pagination.js
-    const users = usePagination(filteredData,usersOnPage,currentPage)
-
-    console.log(`USERS ==> ${filteredData.length} pc/on app`) //TODO: delete this ...
+    const filteredData = useFilters() //we receive the filtered data
+    const users = usePagination()
 
     if( users.length === 0 ) {        
         return <EmptyList/>
@@ -32,7 +21,7 @@ function User() {
     else {
         return (
             <ul className='user-box'>
-                {users.map((user,index) => (<li className={`user-${themeMode}`} key={user.login.uuid} >
+                {users.map((user) => (<li className={`user-${themeMode}`} key={user.login.uuid} >
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 

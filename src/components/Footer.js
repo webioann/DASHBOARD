@@ -9,7 +9,7 @@ function Footer() {
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     return (
-        <footer className='footer'>
+        <footer className={`footer-${themeMode}`}>
             <div className={`footer-box-${themeMode}`}>
                 <Pagination/>
                 <RequestSize/>

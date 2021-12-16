@@ -1,9 +1,14 @@
 import { useState,useEffect } from "react"
+import { useSelector,useDispatch } from 'react-redux'
+import { getPageNumberArray,setLastPage } from "../Redux/paginRedux"
 
-const usePaginSlicer = (currentData) => {
+const usePaginSlicer = () => {
+
+    const dispatch = useDispatch()
+    const currentData = useSelector((state) => state.pagin.currentData)
     const [pageNumberArray,setPNA] = useState([])
-    const [lastPage,setLastPage] = useState('')
-    const usersOnPage = 20
+    const [lastPage,setLast] = useState('')
+    const usersOnPage = useSelector((state) => state.pagin.usersOnPage)
     let fullArray = []
 
     useEffect(() => {
@@ -24,12 +29,16 @@ const usePaginSlicer = (currentData) => {
             let tempArray = [1,2,3,4,'...',penultPage,lastPage]
             setPNA(tempArray)
         }
-        setLastPage(fullArray.length)
+        setLast(fullArray.length)
 
     },[currentData])
+    // console.log(`PNA = ${pageNumberArray}`)
+    // console.log(`U on P = ${usersOnPage}`)
+    // console.log(`C DATA length = ${currentData.length}`)
+    // dispatch(getPageNumberArray(pageNumberArray))
+    // dispatch(setLastPage(lastPage))
 
     return { pageNumberArray,lastPage }
 }
-
 export default usePaginSlicer;
 

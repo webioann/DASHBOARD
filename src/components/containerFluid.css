@@ -1,0 +1,19 @@
+.container-fluid-light{
+    background-color: var(--lt-all-box-bg);
+}
+.container-fluid-dark{
+    background-color: var(--dk-all-box-bg);
+}
+.container-light,
+.container-dark{
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    overflow: hidden;
+}
+.container-light{
+    background-color: var(--lt-app);
+}
+.container-dark{
+    background-color: var(--dk-app);
+}

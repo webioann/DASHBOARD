@@ -7,10 +7,11 @@ function EmptyList() {
     
     const lang = useSelector((state) => state.dialect.lang)
     const themeMode = useSelector(state => state.dialect.themeMode)
-    const [text,setText] = useState('')
+    const translation = multyLang.emptyList
+    const [text,setText] = useState('text')
 
     useEffect(() => {
-        lang === 'eng' ? setText(multyLang.eng.emptyListMessage) : setText(multyLang.rus.emptyListMessage)
+        lang === 'eng' ? setText(translation.eng) : setText(translation.rus)
     },[lang])
 
     return (

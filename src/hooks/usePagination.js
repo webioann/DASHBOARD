@@ -1,20 +1,22 @@
-import React,{ useState,useEffect } from "react"
+import { useEffect } from "react"
 import { useSelector,useDispatch } from "react-redux";
-import { getCurrentPage } from '../Redux/reduxSlice'
+import { getCurrentPage } from '../Redux/paginRedux'
 
-
-
-const usePagination = ( data,usersOnPage,currentPage) => {
+const usePagination = () => {
 
     const dispatch = useDispatch()
+    const usersOnPage = useSelector((state) => state.pagin.usersOnPage)
+    const currentPage = useSelector((state) => state.pagin.currentPage)
+    const currentData = useSelector(state => state.pagin.currentData)
 
     let end = currentPage * usersOnPage
     let start = end - usersOnPage
-    let slicedData = data.slice(start,end)
+    let slicedData = currentData.slice(start,end)
 
     useEffect(() => {
-        dispatch(getCurrentPage(1)) // after any data changes, the first pagination button becomes active
-    },[data])
+        // after any currentData changes, the first pagination button becomes active
+        dispatch(getCurrentPage(1)) 
+    },[currentData])
 
     return slicedData
 }

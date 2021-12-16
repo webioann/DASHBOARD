@@ -1,13 +1,21 @@
-.footer{
+.footer-light,
+.footer-dark{
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0 15px;
+    padding: 0 25px 15px 15px;
     z-index: 2000;
     font-size: 0.8rem;
 }
+.footer-light{
+    background-color: var(--lt-app);
+}
+.footer-dark{
+    background-color: var(--dk-app);
+}
+
 .footer-box-light,
 .footer-box-dark{
     width: 100%;
@@ -26,9 +34,9 @@
 }
 
 @media (min-width: 576px) {
-    .footer{
+    .footer-light,
+    .footer-dark{
         position: relative;
-        padding: 0 25px 15px 15px;
     }
     .footer-box-light,
     .footer-box-dark{

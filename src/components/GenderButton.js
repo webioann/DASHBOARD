@@ -25,7 +25,9 @@ function GenderButton(props) {
             <div className={(activeGender === buttonId) 
                 ? `button-${themeMode} active-${themeMode}` : `button-${themeMode}`}
                 onClick={() => {dispatch(getGender(buttonId))}}>
-                <i className={`icon-${themeMode}`}>{(activeGender === buttonId) ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}</i>
+                <i className={`icon-${themeMode}`}>
+                    {(activeGender === buttonId) ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
+                </i>
                 { lang === 'eng' ? buttonId : btnText }
             </div>
         </div>

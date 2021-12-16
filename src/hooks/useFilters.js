@@ -1,7 +1,13 @@
 import { useState,useEffect } from 'react'
+import { useSelector,useDispatch } from 'react-redux'
+import { putCurrentData } from '../Redux/paginRedux'
 
-const useFilters = (data,gender,nationality) => {
+const useFilters = () => {
 
+    const dispatch = useDispatch()
+    const data = useSelector((state) => state.redux.data)
+    const gender = useSelector((state) => state.redux.gender)
+    const nationality = useSelector((state) => state.redux.nationality)
     const[filteredData,setFilteredData] = useState([])
 
     useEffect(() => {
@@ -20,6 +26,9 @@ const useFilters = (data,gender,nationality) => {
         
     },[data,gender,nationality])
 
+    //we put the filteredData in redux.currentData for use in a Pagination.js
+    dispatch(putCurrentData(filteredData)) 
+    
     return filteredData
 }
 export default useFilters;
