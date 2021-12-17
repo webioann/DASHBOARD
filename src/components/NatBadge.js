@@ -2,7 +2,7 @@ import React from 'react';
 import nations from '../data/nations'
 import './user.css'
 
-function Nationality(props) {
+function NatBadge(props) {
 
     let currentNation = nations.filter(nation => nation.code === props.user.nat)
     let nationality = currentNation[0].nameEng
@@ -12,14 +12,19 @@ function Nationality(props) {
         borderRadius: '3px',
         padding: '0 5px 3px 5px',
         color: 'beige',
-        }
+    }
+    const cell = {
+        paddingTop: '5px',
+        paddingLeft: '15px', 
+        marginRight: '5px',
+    }
 
     return (
-        <p className='cell'>
+        <p className='cell' style={cell}>
             <span style={bg}>
                 {nationality}
             </span>
         </p>
     )
 }
-export default Nationality;
+export default NatBadge;

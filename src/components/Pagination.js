@@ -1,6 +1,6 @@
 import React from "react"
 import { useSelector,useDispatch } from "react-redux"
-import { getCurrentPage } from '../Redux/paginRedux'
+import { getCurrentPage } from '../Redux/paginSlice'
 import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-icons/md"
 import useButtonCreator from "../hooks/useButtonCreator"
 import "./pagination.css"

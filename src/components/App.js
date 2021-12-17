@@ -1,11 +1,16 @@
 import React from 'react'
-import SideBar from './SideBar'
-import Main from './Main'
-import Footer from './Footer'
-import useFetchData from '../hooks/useFetchData.js'
-import { useSelector } from "react-redux"
 import ContainerFluid from './ContainerFluid'
 import Box from './Box'
+import SideBar from './SideBar'
+import Main from './Main'
+import User from './User'
+import Burger from './Burger'
+
+import Footer from './Footer'
+import Pagination from './Pagination'
+import RequestSize from './RequestSize'
+import useFetchData from '../hooks/useFetchData.js'
+import { useSelector } from "react-redux"
 
 function App() {
   
@@ -17,9 +22,15 @@ function App() {
       <ContainerFluid>
         <Box>
           <SideBar />
-          <Main />
+          <Main>
+            <Burger/>
+            <User/>
+          </Main>
         </Box>
-        <Footer />
+        <Footer>
+          <Pagination/>
+          <RequestSize/>
+        </Footer>
       </ContainerFluid>
     )
   }else if (loading) {

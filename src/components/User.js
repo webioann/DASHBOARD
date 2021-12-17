@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
 import Birthday from './Birthday'
-import Nationality from './Nationality'
+import NatBadge from './NatBadge'
 import EmptyList from './EmptyList'
 import { FaPhone} from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
@@ -13,7 +13,7 @@ function User() {
 
     const themeMode = useSelector(state => state.dialect.themeMode)
     const filteredData = useFilters() //we receive the filtered data
-    const users = usePageCutter()
+    const users = usePageCutter() //slicing data for one page
 
     if( users.length === 0 ) {        
         return <EmptyList/>
@@ -33,7 +33,7 @@ function User() {
                             <p className="age cell">
                                 {user.dob.age} years ( <Birthday user={user.dob.date}/> )
                             </p>
-                            <Nationality  user={user} /> 
+                            <NatBadge  user={user} /> 
                         </div>
                     </div>
                     <div className='contacts'>

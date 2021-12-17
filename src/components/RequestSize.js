@@ -1,6 +1,6 @@
 import React from 'react'
 import {useDispatch,useSelector} from "react-redux"
-import { setRequestSize } from '../Redux/paginRedux'
+import { setRequestSize } from '../Redux/paginSlice'
 import './requestSize.css'
 
 function RequestSize() {

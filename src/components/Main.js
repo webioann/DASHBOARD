@@ -1,14 +1,11 @@
 import React from 'react'
-import User from './User'
-import Burger from './Burger'
 import './main.css'
 
-function Main() {
+function Main(props) {
 
     return (
         <div className='main'>
-            <Burger/>
-            <User/>
+            {props.children}
         </div>
     )
 }
