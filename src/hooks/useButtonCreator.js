@@ -1,18 +1,16 @@
 import { useState,useEffect } from "react"
-import { useSelector,useDispatch } from 'react-redux'
-import { getPageNumberArray,setLastPage } from "../Redux/paginRedux"
+import { useSelector } from 'react-redux'
 
-const usePaginSlicer = () => {
+const useButtonCreator = () => {
 
-    const dispatch = useDispatch()
-    const currentData = useSelector((state) => state.pagin.currentData)
+    const filteredData = useSelector((state) => state.pagin.filteredData)
+    const usersOnPage = useSelector((state) => state.pagin.usersOnPage)
     const [pageNumberArray,setPNA] = useState([])
     const [lastPage,setLast] = useState('')
-    const usersOnPage = useSelector((state) => state.pagin.usersOnPage)
     let fullArray = []
 
     useEffect(() => {
-        let totalPages = Math.ceil( currentData.length / usersOnPage )
+        let totalPages = Math.ceil( filteredData.length / usersOnPage )
         for (let i = 1; i <= totalPages; i++) {
             fullArray.push(i)
         }
@@ -31,14 +29,9 @@ const usePaginSlicer = () => {
         }
         setLast(fullArray.length)
 
-    },[currentData])
-    // console.log(`PNA = ${pageNumberArray}`)
-    // console.log(`U on P = ${usersOnPage}`)
-    // console.log(`C DATA length = ${currentData.length}`)
-    // dispatch(getPageNumberArray(pageNumberArray))
-    // dispatch(setLastPage(lastPage))
+    },[filteredData])
 
     return { pageNumberArray,lastPage }
 }
-export default usePaginSlicer;
+export default useButtonCreator;
 

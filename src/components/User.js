@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import usePagination from '../hooks/usePagination.js'
+import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
 import Birthday from './Birthday'
 import Nationality from './Nationality'
@@ -13,7 +13,7 @@ function User() {
 
     const themeMode = useSelector(state => state.dialect.themeMode)
     const filteredData = useFilters() //we receive the filtered data
-    const users = usePagination()
+    const users = usePageCutter()
 
     if( users.length === 0 ) {        
         return <EmptyList/>
