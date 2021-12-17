@@ -4,6 +4,9 @@ import GenderButton from './GenderButton'
 import LangButton from './LangButton'
 import Cross from './Cross'
 import ThemeBtn from './ThemeBtn'
+import BoothGender from './Boothgender'
+import FemaleGender from './FemaleGender'
+import MaleGender from './MaleGender'
 import { useSelector } from "react-redux"
 import './sideBar.css'
 
@@ -36,9 +39,9 @@ function SideBar() {
                 <p className="title">
                     { lang === 'eng' 
                         ? 'gender filter' : 'фильтрация по полу'} </p>
-                <GenderButton id={'both-sex'}/>
-                <GenderButton id={'male'}/>
-                <GenderButton id={'female'}/>
+                <BoothGender/>
+                <FemaleGender/>
+                <MaleGender/>
             </div>
             
         </div>

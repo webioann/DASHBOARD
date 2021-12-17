@@ -11,6 +11,19 @@ export const multyLang = {
         eng: 'gender filter',
         rus: 'фильтрация по полу',
     },
+    boothGender: {
+        eng: 'booth gender',
+        rus: 'обеих полов',
+    },
+    femaleGender: {
+        eng: 'female gender',
+        rus: 'женского пола',
+    },
+    maleGender: {
+        eng: 'male gender',
+        rus: 'мужского пола',
+    },
+
     month: {
         eng: { jan: 'Jan',feb: 'Feb',mar: 'Mar',
             apr: 'Apr',may: 'May',jun: 'Jun',
