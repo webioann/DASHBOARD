@@ -1,10 +1,9 @@
 import React from 'react'
 import NatList from './NatList'
-import GenderButton from './GenderButton'
 import LangButton from './LangButton'
 import Cross from './Cross'
 import ThemeBtn from './ThemeBtn'
-import BoothGender from './Boothgender'
+import BoothGender from './BoothGender'
 import FemaleGender from './FemaleGender'
 import MaleGender from './MaleGender'
 import { useSelector } from "react-redux"

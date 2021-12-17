@@ -7,7 +7,6 @@ import './burger.css'
 function Burger() {
 
     const dispatch = useDispatch()
-    const panel = useSelector(state => state.redux.panel)
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     const showPanel = () => {
@@ -15,10 +14,7 @@ function Burger() {
     }
     return (
         <span className={`burger-box-${themeMode}`}>
-            <BsFilterSquare 
-                className={`burger-${themeMode}`}
-                onClick={showPanel}
-                />
+            <BsFilterSquare className={`burger-${themeMode}`} onClick={showPanel}/>
         </span>
     )
 }

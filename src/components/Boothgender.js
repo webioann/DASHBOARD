@@ -12,7 +12,6 @@ function BoothGender() {
     const activeGender = useSelector(state => state.redux.gender)
     const themeMode = useSelector(state => state.dialect.themeMode)
     const buttonId = 'both-sex'
-    const key = multyLang.boothGender
     
     return (
         <div className="row">
@@ -22,7 +21,7 @@ function BoothGender() {
                 <i className={`icon-${themeMode}`}>
                     {(activeGender === buttonId) ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                 </i>
-                { useTranslator( key ) }
+                { useTranslator(multyLang.boothGender) }
             </div>
         </div>
     )
