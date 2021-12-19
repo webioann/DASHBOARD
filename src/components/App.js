@@ -17,6 +17,7 @@ function App() {
   const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
   const { loading,error } = useFetchData(requestSize)
 
+
   if ( !loading && !error ) {
     return (
       <ContainerFluid>

@@ -6,6 +6,9 @@
   /* align-items: center;  */
   /* border: 1px solid red; */
 }
+.empty{
+  position: relative;
+}
 .sizer-light,
 .sizer-dark{
   min-width: 60px;

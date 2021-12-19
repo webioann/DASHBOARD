@@ -10,6 +10,7 @@ function Pagination() {
   const dispatch = useDispatch()
   const themeMode = useSelector(state => state.dialect.themeMode)
   const currentPage = useSelector((state) => state.pagin.currentPage)
+
   const { pageNumberArray,lastPage } = useButtonCreator()
 
   const goToPage = (event) => {

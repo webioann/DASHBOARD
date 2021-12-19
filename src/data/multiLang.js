@@ -1,3 +1,4 @@
+
 export const multyLang = {
     emptyList: {
         eng: 'nothing was found for these parameters',
@@ -36,4 +37,8 @@ export const multyLang = {
             oct: 'Окт',nov: 'Ноя',dec: 'Дек'
         },
     },
+};
+export const tool_tip_reqestSise = {
+    eng: 'server request size',
+    rus: 'размер запроса к серверу',
 }

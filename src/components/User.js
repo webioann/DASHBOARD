@@ -4,7 +4,7 @@ import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
 import NatBadge from './NatBadge'
 import EmptyList from './EmptyList'
-import { FaPhone} from 'react-icons/fa'
+import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
 import './user.css'
 
