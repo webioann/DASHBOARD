@@ -20,6 +20,17 @@
   border-radius: 5px;
   font-weight: 800;
   margin: 0 5px;
+  position: relative;
+}
+.sizer-light:hover > .tool-tip{
+  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
+}
+.sizer-dark:hover > .tool-tip{
+  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
 }
 .sizer-light{
   border: 1px solid var(--lt-hover);
@@ -49,10 +60,10 @@
   background-color: var(--dk-active);
 }
 
-.active-light:hover,
+/* .active-light:hover,
 .active-dark:hover{
   cursor: not-allowed;
-}
+} */
 @media (min-width: 576px) {
   .request-size{
     margin: 0px 0px 0px;

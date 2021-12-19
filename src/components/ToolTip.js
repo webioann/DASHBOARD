@@ -6,7 +6,7 @@ import './toolTip.css'
 function ToolTip(props) {
     return (
         <div className="tool-tip">
-            <i className="tail"></i>
+            <span className="tail"></span>
             {useTranslator(props.text)}
         </div>
     )

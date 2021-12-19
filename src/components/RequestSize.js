@@ -22,48 +22,32 @@ function RequestSize() {
 
     return (
         <div className="requst-size">
-            <div className="empty">
-                <ToolTip text={tool_tip_reqestSise}/>
-                <div className={requestSize === small 
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                    id={small}
-                    onClick={setSize}>
-                    {small}
-                </div>
-            </div>
-            <div className="empty">
-                <div className={requestSize === medium
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                    id={medium}
-                    onClick={setSize}>
-                    {medium}
-                </div>
-                <ToolTip text={tool_tip_reqestSise}/>
-            </div>
-            <div className="empty">
-                <div className={requestSize === big 
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                    id={big}
-                    onClick={setSize}>
-                    {big}
-                </div>
-                <ToolTip text={tool_tip_reqestSise}/>
-            </div>
-
-            {/* <div className={requestSize === medium 
+            <div className={requestSize === small 
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                id={medium} 
+                id={small}
+                // onMouseEnter={hovered}
+                // onMouseLeave={un_hovered}
                 onClick={setSize}>
-                    { medium }
+                {small}
+                <ToolTip text={tool_tip_reqestSise}/>
+            </div>
+            <div className={requestSize === medium
+                ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                id={medium}
+                onClick={setSize}>
+                {medium}
+                <ToolTip text={tool_tip_reqestSise}/>
             </div>
             <div className={requestSize === big 
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                id={big} 
+                id={big}
                 onClick={setSize}>
-                    {big} 
-            </div> */}
+                {big}
+                <ToolTip text={tool_tip_reqestSise}/>
+            </div>
         </div>
     )
 }
 export default RequestSize;
 
+// onMouseEnter={this.toggleHover} onMouseLeave={this.tog
