@@ -2,8 +2,6 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
-import useBirthday from '../hooks/useBirthday.js'
-import Birthday from './Birthday'
 import NatBadge from './NatBadge'
 import EmptyList from './EmptyList'
 import { FaPhone} from 'react-icons/fa'
@@ -32,7 +30,7 @@ function User() {
                                 {user.name.first} {user.name.last}
                             </h3>
                             <p className="age cell">
-                                {user.dob.age} years (<Birthday user={user.dob.date}/>)
+                                {user.dob.age} years ( {new Date(user.dob.date).toLocaleDateString()} )
                             </p>
                             <NatBadge  user={user} /> 
                         </div>
@@ -59,4 +57,3 @@ function User() {
 }
 export default User;
 
-  
