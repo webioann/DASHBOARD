@@ -6,6 +6,9 @@ import ThemeBtn from './ThemeBtn'
 import BoothGender from './BoothGender'
 import FemaleGender from './FemaleGender'
 import MaleGender from './MaleGender'
+import Title from './Title'
+import { title_nat_filters,title_gender_filters } from '../data/multiLang'
+
 import { useSelector } from "react-redux"
 import './sideBar.css'
 
@@ -27,17 +30,12 @@ function SideBar() {
             </div>
 
             <div className={`button-grop-${themeMode}`}>
-                <p className="title"> 
-                    { lang === 'eng' 
-                        ? 'nationality filters' 
-                        : 'фильтрация по национальности'}</p> 
+                <Title text={title_nat_filters}/>
                 <NatList />
             </div>
 
             <div className={`button-grop-${themeMode}`}>
-                <p className="title">
-                    { lang === 'eng' 
-                        ? 'gender filter' : 'фильтрация по полу'} </p>
+                <Title text={title_gender_filters}/>
                 <BoothGender/>
                 <FemaleGender/>
                 <MaleGender/>

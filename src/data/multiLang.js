@@ -42,3 +42,11 @@ export const tool_tip_reqestSise = {
     eng: 'server request size',
     rus: 'размер запроса к серверу',
 }
+export const title_nat_filters = {
+    eng: 'nationality filters',
+    rus: 'фильтрация по национальности',
+}
+export const title_gender_filters = {
+    eng: 'gender filter',
+    rus: 'фильтрация по полу',
+}
