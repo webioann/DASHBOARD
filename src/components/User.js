@@ -1,15 +1,17 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React,{useEffect} from 'react'
+import { useSelector,useDispatch } from 'react-redux'
 import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
 import NatBadge from './NatBadge'
 import UserNull from './UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
+import { getUserModalData,showModal } from '../Redux/dialectSlice.js'
 import './style/user.css'
 
 function User() {
 
+    const dispatch = useDispatch()
     const themeMode = useSelector(state => state.dialect.themeMode)
     const filteredData = useFilters() //we receive the filtered data
     const users = usePageCutter() //slicing data for one page
@@ -20,7 +22,14 @@ function User() {
     else {
         return (
             <ul className='user-box'>
-                {users.map((user) => (<li className={`user-${themeMode}`} key={user.login.uuid} >
+                {users.map((user) => (
+                    <li className={`user-${themeMode}`} 
+                        key={user.login.uuid}
+                        onClick={() => { 
+                            dispatch(getUserModalData(user))
+                            dispatch(showModal(true))
+                        }}
+                    >
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import ContainerFluid from './ContainerFluid'
 import Box from './Box'
 import SideBar from './SideBar'
@@ -26,6 +26,8 @@ function App() {
   
   const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
   const { loading,error } = useFetchData(requestSize)
+
+
 
   if ( !loading && !error ) {
     return (

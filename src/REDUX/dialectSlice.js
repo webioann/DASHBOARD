@@ -6,17 +6,19 @@ export const dialectSlice = createSlice({
     initialState: {
         lang: 'eng',
         themeMode: 'light',
-        tool_tip_id: ''
+        userModalData: [],
+        showModal: false,
     },
     reducers: {
         langEng: state => { state.lang = 'eng' },
         langRus: state => { state.lang = 'rus' },
         lightMode: state => { state.themeMode = 'light' },
         darkMode: state => { state.themeMode = 'dark' },
-        getToolTipId: (state,actions) => { state.tool_tip_id = actions.payload}
+        showModal: (state,actions) => { state.showModal = actions.payload},
+        getUserModalData: (state,actions) => { state.userModalData = actions.payload}
     }
 })
 
-export const { langEng,langRus,lightMode,darkMode,getToolTipId } = dialectSlice.actions
+export const { langEng,langRus,lightMode,darkMode,getUserModalData,showModal } = dialectSlice.actions
 
 export default dialectSlice.reducer
