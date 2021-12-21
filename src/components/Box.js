@@ -1,5 +1,5 @@
 import React from 'react'
-import './box.css'
+import './style/box.css'
 
 function Box(props) {
     return (

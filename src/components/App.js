@@ -5,13 +5,13 @@ import SideBar from './SideBar'
 import Main from './Main'
 import User from './User'
 import Burger from './Burger'
-import NatList from './NatList'
+import NatFilterList from './NatFilterList'
 import LangButton from './LangButton'
 import Cross from './Cross'
-import ThemeBtn from './ThemeBtn'
-import BoothGender from './BoothGender'
-import FemaleGender from './FemaleGender'
-import MaleGender from './MaleGender'
+import ThemeToggle from './ThemeToggle'
+import GenderFilterBoth from './GenderFilterBoth'
+import GenderFilterFemale from './GenderFilterFemale'
+import GenderFilterMale from './GenderFilterMale'
 import Title from './Title'
 import Group from './Group'
 import Footer from './Footer'
@@ -33,18 +33,18 @@ function App() {
           <SideBar>
           <Group >
                 <LangButton/>
-                <ThemeBtn/>
+                <ThemeToggle/>
                 <Cross/>
             </Group>
             <Group flexDir={'col'}>
                 <Title text={title_nat_filters}/>
-                <NatList />
+                <NatFilterList />
             </Group>
             <Group flexDir={'col'}>
                 <Title text={title_gender_filters}/>
-                <BoothGender/>
-                <FemaleGender/>
-                <MaleGender/>
+                <GenderFilterBoth/>
+                <GenderFilterFemale/>
+                <GenderFilterMale/>
             </Group>
           </SideBar>
           <Main>

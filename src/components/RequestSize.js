@@ -3,7 +3,7 @@ import ToolTip from './ToolTip'
 import {useDispatch,useSelector} from "react-redux"
 import { setRequestSize } from '../Redux/paginSlice'
 import { getToolTipId } from '../Redux/dialectSlice'
-import './requestSize.css'
+import './style/requestSize.css'
 
 import { tool_tip_reqestSise } from '../data/multiLang'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from "react-redux"
-import './appGlobal.css'
-import './containerFluid.css'
+import './style/appGlobal.css'
+import './style/containerFluid.css'
 
 function ContainerFluid(props) {
 

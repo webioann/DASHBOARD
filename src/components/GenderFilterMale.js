@@ -1,18 +1,18 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import { useDispatch,useSelector } from "react-redux"
 import { getGender } from '../Redux/reduxSlice'
 import { multyLang } from '../data/multiLang'
 import useTranslator from '../hooks/useTranslator'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im"
-import './genderButton.css'
+import './style/genderButton.css'
 
-function BoothGender() {
+function GenderFilterMale() {
 
     const dispatch = useDispatch()
     const activeGender = useSelector(state => state.redux.gender)
     const themeMode = useSelector(state => state.dialect.themeMode)
-    const buttonId = 'both-sex'
-    
+    const buttonId = 'male'
+
     return (
         <div className="row">
             <div className={(activeGender === buttonId) 
@@ -21,11 +21,11 @@ function BoothGender() {
                 <i className={`icon-${themeMode}`}>
                     {(activeGender === buttonId) ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                 </i>
-                { useTranslator(multyLang.boothGender) }
+                { useTranslator(multyLang.maleGender) }
             </div>
         </div>
     )
 }
-export default BoothGender;
+export default GenderFilterMale;
 
 

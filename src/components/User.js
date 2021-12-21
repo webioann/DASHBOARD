@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux'
 import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
 import NatBadge from './NatBadge'
-import EmptyList from './EmptyList'
+import UserNull from './UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-import './user.css'
+import './style/user.css'
 
 function User() {
 
@@ -15,7 +15,7 @@ function User() {
     const users = usePageCutter() //slicing data for one page
 
     if( users.length === 0 ) {        
-        return <EmptyList/>
+        return <UserNull/>
     }
     else {
         return (

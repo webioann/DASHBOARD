@@ -2,7 +2,7 @@ import React from 'react'
 import { BsFilterSquare } from "react-icons/bs"
 import { useDispatch,useSelector } from "react-redux"
 import { panelShow } from '../Redux/reduxSlice'
-import './burger.css'
+import './style/burger.css'
 
 function Burger() {
 

@@ -3,7 +3,7 @@ import nations from '../data/nations'
 import { useDispatch,useSelector } from "react-redux"
 import { getNationality } from '../Redux/reduxSlice'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im";
-import './natList.css'
+import './style/natFilterList.css'
 
 function ListOfNationalities() {
 

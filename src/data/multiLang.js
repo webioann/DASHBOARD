@@ -38,6 +38,10 @@ export const multyLang = {
         },
     },
 };
+export const emptyList = {
+    eng: 'nothing was found for these parameters',
+    rus: 'по этим параметрам ничего не найдено',
+}
 export const tool_tip_reqestSise = {
     eng: 'server request size',
     rus: 'размер запроса к серверу',

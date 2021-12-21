@@ -2,9 +2,9 @@ import React from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { lightMode,darkMode } from '../Redux/dialectSlice'
 import { FaMoon,FaRegSun } from "react-icons/fa"
-import './themeBtn.css'
+import './style/themeToggle.css'
 
-function ThemeBtn() {
+function ThemeToggle() {
 
     const dispatch = useDispatch()
     const themeMode = useSelector(state => state.dialect.themeMode)
@@ -22,4 +22,4 @@ function ThemeBtn() {
         </div>
     )
 }
-export default ThemeBtn;
+export default ThemeToggle;

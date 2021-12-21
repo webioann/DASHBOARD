@@ -1,6 +1,6 @@
 import React,{ useState,useEffect } from 'react'
 import useTranslator from '../hooks/useTranslator'
-import './toolTip.css'
+import './style/toolTip.css'
 
 function ToolTip(props) {
 

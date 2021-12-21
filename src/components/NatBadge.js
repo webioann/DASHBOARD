@@ -1,6 +1,6 @@
 import React from 'react';
 import nations from '../data/nations'
-import './user.css'
+import './style/user.css'
 
 function NatBadge(props) {
 

@@ -3,7 +3,7 @@ import { useSelector,useDispatch } from "react-redux"
 import { getCurrentPage } from '../Redux/paginSlice'
 import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-icons/md"
 import useButtonCreator from "../hooks/useButtonCreator"
-import "./pagination.css"
+import "./style/pagination.css"
 
 function Pagination() {
 

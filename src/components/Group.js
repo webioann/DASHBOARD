@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux"
-import './group.css'
+import './style/group.css'
 
 function Group (props) {
 

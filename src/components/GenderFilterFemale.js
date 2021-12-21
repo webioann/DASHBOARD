@@ -4,9 +4,9 @@ import { getGender } from '../Redux/reduxSlice'
 import { multyLang } from '../data/multiLang'
 import useTranslator from '../hooks/useTranslator'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im"
-import './genderButton.css'
+import './style/genderButton.css'
 
-function FemaleGender() {
+function GenderFilterFemale() {
 
     const dispatch = useDispatch()
     const activeGender = useSelector(state => state.redux.gender)
@@ -26,6 +26,6 @@ function FemaleGender() {
         </div>
     )
 }
-export default FemaleGender;
+export default GenderFilterFemale;
 
 

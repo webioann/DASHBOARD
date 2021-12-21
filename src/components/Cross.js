@@ -2,7 +2,7 @@ import React from 'react'
 import { ImCross } from "react-icons/im"
 import { useDispatch,useSelector } from "react-redux"
 import { panelHide } from '../Redux/reduxSlice'
-import './cross.css'
+import './style/cross.css'
 
 function Cross() {
 
