@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { multyLang } from '../data/multiLang'
 
 export const dialectSlice = createSlice({
     name: 'dialect',
@@ -7,14 +6,14 @@ export const dialectSlice = createSlice({
         lang: 'eng',
         themeMode: 'light',
         userModalData: [],
-        showModal: false,
+        modalVisibility: false,
     },
     reducers: {
         langEng: state => { state.lang = 'eng' },
         langRus: state => { state.lang = 'rus' },
         lightMode: state => { state.themeMode = 'light' },
         darkMode: state => { state.themeMode = 'dark' },
-        showModal: (state,actions) => { state.showModal = actions.payload},
+        showModal: (state,actions) => { state.modalVisibility = actions.payload},
         getUserModalData: (state,actions) => { state.userModalData = actions.payload}
     }
 })
