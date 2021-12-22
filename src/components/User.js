@@ -16,6 +16,7 @@ function User() {
     const filteredData = useFilters() //we receive the filtered data
     const users = usePageCutter() //slicing data for one page
 
+ 
     if( users.length === 0 ) {        
         return <UserNull/>
     }
@@ -25,7 +26,7 @@ function User() {
                 {users.map((user) => (
                     <li className={`user-${themeMode}`} 
                         key={user.login.uuid}
-                        onDoubleClick={() => { 
+                        onClick={() => { 
                             dispatch(getUserModalData(user))
                             dispatch(showModal(true))
                         }}

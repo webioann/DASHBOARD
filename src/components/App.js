@@ -17,7 +17,7 @@ import Group from './Group'
 import Footer from './Footer'
 import Pagination from './Pagination'
 import RequestSize from './RequestSize'
-import UserModal from './UserModal'
+import ModalUser from './ModalUser'
 import useFetchData from '../hooks/useFetchData.js'
 import { useSelector } from "react-redux"
 import { title_nat_filters,title_gender_filters } from '../data/multiLang'
@@ -27,12 +27,10 @@ function App() {
   const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
   const { loading,error } = useFetchData(requestSize)
 
-
-
   if ( !loading && !error ) {
     return (
       <ContainerFluid>
-        <UserModal/>
+        <ModalUser/>
         <Box>
           <SideBar>
           <Group >

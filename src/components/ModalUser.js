@@ -4,10 +4,22 @@ import { showModal } from '../Redux/dialectSlice.js'
 import { ImCross } from "react-icons/im"
 import './style/userModal.css'
 
-function UserModal() {
+function ModalUser() {
 
     const dispatch = useDispatch()
     const modalVisibility = useSelector(state => state.dialect.modalVisibility) 
+    const userModalData = useSelector(state => state.dialect.userModalData)
+    const user = []
+
+    // alert(`user => ${JSON.stringify(user)}`)
+    // alert(`user name => ${user.name.first}`)
+    console.log(`user => ${JSON.stringify(userModalData)}`)
+    // console.log(`user name => ${userModalData[0].name.first}`)
+
+    // useEffect(() => {
+    //     user.push(userModalData)
+    //     console.log(`user => ${user[0].name.first}`)
+    // },[userModalData])
 
     return (
         <div  className={ modalVisibility ? 'modal-container active-modal' : 'modal-container' }>
@@ -16,7 +28,7 @@ function UserModal() {
                     <div className="main-info">
                         <div className="foto"></div>
                         <div className="col">
-                            <h3 className="name">Patric Newman</h3>
+                            <h3 className="name">Patrick Newman</h3>
                             <p className="age">45 years 7/12/1987</p>
                         </div>
                     </div>
@@ -40,6 +52,11 @@ function UserModal() {
                     <p className="left-p">Emaile:</p>
                     <p className="right-p">tyuirdfg@gmail.com</p>
                 </div>
+                <div className="field">
+                    <p className="left-p">Country:</p>
+                    <p className="right-p">Brasil</p>
+                </div>
+
                 <div className="field">
                     <p className="left-p">Street:</p>
                     <p className="right-p">9278 new road</p>
@@ -74,5 +91,5 @@ function UserModal() {
     )
 }
 
-export default UserModal;
+export default ModalUser;
 
