@@ -24,7 +24,7 @@
 
 .modal-window{
     background-color: #fff;
-    padding: 20px 30px;
+    padding: 2rem;
     border-radius: 1rem;
     color: #333333;
     display: flex;
@@ -32,18 +32,15 @@
     flex-direction: column;
     transform: scale(0.7);
     transition: all 0.8s;
-    min-width: 25%;               /* fixe */
+    border: 1px solid green;
 }
 .acive-modal-window{
     transform: scale(1);
 }
 .modal-header{
     display: flex;
-    justify-content: space-between;
-}
-.main-info{
-    flex: auto;
-    display: flex;
+    /* justify-content: space-between; */
+    border: 1px solid blue;
 }
 .foto{
     width: 75px;
@@ -59,7 +56,9 @@
 }
 .field{
     display: flex;
+    justify-content: space-between;
     padding: 8px 10px;
+    border: 1px solid red;
 }
 .field:hover{
     background-color: #eee;
@@ -85,9 +84,13 @@
 .left-p{
     flex: 2;
     font-weight: 600;
+    padding-left: 10px;
+    border: 1px solid red;
 }
 .right-p{
-    flex: 3;
+    flex: 6;
+    overflow: hidden;
+    
 }
 #big-letter::first-letter{
     text-transform: uppercase;

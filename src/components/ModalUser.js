@@ -2,35 +2,29 @@ import React,{useState,useEffect} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { showModal } from '../Redux/dialectSlice.js'
 import { ImCross } from "react-icons/im"
-import './style/userModal.css'
+import './style/modalUser.css'
 
 function ModalUser() {
 
     const dispatch = useDispatch()
     const modalVisibility = useSelector(state => state.dialect.modalVisibility) 
     const userModalData = useSelector(state => state.dialect.userModalData)
-    const user = []
+    let usetor = {...userModalData}
 
-    // alert(`user => ${JSON.stringify(user)}`)
-    // alert(`user name => ${user.name.first}`)
-    console.log(`user => ${JSON.stringify(userModalData)}`)
-    // console.log(`user name => ${userModalData[0].name.first}`)
-
-    // useEffect(() => {
-    //     user.push(userModalData)
-    //     console.log(`user => ${user[0].name.first}`)
-    // },[userModalData])
+    useEffect(() => {
+        console.log(`USETOR => ${JSON.stringify(usetor)}`)
+        console.log(`USETOR.Name => ${usetor.name.last}`)
+        console.log(userModalData.cell)
+    },[userModalData])
 
     return (
         <div  className={ modalVisibility ? 'modal-container active-modal' : 'modal-container' }>
             <div className={modalVisibility ? 'modal-window active-modal-window' : 'modal-window'}>
                 <header className="modal-header">
-                    <div className="main-info">
-                        <div className="foto"></div>
-                        <div className="col">
-                            <h3 className="name">Patrick Newman</h3>
-                            <p className="age">45 years 7/12/1987</p>
-                        </div>
+                    <div className="foto"></div>
+                    <div className="col">
+                        <h3 className="name">{userModalData.nat} Newman</h3>
+                        <p className="age">45 years 7/12/1987</p>
                     </div>
                     <i className="close-modal">
                         <ImCross onClick={() => { dispatch(showModal(false))}}/>
@@ -38,7 +32,7 @@ function ModalUser() {
                 </header>
                 <div className="field">
                     <p className="left-p">Gender:</p>
-                    <p className="right-p">female</p>
+                    <p className="right-p">{userModalData.gender}</p>
                 </div>
                 <div className="field">
                     <p className="left-p">Nationality:</p>
@@ -46,11 +40,11 @@ function ModalUser() {
                 </div>
                 <div className="field">
                     <p className="left-p">Phone:</p>
-                    <p className="right-p">(098)-456-46-14</p>
+                    <p className="right-p">{userModalData.phone}</p>
                 </div>
                 <div className="field">
                     <p className="left-p">Emaile:</p>
-                    <p className="right-p">tyuirdfg@gmail.com</p>
+                    <p className="right-p">{userModalData.email}</p>
                 </div>
                 <div className="field">
                     <p className="left-p">Country:</p>

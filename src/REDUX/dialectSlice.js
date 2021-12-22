@@ -5,7 +5,7 @@ export const dialectSlice = createSlice({
     initialState: {
         lang: 'eng',
         themeMode: 'light',
-        userModalData: [],
+        userModalData: '',
         modalVisibility: false,
     },
     reducers: {

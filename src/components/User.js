@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{ useState,useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
@@ -16,7 +16,6 @@ function User() {
     const filteredData = useFilters() //we receive the filtered data
     const users = usePageCutter() //slicing data for one page
 
- 
     if( users.length === 0 ) {        
         return <UserNull/>
     }
@@ -24,13 +23,12 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                    <li className={`user-${themeMode}`} 
+                    <li className={`user-${themeMode}`}
                         key={user.login.uuid}
-                        onClick={() => { 
-                            dispatch(getUserModalData(user))
+                        onClick={() => {
                             dispatch(showModal(true))
-                        }}
-                    >
+                            dispatch(getUserModalData(user))
+                        }} >
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 

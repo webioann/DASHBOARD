@@ -4,7 +4,7 @@
   "description": "webpack config for react progects",
   "main": "index.js",
   "scripts": {
-    "start": "webpack server --open --hot --mode development",
+    "start": "webpack server --open --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --watch"
   },
