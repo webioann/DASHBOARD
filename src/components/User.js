@@ -25,7 +25,7 @@ function User() {
                 {users.map((user) => (
                     <li className={`user-${themeMode}`} 
                         key={user.login.uuid}
-                        onClick={() => { 
+                        onDoubleClick={() => { 
                             dispatch(getUserModalData(user))
                             dispatch(showModal(true))
                         }}

@@ -1,4 +1,4 @@
-.user-modal{
+.modal-container{
     position: fixed;
     top: 0;
     left: 0;
@@ -14,6 +14,7 @@
     opacity: 0;
     pointer-events: none;
     z-index: 10000;
+    font-size: 1.5rem; /* bigger font size*/
     transition: all 0.8s;
 }
 .active-modal{
@@ -23,9 +24,7 @@
 
 .modal-window{
     background-color: #fff;
-    padding: 20px;
-    width: 25%;
-    height: 25vh;
+    padding: 20px 30px;
     border-radius: 1rem;
     color: #333333;
     display: flex;
@@ -33,6 +32,7 @@
     flex-direction: column;
     transform: scale(0.7);
     transition: all 0.8s;
+    min-width: 25%;               /* fixe */
 }
 .acive-modal-window{
     transform: scale(1);
@@ -40,7 +40,6 @@
 .modal-header{
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
 }
 .main-info{
     flex: auto;
@@ -52,11 +51,18 @@
     border-radius: 50%;
     background-color: #bbb;
 }
-.row{
+.col{
     padding: 9px 12px 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.field{
+    display: flex;
+    padding: 8px 10px;
+}
+.field:hover{
+    background-color: #eee;
 }
 .name{
     letter-spacing: 1px;
@@ -73,6 +79,16 @@
     transition: all 0.3s;
 }
 .close-modal:hover{
-    background-color: rgba(0,0,0,0.05);
+    background-color: #eee;
     cursor: pointer;
+}
+.left-p{
+    flex: 2;
+    font-weight: 600;
+}
+.right-p{
+    flex: 3;
+}
+#big-letter::first-letter{
+    text-transform: uppercase;
 }
