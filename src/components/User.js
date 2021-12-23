@@ -6,7 +6,7 @@ import NatBadge from './NatBadge'
 import UserNull from './UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-import { getUserModalData,showModal } from '../Redux/dialectSlice.js'
+import { getUserLoginUuid,showModal,putDataForModal } from '../Redux/dialectSlice.js'
 import './style/user.css'
 
 function User() {
@@ -27,9 +27,9 @@ function User() {
                         key={user.login.uuid}
                         onClick={() => {
                             dispatch(showModal(true))
-                            dispatch(getUserModalData(user))
+                            dispatch(getUserLoginUuid(user.login.uuid))
                         }} >
-                    <div className="pass">
+                        <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
                         </div>

@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { showModal } from '../Redux/dialectSlice.js'
 import { ImCross } from "react-icons/im"
@@ -7,32 +7,24 @@ import './style/modalUser.css'
 function ModalUser() {
 
     const dispatch = useDispatch()
-    const modalVisibility = useSelector(state => state.dialect.modalVisibility) 
-    const userModalData = useSelector(state => state.dialect.userModalData)
-    let usetor = {...userModalData}
-
-    useEffect(() => {
-        console.log(`USETOR => ${JSON.stringify(usetor)}`)
-        console.log(`USETOR.Name => ${usetor.name.last}`)
-        console.log(userModalData.cell)
-    },[userModalData])
+    const active = useSelector(state => state.dialect.modalVisibility) 
 
     return (
-        <div  className={ modalVisibility ? 'modal-container active-modal' : 'modal-container' }>
-            <div className={modalVisibility ? 'modal-window active-modal-window' : 'modal-window'}>
+        <div  className={ active ? 'modal-container active-modal' : 'modal-container' }>
+            <div className={ active ? 'modal-window active-modal-window' : 'modal-window'}>
                 <header className="modal-header">
                     <div className="foto"></div>
                     <div className="col">
-                        <h3 className="name">{userModalData.nat} Newman</h3>
+                        <h3 className="name">ttt Newman</h3>
                         <p className="age">45 years 7/12/1987</p>
                     </div>
                     <i className="close-modal">
-                        <ImCross onClick={() => { dispatch(showModal(false))}}/>
+                        <ImCross onClick={() => {dispatch(showModal(false))}}/>
                     </i>
                 </header>
                 <div className="field">
                     <p className="left-p">Gender:</p>
-                    <p className="right-p">{userModalData.gender}</p>
+                    <p className="right-p">ttt</p>
                 </div>
                 <div className="field">
                     <p className="left-p">Nationality:</p>
@@ -40,11 +32,11 @@ function ModalUser() {
                 </div>
                 <div className="field">
                     <p className="left-p">Phone:</p>
-                    <p className="right-p">{userModalData.phone}</p>
+                    <p className="right-p">ttt</p>
                 </div>
                 <div className="field">
                     <p className="left-p">Emaile:</p>
-                    <p className="right-p">{userModalData.email}</p>
+                    <p className="right-p">ttt</p>
                 </div>
                 <div className="field">
                     <p className="left-p">Country:</p>
@@ -87,3 +79,4 @@ function ModalUser() {
 
 export default ModalUser;
 
+//     setUser(JSON.parse(JSON.stringify(raw)))
