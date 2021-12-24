@@ -28,6 +28,7 @@ function User() {
                         onClick={() => {
                             dispatch(showModal(true))
                             dispatch(getUserLoginUuid(user.login.uuid))
+                            dispatch(putDataForModal(user))
                         }} >
                         <div className="pass">
                         <div className="avatar">

@@ -8,14 +8,17 @@ function ModalUser() {
 
     const dispatch = useDispatch()
     const active = useSelector(state => state.dialect.modalVisibility) 
-
+    const data = useSelector(state => state.redux.data) 
+    const userLoginUuid = useSelector(state => state.dialect.userLoginUuid) 
+    // const filteredData = useSelector(state => state.pagin.filteredData)
+    
     return (
         <div  className={ active ? 'modal-container active-modal' : 'modal-container' }>
             <div className={ active ? 'modal-window active-modal-window' : 'modal-window'}>
                 <header className="modal-header">
                     <div className="foto"></div>
                     <div className="col">
-                        <h3 className="name">ttt Newman</h3>
+                        <h3 className="name">tttt Newman</h3>
                         <p className="age">45 years 7/12/1987</p>
                     </div>
                     <i className="close-modal">

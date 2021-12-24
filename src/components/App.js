@@ -32,7 +32,7 @@ function App() {
   if ( !loading && !error ) {
     return (
       <ContainerFluid>
-        {/* <ModalUser/> */}
+        <ModalUser/>
         {/* <ChartModal/> */}
         <Box>
           <SideBar>
