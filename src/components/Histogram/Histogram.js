@@ -1,12 +1,17 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import { useSelector } from "react-redux"
 import  nations  from '../../data/nations'
+import useChartDataCreator from '../../hooks/useChartDataCreator'
 import './histogram.css'
 
 function Histogram() {
 
     const lang = useSelector((state) => state.dialect.lang)
     nations.map(item => { Object.assign( item , { size: 200 } )})
+
+    const wrong = useChartDataCreator()
+
+    console.log(`Histog ==> ${JSON.stringify(nations)}`)
 
     return (
         <ul className="chart">
@@ -31,7 +36,3 @@ function Histogram() {
 }
 export default Histogram;
 
-// onClick={() => { console.log(`DATA --> ${data} == ${JSON.stringify(nations)}`) }}
-
-
-// (<li className="chart-item" key={unit.code} ></li>))}
