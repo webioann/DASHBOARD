@@ -11,17 +11,19 @@
     align-items: center;
     background: rgba( 17, 16, 16, 0.5 );
     backdrop-filter: blur(7px);
-    opacity: 0;
-    pointer-events: none;
-
-    z-index: 10000;
-
     font-size: 1.5rem; /* bigger font size*/
     transition: all 0.8s;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    visibility: hidden;
+
 }
 .active-modal{
     pointer-events: all;
     opacity: 1;
+    visibility: visible;
+    z-index: 10000;
 }
 
 .modal-window{

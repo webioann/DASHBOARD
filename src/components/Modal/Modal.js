@@ -14,10 +14,9 @@ function Modal(props) {
         <div  className={ active ? 'modal-container active-modal' : 'modal-container' }>
             <div className={ active ? 'modal-window active-modal-window' : 'modal-window'}>
                 <div className="close-modal">
-                <i className="cross">
-                <ImCross onClick={() => {dispatch(showModal(false))}}/>
-            </i>
-
+                    <i className="cross">
+                        <ImCross onClick={() => {dispatch(showModal(false))}}/>
+                    </i>
                 </div>
                 { props.children }
             </div>
