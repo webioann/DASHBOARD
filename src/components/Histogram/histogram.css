@@ -1,6 +1,9 @@
 .chart{
     background-color: #bbb;
     padding: 10px;
+}
+.title-for{
+    text-align: center;
 } 
 .chart-item{
     display: flex;
