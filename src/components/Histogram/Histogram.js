@@ -24,7 +24,7 @@ function Histogram() {
                         { lang === 'eng' ? unit.nameEng : unit.nameRus }
                     </span>
                     <div className="histogram" 
-                        style={{ backgroundColor: unit.color, width: `${unit.size}px`}}>
+                        style={{ backgroundColor: unit.color, width: `${unit.dataVolum * 100}px`}}>
                     </div> 
                 </li>
                 }else{
