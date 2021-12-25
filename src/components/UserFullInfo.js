@@ -1,29 +1,25 @@
 import React,{useState,useEffect,useRef} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { showModal } from '../Redux/dialectSlice.js'
-import { ImCross } from "react-icons/im"
 import './style/modalUser.css'
 
-function ModalUser() {
+function UserFullInfo() {
 
     const dispatch = useDispatch()
     const active = useSelector(state => state.dialect.modalVisibility) 
-    const data = useSelector(state => state.redux.data) 
-    const userLoginUuid = useSelector(state => state.dialect.userLoginUuid) 
-    // const filteredData = useSelector(state => state.pagin.filteredData)
-    
+    const modalData = useSelector(state => state.dialect.modalData) 
+   
     return (
         <div  className={ active ? 'modal-container active-modal' : 'modal-container' }>
             <div className={ active ? 'modal-window active-modal-window' : 'modal-window'}>
                 <header className="modal-header">
                     <div className="foto"></div>
                     <div className="col">
-                        <h3 className="name">tttt Newman</h3>
+                        <h3 className="name">{modalData.nat} Newman</h3>
                         <p className="age">45 years 7/12/1987</p>
                     </div>
-                    <i className="close-modal">
+                    {/* <i className="close-modal">
                         <ImCross onClick={() => {dispatch(showModal(false))}}/>
-                    </i>
+                    </i> */}
                 </header>
                 <div className="field">
                     <p className="left-p">Gender:</p>
@@ -80,6 +76,6 @@ function ModalUser() {
     )
 }
 
-export default ModalUser;
+export default UserFullInfo;
 
 //     setUser(JSON.parse(JSON.stringify(raw)))

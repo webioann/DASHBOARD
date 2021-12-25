@@ -2,7 +2,9 @@ import React from 'react'
 import ToolTip from './ToolTip'
 import {useDispatch,useSelector} from "react-redux"
 import { setRequestSize } from '../Redux/paginSlice'
-import { getToolTipId } from '../Redux/dialectSlice'
+import { showModal,getToolTipId } from '../Redux/dialectSlice'
+import { ImCross } from "react-icons/im"
+
 import './style/requestSize.css'
 
 import { tool_tip_reqestSise } from '../data/multiLang'
@@ -24,6 +26,8 @@ function RequestSize() {
 
     return (
         <div className="requst-size">
+                <ImCross onClick={() => {dispatch(showModal(true))}}/>
+
             <div className={requestSize === small 
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
                 id={small}

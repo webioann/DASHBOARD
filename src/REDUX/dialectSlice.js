@@ -5,7 +5,7 @@ export const dialectSlice = createSlice({
     initialState: {
         lang: 'eng',
         themeMode: 'light',
-        modalData: {},
+        modalData: '',
         userLoginUuid: '',
         modalVisibility: false,
     },
@@ -14,7 +14,7 @@ export const dialectSlice = createSlice({
         langRus: state => { state.lang = 'rus' },
         lightMode: state => { state.themeMode = 'light' },
         darkMode: state => { state.themeMode = 'dark' },
-        putDataForModal: (state,actions) => { state.modalData = JSON.parse(JSON.stringify(actions.payload))},
+        putDataForModal: (state,actions) => { state.modalData = actions.payload},
         showModal: (state,actions) => { state.modalVisibility = actions.payload},
         getUserLoginUuid: (state,actions) => { state.userLoginUuid = actions.payload}
     }

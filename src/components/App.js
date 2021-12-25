@@ -17,7 +17,9 @@ import Group from './Group'
 import Footer from './Footer'
 import Pagination from './Pagination'
 import RequestSize from './RequestSize'
-import ModalUser from './ModalUser'
+import Modal from './Modal/Modal'
+import Histogram from './Histogram/Histogram'
+import UserFullInfo from './UserFullInfo'
 import useFetchData from '../hooks/useFetchData.js'
 import { useSelector } from "react-redux"
 import { title_nat_filters,title_gender_filters } from '../data/multiLang'
@@ -32,7 +34,10 @@ function App() {
   if ( !loading && !error ) {
     return (
       <ContainerFluid>
-        <ModalUser/>
+        <Modal>
+          <Histogram/>
+        </Modal>
+        {/* <UserFullInfo/> */}
         {/* <ChartModal/> */}
         <Box>
           <SideBar>
