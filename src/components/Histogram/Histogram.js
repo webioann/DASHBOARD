@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState,useEffect } from 'react'
 import { useSelector } from "react-redux"
 import  nations  from '../../data/nations'
 import useChartDataCreator from '../../hooks/useChartDataCreator'
@@ -8,13 +8,24 @@ function Histogram() {
 
     const lang = useSelector((state) => state.dialect.lang)
     const requestSize = useSelector(state => state.pagin.requestSize)
+    const active = useSelector(state => state.dialect.modalVisibility) 
 
+    const wrong = useChartDataCreator()
+    const [part,setPart] = useState(0)
     let fraction = ''
     if( requestSize === 50 ) { fraction = 100 }
     if( requestSize === 150 ) { fraction = 33 }
     if( requestSize === 250 ) { fraction = 20 }
+    // let uni = fraction / 500
 
-    const wrong = useChartDataCreator()
+
+    // useEffect(() => {
+    //     let sum = 0
+    //     for( let i = 0; i <= 500; i++) {
+    //         setTimeout(() => { sum + uni },1)
+    //     }
+    //     setPart(sum)
+    // },[])
 
     // console.log(`Histog ==> ${JSON.stringify(nations)}`)
 
