@@ -21,12 +21,13 @@ function RequestSize() {
         dispatch(event.target.id)
     }
     const small = 50
-    const medium = 140
-    const big = 550
+    const medium = 150
+    const big = 250
 
     return (
         <div className="requst-size">
-                <ImCross onClick={() => {dispatch(showModal(true))}}/>
+                {/* FIXME: delete this */}
+                <ImCross onClick={() => {dispatch(showModal(true))}}/>  
 
             <div className={requestSize === small 
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
