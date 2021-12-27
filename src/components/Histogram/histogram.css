@@ -33,7 +33,7 @@
     padding-right: 10px;
 }
 .hist-box{
-    flex: 8;
+    flex: 9;
 
 }
 .histogram{
@@ -42,6 +42,32 @@
     display: flex;
     border-left: 8px solid rgba(0, 0, 0, 0.5);
     padding: 5px;
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5); */
+
+}
+.range-box{
+    min-width: 100%;
+    padding: 10px;
+}
+.range{
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 26px 0px rgba(34, 60, 80, 0.29);
+
+}
+.range-men{
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-right: 3px solid rgba(0, 0, 0, 0.5);
+}
+.range-women{
+    padding: 5px;
+    text-align: center;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-left: 3px solid rgba(0, 0, 0, 0.5);
 
 }

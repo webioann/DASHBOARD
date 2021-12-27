@@ -1,18 +1,25 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import nations from '../data/nations'
 
 const useChartDataCreator = () => {
 
     const data = useSelector((state) => state.redux.data)
-    const [chartData,setChartData] = useState([])
+    const [totalMen,setTotalMen] = useState('')
+    const [totalWomen,setTotalWomen] = useState('')
 
-    nations.map(unit => {
-        let overlap = data.filter(item => item.nat === unit.code)
-        let volum = overlap.length
-        Object.assign( unit , { dataVolum: volum } )
-    })
+    useEffect(() => {
+        nations.map(unit => {
+            let overlap = data.filter(item => item.nat === unit.code)
+            let volum = overlap.length
+            Object.assign( unit , { dataVolum: volum } )
+        }) 
+        const rawMen = data.filter(item => item.gender === 'male')
+        const rawWomen = data.filter(item => item.gender === 'female')
+        setTotalMen(rawMen.length)
+        setTotalWomen(rawWomen.length)
+    },[data])
 
-    return chartData
+    return { totalMen,totalWomen }
 }
 export default useChartDataCreator;
