@@ -7,7 +7,6 @@ import './style/cross.css'
 function Cross() {
 
     const dispatch = useDispatch()
-    const panel = useSelector(state => state.redux.panel)
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     const hidePanel = () => {

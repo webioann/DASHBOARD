@@ -24,8 +24,6 @@ import useFetchData from '../hooks/useFetchData.js'
 import { useSelector } from "react-redux"
 import { title_nat_filters,title_gender_filters } from '../data/multiLang'
 
-import ChartModal from './ChartModal'
-
 function App() {
   
   const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
@@ -38,7 +36,6 @@ function App() {
           <Histogram/>
         </Modal>
         {/* <UserFullInfo/> */}
-        {/* <ChartModal/> */}
         <Box>
           <SideBar>
           <Group >

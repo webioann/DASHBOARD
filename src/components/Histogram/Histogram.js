@@ -16,13 +16,15 @@ function Histogram() {
     if( requestSize === 50 ) { fraction = 100 }
     if( requestSize === 150 ) { fraction = 33 }
     if( requestSize === 250 ) { fraction = 20 }
-    // let uni = fraction / 500
+    let uni = fraction / 1500
 
+    // active ? (
 
+    // ) : console.log(`HISTOGRAM IS HIDDEN`)
     // useEffect(() => {
     //     let sum = 0
-    //     for( let i = 0; i <= 500; i++) {
-    //         setTimeout(() => { sum + uni },1)
+    //     for( let i = 0; i <= 1500; i++) {
+    //         setTimeout(() => { i + uni },1)
     //     }
     //     setPart(sum)
     // },[])

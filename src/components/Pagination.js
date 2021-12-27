@@ -44,7 +44,6 @@ function Pagination() {
             {pageNumber}
           </span>
         ))}
-
       <MdOutlineKeyboardArrowRight 
         onClick={nextPage} 
         className={currentPage === lastPage ? `blocked-arrow-${themeMode}` : `arrow-${themeMode}`} />

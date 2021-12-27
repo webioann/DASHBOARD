@@ -1,4 +1,4 @@
-import React,{ useState,useEffect } from 'react'
+import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
@@ -25,6 +25,7 @@ function User() {
                 {users.map((user) => (
                     <li className={`user-${themeMode}`}
                         key={user.login.uuid}
+                        //FIXME: finish UserFullInfo
                         onClick={() => {
                             dispatch(showModal(true))
                             dispatch(getUserLoginUuid(user.login.uuid))

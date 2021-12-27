@@ -4,11 +4,8 @@ import {useDispatch,useSelector} from "react-redux"
 import { setRequestSize } from '../Redux/paginSlice'
 import { showModal,getToolTipId } from '../Redux/dialectSlice'
 import { ImCross } from "react-icons/im"
-
-import './style/requestSize.css'
-
 import { tool_tip_reqestSise } from '../data/multiLang'
-
+import './style/requestSize.css'
 
 function RequestSize() {
 
@@ -55,4 +52,3 @@ function RequestSize() {
 }
 export default RequestSize;
 
-// onMouseEnter={this.toggleHover} onMouseLeave={this.tog

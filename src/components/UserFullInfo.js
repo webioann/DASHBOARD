@@ -7,7 +7,7 @@ function UserFullInfo() {
     const dispatch = useDispatch()
     const active = useSelector(state => state.dialect.modalVisibility) 
     const modalData = useSelector(state => state.dialect.modalData) 
-   
+
     return (
         <div  className={ active ? 'modal-container active-modal' : 'modal-container' }>
             <div className={ active ? 'modal-window active-modal-window' : 'modal-window'}>
@@ -75,7 +75,5 @@ function UserFullInfo() {
         </div>
     )
 }
-
 export default UserFullInfo;
 
-//     setUser(JSON.parse(JSON.stringify(raw)))

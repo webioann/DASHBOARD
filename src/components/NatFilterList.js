@@ -5,7 +5,7 @@ import { getNationality } from '../Redux/reduxSlice'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im";
 import './style/natFilterList.css'
 
-function ListOfNationalities() {
+function NatFilterList() {
 
     const dispatch = useDispatch()
     const activeNationality = useSelector(state => state.redux.nationality)
@@ -26,13 +26,13 @@ function ListOfNationalities() {
                 key={nation.code}
                 onClick={chooseNationality} 
                 id={nation.code}>
-                    <i className={`icon-${themeMode}`}>
-                        {(activeNationality === nation.code) 
-                        ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
-                    </i>
+                <i className={`icon-${themeMode}`}>
+                    {(activeNationality === nation.code) 
+                    ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
+                </i>
                 { lang === 'eng' ? nation.nameEng : nation.nameRus }
             </li>))}   
         </ul>
     )
 }
-export default ListOfNationalities;
+export default NatFilterList;
