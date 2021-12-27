@@ -19,7 +19,7 @@ function NatFilterList() {
 
     return (
         <ul className= 'list'>
-            {nations.map((nation) =>(
+            {nations.map((nation) => (
             <li className={activeNationality === nation.code 
                 ? `nat-${themeMode} active-${themeMode}`
                 : `nat-${themeMode}` }

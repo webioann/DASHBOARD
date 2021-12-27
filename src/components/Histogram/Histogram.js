@@ -18,33 +18,25 @@ function Histogram() {
     if( requestSize === 250 ) { fraction = 20 }
     let uni = fraction / 1500
 
-    // active ? (
-
-    // ) : console.log(`HISTOGRAM IS HIDDEN`)
-    // useEffect(() => {
-    //     let sum = 0
-    //     for( let i = 0; i <= 1500; i++) {
-    //         setTimeout(() => { i + uni },1)
-    //     }
-    //     setPart(sum)
-    // },[])
-
-    // console.log(`Histog ==> ${JSON.stringify(nations)}`)
-
     return (
         <ul className="chart">
-            <div className="title-for">
-                { lang === 'eng' ? nations[0].nameEng : nations[0].nameRus }
-            </div>
+            <header className="header">
+                <h3>
+                    { lang === 'eng' ? nations[0].chartTitleEng : nations[0].chartTitleRus }
+                </h3>
+                <span>{requestSize}</span>
+            </header>
             { nations.map( unit  => { if (unit.code !== 'ALL') {
                 return <li className="chart-item" key={unit.code} >
-                    <span className="chart-title">
+                    <div className="chart-title">
                         { lang === 'eng' ? unit.nameEng : unit.nameRus }
-                    </span>
-                    <div className="histogram" 
-                        style={{ backgroundColor: unit.color, width: `${unit.dataVolum * fraction}px`}}>
-                            {unit.dataVolum}
-                    </div> 
+                    </div>
+                    <div className="hist-box">
+                        <div className="histogram" 
+                            style={{ backgroundColor: unit.color, width: `${unit.dataVolum * fraction}px`}}>
+                                {unit.dataVolum}
+                        </div> 
+                    </div>
                 </li>
                 }else{
                     return null

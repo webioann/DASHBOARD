@@ -1,5 +1,5 @@
 const nations = [
-    { code:'ALL',size: 0,  dataVolum:  0,   nameEng:"All nationality", nameRus: "Все национальности", color:'blue'},
+    { code:'ALL',chartTitleEng: 'Total users :',  chartTitleRus: 'Всего пользователей :',  nameEng:"All nationality", nameRus: "Все национальности", color:'blue'},
     { code:'BR', size: 0,  dataVolum:  0,   nameEng:"Brazilian",       nameRus: "Бразилийцы",         color:'crimson'},
     { code:'AU', size: 0,  dataVolum:  0,   nameEng:"Australian",      nameRus: "Австралийцы",        color:'brown'},
     { code:'CA', size: 0,  dataVolum:  0,   nameEng:"Canadian",        nameRus: "Канадцы",            color:'blueviolet'},
@@ -17,6 +17,7 @@ const nations = [
     { code:'NZ', size: 0,  dataVolum:  0,   nameEng:"New Zealand",     nameRus: "Новозеландцы",       color:'darkOrange'},
     { code:'TR', size: 0,  dataVolum:  0,   nameEng:"Turkish",         nameRus: "Турки",              color:'tomato'},
     { code:'US', size: 0,  dataVolum:  0,   nameEng:"American",        nameRus: "Американцы",         color:'cadetBlue'},
+
 ]
     
 export default nations;

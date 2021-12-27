@@ -1,33 +1,47 @@
 .chart{
-    padding: 10px;
-    /* background-color: #eee; */
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0px 0px 26px 0px rgba(34, 60, 80, 0.29);
+
 }
-.title-for{
-    text-align: center;
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 } 
+.header > span{
+    padding-left: 10px;
+    font-weight: 700;
+}
 .chart-item{
     display: flex;
     align-items: center;
+    font-weight: 500;
     margin-bottom: 5px;
     padding: 5px 0;
     color: #fff;
 
 }
 .chart-title{
-    min-width: 140px;
+    flex: 2;
+    min-width: 160px;
     color: #000;
     text-align: right;
     padding-right: 10px;
-    font-weight: 600;
+}
+.hist-box{
+    flex: 8;
+
 }
 .histogram{
     min-width: 30px;
     border-radius: 0 5px 5px 0;
     display: flex;
-    border: 1px solid #bbb;
-    border-left: 6px solid #bbb;
-    padding: 10px 5px;
+    border-left: 8px solid rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5);
+
 }
