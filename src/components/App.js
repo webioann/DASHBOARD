@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{ useRef,useEffect } from 'react'
 import ContainerFluid from './ContainerFluid'
 import Box from './Box'
 import SideBar from './SideBar'
@@ -26,6 +26,13 @@ import { title_nat_filters,title_gender_filters } from '../data/multiLang'
 
 function App() {
   
+  // --- it is RENDER COUNTER function
+  const newRender = useRef(1)
+  useEffect(() => {
+    newRender.current++
+    console.log(`RENDER --> ${newRender.current} times`)
+  })
+  //------
   const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
   const { loading,error } = useFetchData(requestSize)
 
