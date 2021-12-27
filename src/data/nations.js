@@ -1,5 +1,8 @@
 const nations = [
-    { code:'ALL',chartTitleEng: 'Total users :',  chartTitleRus: 'Всего пользователей :',  nameEng:"All nationality", nameRus: "Все национальности", color:'blue'},
+    { code:'ALL',
+        chartTitleEng: 'Total users :',  chartTitleRus: 'Всего пользователей :',
+        rangeTitleEng: 'Male to female ratio',  rangeTitleRus: 'Соотношение полов',
+        nameEng:"All nationality", nameRus: "Все национальности", color:'blue'},
     { code:'BR', size: 0,  dataVolum:  0,   nameEng:"Brazilian",       nameRus: "Бразилийцы",         color:'crimson'},
     { code:'AU', size: 0,  dataVolum:  0,   nameEng:"Australian",      nameRus: "Австралийцы",        color:'brown'},
     { code:'CA', size: 0,  dataVolum:  0,   nameEng:"Canadian",        nameRus: "Канадцы",            color:'blueviolet'},

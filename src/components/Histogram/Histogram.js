@@ -1,33 +1,22 @@
-import React,{ useState,useEffect } from 'react'
+import React from 'react'
 import { useSelector } from "react-redux"
 import  nations  from '../../data/nations'
-import useChartDataCreator from '../../hooks/useChartDataCreator'
+import useHistogramData from '../../hooks/useHistogramData'
+import useGenderHistogram from '../../hooks/useGenderHistogram'
 import './histogram.css'
 
 function Histogram() {
 
     const lang = useSelector((state) => state.dialect.lang)
     const requestSize = useSelector(state => state.pagin.requestSize)
-    const active = useSelector(state => state.dialect.modalVisibility)
-    const [menPercent,setMenPercent] = useState('')
-    const [womenPercent,setWomenPercent] = useState('')
-    
-
-    const { totalMen,totalWomen } = useChartDataCreator()
-
-    useEffect(() => {
-        let onePercentage = (totalMen + totalWomen) / 100
-        let men = Math.round( onePercentage * totalMen )
-        let women = 100 - men
-        setMenPercent(`${men}%`)
-        setWomenPercent(`${women}%`)
-    },[totalMen,totalWomen])
+    // const active = useSelector(state => state.dialect.modalVisibility)
+    const EMPTY = useHistogramData()
+    const { totalMen,totalWomen } = useGenderHistogram()
     
     let fraction = ''
     if( requestSize === 50 ) { fraction = 80 }
     if( requestSize === 150 ) { fraction = 40 }
     if( requestSize === 250 ) { fraction = 25 }
-    let uni = fraction / 1500
 
     return (
         <ul className="chart">
@@ -54,12 +43,17 @@ function Histogram() {
                 }
             })} 
             <div className="range-box">
+                <header className="header">
+                    <h4>
+                        { lang === 'eng' ? nations[0].rangeTitleEng : nations[0].rangeTitleRus }
+                    </h4>
+                </header>
                 <div className="range">
-                    <div style={{width: menPercent,backgroundColor: 'blue'}} className="range-men">
-                        men
+                    <div style={{width: `${totalMen}%`}} className="range-men">
+                        {`men  ${totalMen}%`}
                     </div>
-                    <div style={{width: womenPercent,backgroundColor: 'pink'}} className="range-women">
-                        women
+                    <div style={{width: `${totalWomen}%`}} className="range-women">
+                        {`women  ${totalWomen}%`}
                     </div>
                 </div>
             </div>
