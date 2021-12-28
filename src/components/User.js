@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
@@ -25,11 +25,9 @@ function User() {
                 {users.map((user) => (
                     <li className={`user-${themeMode}`}
                         key={user.login.uuid}
-                        //FIXME: finish UserFullInfo
-                        onClick={() => {
-                            dispatch(showModal(true))
+                        onClick={() => { dispatch(putDataForModal(Object.assign({},user)))
                             dispatch(getUserLoginUuid(user.login.uuid))
-                            dispatch(putDataForModal(user))
+                            dispatch(showModal(true))
                         }} >
                         <div className="pass">
                         <div className="avatar">
@@ -67,3 +65,6 @@ function User() {
 }
 export default User;
 
+// dispatch(showModal(true))
+// dispatch(getUserLoginUuid(user.login.uuid))
+// dispatch(putDataForModal(user))

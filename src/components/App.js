@@ -40,9 +40,9 @@ function App() {
     return (
       <ContainerFluid>
         <Modal>
-          <Histogram/>
+          <UserFullInfo/>
+          {/* <Histogram/> */}
         </Modal>
-        {/* <UserFullInfo/> */}
         <Box>
           <SideBar>
           <Group >
