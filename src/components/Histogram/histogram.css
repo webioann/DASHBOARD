@@ -23,17 +23,16 @@
     margin-bottom: 5px;
     padding: 5px 0;
     color: #fff;
-
+    width: 100%;
 }
 .chart-title{
-    width: 14ch;
+    width: 12ch;    
     color: #000;
     text-align: right;
     padding-right: 10px;
 }
 .hist-box{
     flex: auto;
-
 }
 .histogram{
     min-width: 30px;

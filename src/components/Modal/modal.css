@@ -29,21 +29,23 @@
 }
 
 .modal-window{
-    /* min-width: 100px;
-    min-height: 100px; */
     background-color: #fff;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 1rem;
     border-radius: 1rem;
     color: #333333;
-    /* display: flex;
-    justify-content: space-between;
-    flex-direction: column; */
     transform: scale(0.7);
     transition: all 0.8s;
 }
 .acive-modal-window{
     transform: scale(1);
 }
+@media (min-width: 576px) {
+    .modal-window{
+        padding: 1rem 2rem 2rem 2rem;
+
+    }
+}
+
 .close-modal{
     display: flex;
     justify-content: flex-end;

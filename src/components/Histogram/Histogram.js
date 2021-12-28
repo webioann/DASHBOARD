@@ -14,28 +14,23 @@ function Histogram() {
     const EMPTY = useHistogramData()
     const { totalMen,totalWomen } = useGenderHistogram()
     const [fraction,setFraction] = useState('')
-
+    //FIXME: this is not logic - it is a dog shit
     useEffect(() => {
         if( window.matchMedia('(max-width: 575.92px)').matches) {
-            if( requestSize === 50 ) { setFraction(25) }
-            if( requestSize === 150 ) { setFraction(15) }
+            if( requestSize === 50 ) { setFraction(40) }
+            if( requestSize === 150 ) { setFraction(20) }
             if( requestSize === 250 ) { setFraction(10)}
         }
         if( window.matchMedia('(min-width: 576px)').matches) {
-            if( requestSize === 50 ) { setFraction(45) }
-            if( requestSize === 150 ) { setFraction(25) }
+            if( requestSize === 50 ) { setFraction(60) }
+            if( requestSize === 150 ) { setFraction(30) }
             if( requestSize === 250 ) { setFraction(15)}
         }
 
-        if( window.matchMedia('(min-width: 768px)').matches) {
-            if( requestSize === 50 ) { setFraction(60) }
-            if( requestSize === 150 ) { setFraction(30) }
-            if( requestSize === 250 ) { setFraction(20)}
-        }
         if( window.matchMedia('(min-width: 992px)').matches) {
-            if( requestSize === 50 ) { setFraction(70) }
-            if( requestSize === 150 ) { setFraction(40) }
-            if( requestSize === 250 ) { setFraction(25)}
+            if( requestSize === 50 ) { setFraction(90) }
+            if( requestSize === 150 ) { setFraction(45) }
+            if( requestSize === 250 ) { setFraction(23)}
         }
     },[requestSize])
     
