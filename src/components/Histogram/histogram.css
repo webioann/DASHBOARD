@@ -1,8 +1,9 @@
 .chart{
-    padding: 20px;
-    border-radius: 12px;
+    padding: 1rem;
+    border-radius: 0.5rem;
     box-shadow: 0px 0px 26px 0px rgba(34, 60, 80, 0.29);
-
+    display: flex;
+    flex-direction: column;
 }
 .header{
     display: flex;
@@ -18,7 +19,6 @@
 }
 .chart-item{
     display: flex;
-    align-items: center;
     font-weight: 500;
     margin-bottom: 5px;
     padding: 5px 0;
@@ -26,14 +26,13 @@
 
 }
 .chart-title{
-    flex: 2;
-    min-width: 160px;
+    width: 14ch;
     color: #000;
     text-align: right;
     padding-right: 10px;
 }
 .hist-box{
-    flex: 9;
+    flex: auto;
 
 }
 .histogram{
@@ -43,7 +42,6 @@
     border-left: 8px solid rgba(0, 0, 0, 0.5);
     padding: 5px;
     /* box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.5); */
-
 }
 .range-box{
     min-width: 100%;

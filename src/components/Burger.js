@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsFilterSquare } from "react-icons/bs"
+import { FiFilter } from "react-icons/fi"
 import { useDispatch,useSelector } from "react-redux"
 import { panelShow } from '../Redux/reduxSlice'
 import './style/burger.css'
@@ -14,7 +14,7 @@ function Burger() {
     }
     return (
         <span className={`burger-box-${themeMode}`}>
-            <BsFilterSquare className={`burger-${themeMode}`} onClick={showPanel}/>
+            <FiFilter className={`burger-${themeMode}`} onClick={showPanel}/>
         </span>
     )
 }

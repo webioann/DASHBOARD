@@ -7,6 +7,7 @@ import User from './User'
 import Burger from './Burger'
 import NatFilterList from './NatFilterList'
 import LangButton from './LangButton'
+import ChartButton from './ChartButton'
 import Cross from './Cross'
 import ThemeToggle from './ThemeToggle'
 import GenderFilterBoth from './GenderFilterBoth'
@@ -40,14 +41,15 @@ function App() {
     return (
       <ContainerFluid>
         <Modal>
-          <UserFullInfo/>
-          {/* <Histogram/> */}
+          {/* <UserFullInfo/> */}
+          <Histogram/>
         </Modal>
         <Box>
           <SideBar>
           <Group >
                 <LangButton/>
                 <ThemeToggle/>
+                <ChartButton/> 
                 <Cross/>
             </Group>
             <Group flexDir={'col'}>

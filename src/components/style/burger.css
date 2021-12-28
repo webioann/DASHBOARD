@@ -1,12 +1,12 @@
 .burger-box-light,
 .burger-box-dark{
     position: fixed;
-    margin-bottom: -40px; /* must be 40px how and height this block*/
+    /* margin-bottom: -40px; must be 40px how and height this block */
     top: 25px;
-    left: 84%;
+    right: 25px;
     width: 40px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 50%;
     background-color: var(--lt-active);
     display: flex;
     justify-content: center;
@@ -46,5 +46,6 @@
     .burger-box-light,
     .burger-box-dark{
         visibility: hidden;
+        display: none;
     }
 }

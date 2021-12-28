@@ -1,5 +1,6 @@
 import React from 'react'
 import { ImCross } from "react-icons/im"
+import { FaChartLine } from "react-icons/fa"
 import { useDispatch,useSelector } from "react-redux"
 import { panelHide } from '../Redux/reduxSlice'
 import './style/cross.css'
