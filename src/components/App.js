@@ -36,8 +36,7 @@ function App() {
     console.log(`RENDER --> ${newRender.current} times`)
   })
   //------
-  const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
-  const { loading,error } = useFetchData(requestSize)
+  const { loading,error } = useFetchData()
 
   if ( !loading && !error ) {
     return (

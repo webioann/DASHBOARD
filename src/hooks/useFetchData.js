@@ -1,10 +1,12 @@
 import { useEffect,useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { fetchData } from '../Redux/reduxSlice'
 
-const useFetchData = (requestSize) => {
+const useFetchData = () => {
 
     const dispatch = useDispatch()
+    const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
+
     const[loading,setLoader] = useState(true)
     const[error,setErrors] = useState(false)
     let url = `https://randomuser.me/api/?page=1&results=${requestSize}`

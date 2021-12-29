@@ -2,7 +2,6 @@ import React from 'react'
 import ToolTip from './ToolTip'
 import {useDispatch,useSelector} from "react-redux"
 import { setRequestSize } from '../Redux/paginSlice'
-import { getToolTipId } from '../Redux/dialectSlice'
 import { tool_tip_reqestSise } from '../data/multiLang'
 import './style/requestSize.css'
 
@@ -28,7 +27,6 @@ function RequestSize() {
                 id={small}
                 onClick={setSize}>
                 {small}
-                
             </div>
             <div className={requestSize === medium
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
