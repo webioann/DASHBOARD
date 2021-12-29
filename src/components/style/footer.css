@@ -5,7 +5,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0 25px 15px 15px;
+    padding: 0 25px 15px 15px; /* 25px = 10px(scroll-bar) + 15px(padding)*/
     z-index: 2000;
     font-size: 0.8rem;
 }

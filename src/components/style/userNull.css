@@ -7,6 +7,7 @@
     align-items: center;
     height: 85px;
     border-radius: 8px;
+    padding: 20px;
 }
 .empty-list-light{
     background-color: var(--lt-all-box-bg);

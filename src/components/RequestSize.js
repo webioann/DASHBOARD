@@ -21,27 +21,28 @@ function RequestSize() {
     const big = 250
 
     return (
-        <div className="requst-size">
+        <div className="request-size">
+            <ToolTip text={tool_tip_reqestSise}/>
             <div className={requestSize === small 
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
                 id={small}
                 onClick={setSize}>
                 {small}
-                <ToolTip text={tool_tip_reqestSise}/>
+                
             </div>
             <div className={requestSize === medium
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
                 id={medium}
                 onClick={setSize}>
                 {medium}
-                <ToolTip text={tool_tip_reqestSise}/>
+                {/* <ToolTip text={tool_tip_reqestSise}/> */}
             </div>
             <div className={requestSize === big 
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
                 id={big}
                 onClick={setSize}>
                 {big}
-                <ToolTip text={tool_tip_reqestSise}/>
+                {/* <ToolTip text={tool_tip_reqestSise}/> */}
             </div>
         </div>
     )
