@@ -23,12 +23,7 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                    <li className={`user-${themeMode}`}
-                        key={user.login.uuid}
-                        onClick={() => { dispatch(putDataForModal(Object.assign({},user)))
-                            dispatch(getUserLoginUuid(user.login.uuid))
-                            dispatch(showModal(true))
-                        }} >
+                    <li className={`user-${themeMode}`} key={user.login.uuid}>
                         <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
