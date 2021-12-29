@@ -1,5 +1,7 @@
 import React,{ useRef,useEffect } from 'react'
 import ContainerFluid from './ContainerFluid'
+import MobilButtonsPanel from './MobilButtonsPanel'
+import { FiltersButton } from './FiltersButton'
 import Box from './Box'
 import SideBar from './SideBar'
 import Main from './Main'
@@ -40,6 +42,9 @@ function App() {
   if ( !loading && !error ) {
     return (
       <ContainerFluid>
+        <MobilButtonsPanel>
+          <FiltersButton/>
+        </MobilButtonsPanel>
         <Modal>
           {/* <UserFullInfo/> */}
           <Histogram/>
@@ -64,7 +69,6 @@ function App() {
             </Group>
           </SideBar>
           <Main>
-            <Burger/>
             <User/>
           </Main>
         </Box>
