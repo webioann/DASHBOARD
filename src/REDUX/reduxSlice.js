@@ -10,7 +10,7 @@ export const reduxSlice = createSlice({
     },
     reducers: {
         getGender:(state,actions) => {state.gender = actions.payload},
-        getNationality: (state,actions) => {state.nationality = actions.payload},
+        getNatId: (state,actions) => {state.nationality = actions.payload},
         fetchData: (state,actions) => {state.data = actions.payload},
         getCurrentPage: (state,actions) => {state.currentPage = actions.payload},
         panelShow: state => {state.panel = 'show'},
@@ -18,8 +18,6 @@ export const reduxSlice = createSlice({
     }
 })
 
-export const 
-    { getGender,getNationality,fetchData,panelShow,panelHide, }
-    = reduxSlice.actions
+export const { getGender,getNatId,fetchData,panelShow,panelHide, } = reduxSlice.actions
 
 export default reduxSlice.reducer

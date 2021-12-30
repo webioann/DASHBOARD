@@ -1,7 +1,7 @@
 import React from 'react'
 import nations from '../data/nations'
 import { useDispatch,useSelector } from "react-redux"
-import { getNationality } from '../Redux/reduxSlice'
+import { getNatId } from '../Redux/reduxSlice'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im";
 import './style/natFilterList.css'
 
@@ -14,7 +14,7 @@ function NatFilterList() {
 
     function chooseNationality (event) {
         let id = event.target.id //event.target.id it is nationality code FN,GB,CA,US...
-        dispatch(getNationality(id)) //put active nationality code in the redux store
+        dispatch(getNatId(id)) //put active nationality code in the redux store
     }
 
     return (

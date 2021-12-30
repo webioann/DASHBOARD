@@ -9,7 +9,6 @@ function Histogram() {
 
     const lang = useSelector((state) => state.dialect.lang)
     const requestSize = useSelector(state => state.pagin.requestSize)
-    // const active = useSelector(state => state.dialect.modalVisibility)
     const fraction = useHistogramData()
     const { totalMen,totalWomen } = useGenderHistogram()
     
@@ -21,7 +20,7 @@ function Histogram() {
                 </h3>
                 <span>{requestSize}</span>
             </header>
-            { nations.map( unit  => { if (unit.code !== 'ALL') {
+            { nations.map( unit  => { if (unit.code !== 'ALL') {  // ignored first unit with key 'ALL'
                 return <li className="chart-item" key={unit.code} >
                     <div className="chart-title">
                         { lang === 'eng' ? unit.nameEng : unit.nameRus }

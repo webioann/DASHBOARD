@@ -5,7 +5,7 @@ import { putFilteredData } from '../Redux/paginSlice'
 const useFilters = () => {
 
     const dispatch = useDispatch()
-    const data = useSelector((state) => state.redux.data)
+    const data = useSelector((state) => state.data.data)
     const gender = useSelector((state) => state.redux.gender)
     const nationality = useSelector((state) => state.redux.nationality)
     const[filteredData,setFilteredData] = useState([])

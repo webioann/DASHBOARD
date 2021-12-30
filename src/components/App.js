@@ -24,7 +24,8 @@ import Modal from './Modal/Modal'
 import Histogram from './Histogram/Histogram'
 import UserFullInfo from './UserFullInfo'
 import useFetchData from '../hooks/useFetchData.js'
-import { useSelector } from "react-redux"
+import { useDispatch,useSelector } from "react-redux"
+import { fetchAsyncData } from '../Redux/dataSlice'
 import { title_nat_filters,title_gender_filters } from '../data/multiLang'
 
 function App() {
@@ -36,7 +37,16 @@ function App() {
     console.log(`RENDER --> ${newRender.current} times`)
   })
   //------
-  const { loading,error } = useFetchData()
+  const dispatch = useDispatch()
+  const requestSize = useSelector(state => state.pagin.requestSize)
+  const loading = useSelector(state => state.data.loading)
+  const error = useSelector(state => state.data.error)
+
+  useEffect(() => {
+    dispatch(fetchAsyncData(requestSize))
+  },[requestSize])
+
+  // const { loading,error } = useFetchData()
 
   if ( !loading && !error ) {
     return (
