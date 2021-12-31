@@ -1,12 +1,11 @@
 import React,{ useRef,useEffect } from 'react'
 import ContainerFluid from './ContainerFluid'
 import MobilButtonsPanel from './MobilButtonsPanel'
-import { FiltersButton } from './FiltersButton'
+import FiltersButton from './FiltersButton'
 import Box from './Box'
 import SideBar from './SideBar'
 import Main from './Main'
 import User from './User'
-import Burger from './Burger'
 import NatFilterList from './NatFilterList'
 import LangButton from './LangButton'
 import ChartButton from './ChartButton'
@@ -22,11 +21,13 @@ import Pagination from './Pagination'
 import RequestSize from './RequestSize'
 import Modal from './Modal/Modal'
 import Histogram from './Histogram/Histogram'
-import UserFullInfo from './UserFullInfo'
+// import UserFullInfo from './UserFullInfo'
+// ===== Hooks and others =====
 import useFetchData from '../hooks/useFetchData.js'
-import { useDispatch,useSelector } from "react-redux"
-import { fetchAsyncData } from '../Redux/dataSlice'
+import usePageCutter from '../hooks/usePageCutter.js'
+import useFilters from '../hooks/useFilters.js'
 import { title_nat_filters,title_gender_filters } from '../data/multiLang'
+
 
 function App() {
   
@@ -37,14 +38,10 @@ function App() {
     console.log(`RENDER --> ${newRender.current} times`)
   })
   //------
-  // const dispatch = useDispatch()
-  // const requestSize = useSelector(state => state.pagin.requestSize)
-  // const { loading,error } = useSelector(state => state.data)
 
-  // useEffect(() => {
-  //   dispatch(fetchAsyncData(requestSize))
-  // },[requestSize])
-
+  // ===== CUSTOM HOOKS CALL PLACE ================
+  const fff = useFilters() //we receive the filtered data
+  const sss = usePageCutter() //slicing data for one page
   const { loading,error } = useFetchData()
 
   if ( !loading && !error ) {

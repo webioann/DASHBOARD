@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 
 const useButtonCreator = () => {
 
-    const filteredData = useSelector((state) => state.pagin.filteredData)
-    const usersOnPage = useSelector((state) => state.pagin.usersOnPage)
+    const filteredData = useSelector((state) => state.redux.filteredData)
+    const usersOnPage = useSelector((state) => state.redux.usersOnPage)
     const [pageNumberArray,setPNA] = useState([])
     const [lastPage,setLast] = useState('')
     let fullArray = []

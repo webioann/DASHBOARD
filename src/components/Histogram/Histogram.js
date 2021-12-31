@@ -8,7 +8,7 @@ import './histogram.css'
 function Histogram() {
 
     const lang = useSelector((state) => state.dialect.lang)
-    const requestSize = useSelector(state => state.pagin.requestSize)
+    const requestSize = useSelector(state => state.redux.requestSize)
     const fraction = useHistogramData()
     const { totalMen,totalWomen } = useGenderHistogram()
     

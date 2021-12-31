@@ -1,12 +1,10 @@
-import React,{ useState } from 'react'
+import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import usePageCutter from '../hooks/usePageCutter.js'
-import useFilters from '../hooks/useFilters.js'
 import NatBadge from './NatBadge'
 import UserNull from './UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-// import { getUserLoginUuid,showModal,putDataForModal } from '../Redux/dialectSlice.js'
+// import { getUserLoginUuid,showModal,putDataForModal } from '../Redux/reduxSlice.js'
 import './style/user.css'
 
 function User() {
@@ -14,8 +12,6 @@ function User() {
     const dispatch = useDispatch()
     const themeMode = useSelector(state => state.dialect.themeMode)
     const users = useSelector(state => state.redux.currentData)
-    const filteredData = useFilters() //we receive the filtered data
-    const usersss = usePageCutter() //slicing data for one page
 
     if( users.length === 0 ) {        
         return <UserNull/>

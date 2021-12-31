@@ -1,14 +1,14 @@
 import React from 'react'
 import ToolTip from './ToolTip'
 import {useDispatch,useSelector} from "react-redux"
-import { setRequestSize } from '../Redux/paginSlice'
+import { setRequestSize } from '../Redux/reduxSlice'
 import { tool_tip_reqestSise } from '../data/multiLang'
 import './style/requestSize.css'
 
 function RequestSize() {
 
     const dispatch = useDispatch()
-    const requestSize = useSelector(state => state.pagin.requestSize)
+    const requestSize = useSelector(state => state.redux.requestSize)
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     const setSize = (event) =>{

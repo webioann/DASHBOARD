@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { putFilteredData } from '../Redux/paginSlice'
+import { putFilteredData } from '../Redux/reduxSlice'
 
 const useFilters = () => {
 

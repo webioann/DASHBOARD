@@ -4,7 +4,7 @@ import './style/sideBar.css'
 
 function SideBar(props) {
 
-    const panel = useSelector(state => state.redux.panel)
+    const panel = useSelector(state => state.dialect.panel)
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     return (

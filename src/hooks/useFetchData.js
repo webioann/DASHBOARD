@@ -5,7 +5,7 @@ import { fetchData } from '../Redux/reduxSlice'
 const useFetchData = () => {
 
     const dispatch = useDispatch()
-    const requestSize = useSelector(state => state.pagin.requestSize) //the size of the request to the API
+    const requestSize = useSelector(state => state.redux.requestSize) //the size of the request to the API
 
     const[loading,setLoader] = useState(true)
     const[error,setErrors] = useState(false)

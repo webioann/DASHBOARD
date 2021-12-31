@@ -1,6 +1,6 @@
 import React from "react"
 import { useSelector,useDispatch } from "react-redux"
-import { getCurrentPage } from '../Redux/paginSlice'
+import { getCurrentPage } from '../Redux/reduxSlice'
 import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-icons/md"
 import useButtonCreator from "../hooks/useButtonCreator"
 import "./style/pagination.css"
@@ -9,7 +9,7 @@ function Pagination() {
 
   const dispatch = useDispatch()
   const themeMode = useSelector(state => state.dialect.themeMode)
-  const currentPage = useSelector((state) => state.pagin.currentPage)
+  const currentPage = useSelector(state => state.redux.currentPage)
 
   const { pageNumberArray,lastPage } = useButtonCreator()
 
