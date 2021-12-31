@@ -21,10 +21,10 @@ function User() {
     else {
         return (
             <ul className='user-box'>
-                {users.map((user) => (
+                {users.map((user,index) => (
                     <li className={`user-${themeMode}`} 
                         key={user.login.uuid}
-                        onClick={() => {dispatch(getUserLoginUuid(user.login.uuid))
+                        onClick={() => {dispatch(getUserLoginUuid(index))
                         }}
                         >
                         <div className="pass">
