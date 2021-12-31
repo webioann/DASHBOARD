@@ -37,16 +37,15 @@ function App() {
     console.log(`RENDER --> ${newRender.current} times`)
   })
   //------
-  const dispatch = useDispatch()
-  const requestSize = useSelector(state => state.pagin.requestSize)
-  const loading = useSelector(state => state.data.loading)
-  const error = useSelector(state => state.data.error)
+  // const dispatch = useDispatch()
+  // const requestSize = useSelector(state => state.pagin.requestSize)
+  // const { loading,error } = useSelector(state => state.data)
 
-  useEffect(() => {
-    dispatch(fetchAsyncData(requestSize))
-  },[requestSize])
+  // useEffect(() => {
+  //   dispatch(fetchAsyncData(requestSize))
+  // },[requestSize])
 
-  // const { loading,error } = useFetchData()
+  const { loading,error } = useFetchData()
 
   if ( !loading && !error ) {
     return (
@@ -98,6 +97,5 @@ function App() {
   }
 
 }
-
 export default App;
 

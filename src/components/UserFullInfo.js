@@ -5,11 +5,10 @@ import './style/modalUser.css'
 function UserFullInfo() {
 
     const dispatch = useDispatch()
-    const active = useSelector(state => state.dialect.modalVisibility) 
-    const uuid = useSelector(state => state.dialect.userLoginUuid)
+    // const active = useSelector(state => state.dialect.modalVisibility) 
+    // const uuid = useSelector(state => state.dialect.userLoginUuid)
     const user = useSelector(state => state.dialect.modalData)
-    console.log(`USER --> ${JSON.stringify(user)}`)
-    // console.log(`USER NAME --> ${user.nat}`)
+    
     return (
         <div className='user-full-info'>
             {/* <p>{user.name.last}</p> */}

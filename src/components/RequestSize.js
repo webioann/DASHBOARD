@@ -13,8 +13,8 @@ function RequestSize() {
 
     const setSize = (event) =>{
         dispatch(setRequestSize(Number(event.target.id)))
-        dispatch(event.target.id)
     }
+    
     const small = 50
     const medium = 150
     const big = 250
@@ -33,14 +33,12 @@ function RequestSize() {
                 id={medium}
                 onClick={setSize}>
                 {medium}
-                {/* <ToolTip text={tool_tip_reqestSise}/> */}
             </div>
             <div className={requestSize === big 
                 ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
                 id={big}
                 onClick={setSize}>
                 {big}
-                {/* <ToolTip text={tool_tip_reqestSise}/> */}
             </div>
         </div>
     )

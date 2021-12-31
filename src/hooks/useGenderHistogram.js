@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 const useGenderHistogram = () => {
 
-    const data = useSelector((state) => state.data.data)
+    const data = useSelector((state) => state.redux.data)
     const dataVolum = data.length
     const [totalMen,setTotalMen]  = useState('')
     const [totalWomen,setTotalWomen] = useState('')

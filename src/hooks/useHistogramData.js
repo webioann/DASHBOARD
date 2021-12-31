@@ -4,7 +4,7 @@ import nations from '../data/nations'
 
 const useChartDataCreator = () => {
 
-    const data = useSelector((state) => state.data.data)
+    const data = useSelector((state) => state.redux.data)
     const [maxValue,setMaxValue] = useState(0)
     const [fraction,setFraction] = useState('')
 
