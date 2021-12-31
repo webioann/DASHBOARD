@@ -9,7 +9,7 @@ export const reduxSlice = createSlice({
         filteredData: [],
         currentData: [],
         modalData: [],
-        userLoginUuid: '',
+        userLoginUuid: 'uuid',
         currentPage: 1,
         requestSize: 50,
         usersOnPage: 20,
@@ -27,6 +27,7 @@ export const reduxSlice = createSlice({
     }
 })
 
-export const { getGender,getNatId,fetchData,putFilteredData,getCurrentData,putDataForModal, getUserLoginUuid,getCurrentPage ,setRequestSize,} = reduxSlice.actions
+export const { getGender,getNatId,fetchData,putFilteredData,getCurrentData,
+    putDataForModal, getUserLoginUuid,getCurrentPage ,setRequestSize,} = reduxSlice.actions
 
 export default reduxSlice.reducer

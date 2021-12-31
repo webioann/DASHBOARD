@@ -21,7 +21,7 @@ import Pagination from './Pagination'
 import RequestSize from './RequestSize'
 import Modal from './Modal/Modal'
 import Histogram from './Histogram/Histogram'
-// import UserFullInfo from './UserFullInfo'
+import UserFullInfo from './UserFullInfo'
 // ===== Hooks and others =====
 import useFetchData from '../hooks/useFetchData.js'
 import usePageCutter from '../hooks/usePageCutter.js'
@@ -51,7 +51,7 @@ function App() {
           <FiltersButton/>
         </MobilButtonsPanel>
         <Modal>
-          {/* <UserFullInfo/> */}
+          <UserFullInfo/>
           <Histogram/>
         </Modal>
         <Box>

@@ -4,7 +4,7 @@ import NatBadge from './NatBadge'
 import UserNull from './UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-// import { getUserLoginUuid,showModal,putDataForModal } from '../Redux/reduxSlice.js'
+import { getUserLoginUuid,showModal,putDataForModal } from '../Redux/reduxSlice.js'
 import './style/user.css'
 
 function User() {
@@ -13,6 +13,8 @@ function User() {
     const themeMode = useSelector(state => state.dialect.themeMode)
     const users = useSelector(state => state.redux.currentData)
 
+    // console.log(`USERS --> ${JSON.stringify(users[0].name.last)}`)
+
     if( users.length === 0 ) {        
         return <UserNull/>
     }
@@ -20,7 +22,11 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                    <li className={`user-${themeMode}`} key={user.login.uuid}>
+                    <li className={`user-${themeMode}`} 
+                        key={user.login.uuid}
+                        onClick={() => {dispatch(getUserLoginUuid(user.login.uuid))
+                        }}
+                        >
                         <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 

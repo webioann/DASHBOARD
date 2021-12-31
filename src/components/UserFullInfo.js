@@ -6,16 +6,28 @@ function UserFullInfo() {
 
     const dispatch = useDispatch()
     // const active = useSelector(state => state.dialect.modalVisibility) 
-    // const uuid = useSelector(state => state.dialect.userLoginUuid)
-    const user = useSelector(state => state.dialect.modalData)
-    
+    const [info,setInfo] = useState()
+    const uuid = useSelector(state => state.redux.userLoginUuid)
+    const users = useSelector(state => state.redux.currentData)
+    // console.log(`USERS --> ${JSON.stringify(users[0].name.first)}`)
+
+    useEffect(() => {
+        // console.log(`UUID --> ${uuid}`)
+        let raw = users.find(elem => elem.login.uuid === uuid)
+        console.log(`RAW --> ${JSON.stringify(raw.gender)}`)
+        setInfo(raw)
+    ,[uuid]})
+
+        // console.log(`RAW --> ${JSON.stringify(raw)}`)
+        // console.log(`RAW typeof --> ${typeof info}`)
+
     return (
         <div className='user-full-info'>
             {/* <p>{user.name.last}</p> */}
             <header className="modal-header">
                 <div className="foto"></div>
                 <div className="col">
-                    <h3 className="name">zzzz Newman</h3>
+                    <h3 className="name"></h3>
                     <p className="age">45 years 7/12/1987</p>
                 </div>
             </header>

@@ -29,6 +29,7 @@
 }
 
 .modal-window{
+    display: flex;
     background-color: #fff;
     padding: 1rem;
     border-radius: 1rem;
