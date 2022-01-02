@@ -4,7 +4,7 @@ import NatBadge from './NatBadge'
 import UserNull from './UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-import { getUserLoginUuid,showModal,putDataForModal } from '../Redux/reduxSlice.js'
+import { getUserLoginUuid } from '../Redux/reduxSlice.js'
 import './style/user.css'
 
 function User() {
@@ -19,7 +19,7 @@ function User() {
     else {
         return (
             <ul className='user-box'>
-                {users.map((user,index) => (
+                {users.map((user) => (
                     <li className={`user-${themeMode}`} 
                         key={user.login.uuid}
                         onClick={() => {dispatch(getUserLoginUuid(user.login.uuid))

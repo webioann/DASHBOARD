@@ -52,7 +52,7 @@ function App() {
         </MobilButtonsPanel>
         <Modal>
           <UserFullInfo/>
-          <Histogram/>
+          {/* <Histogram/> */}
         </Modal>
         <Box>
           <SideBar>
