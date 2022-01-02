@@ -9,7 +9,7 @@ export const reduxSlice = createSlice({
         filteredData: [],
         currentData: [],
         modalData: [],
-        userLoginUuid: 'uuid',
+        userLoginUuid: 'uuid is empty',
         currentPage: 1,
         requestSize: 50,
         usersOnPage: 20,

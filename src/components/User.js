@@ -13,8 +13,6 @@ function User() {
     const themeMode = useSelector(state => state.dialect.themeMode)
     const users = useSelector(state => state.redux.currentData)
 
-    // console.log(`USERS --> ${JSON.stringify(users[0].name.last)}`)
-
     if( users.length === 0 ) {        
         return <UserNull/>
     }
@@ -24,7 +22,7 @@ function User() {
                 {users.map((user,index) => (
                     <li className={`user-${themeMode}`} 
                         key={user.login.uuid}
-                        onClick={() => {dispatch(getUserLoginUuid(index))
+                        onClick={() => {dispatch(getUserLoginUuid(user.login.uuid))
                         }}
                         >
                         <div className="pass">

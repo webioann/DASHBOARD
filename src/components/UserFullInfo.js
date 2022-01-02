@@ -6,30 +6,34 @@ function UserFullInfo() {
 
     const dispatch = useDispatch()
     // const active = useSelector(state => state.dialect.modalVisibility) 
-    // const [info,setInfo] = useState([])
+    // const [info,setInfo] = useState()
     const uuid = useSelector(state => state.redux.userLoginUuid)
     const users = useSelector(state => state.redux.currentData)
     // console.log(`USERS --> ${JSON.stringify(users[0].name.first)}`)
-
-    // let id = Number(uuid)
-
-    // let RAW = []
+    // console.log(`UUID --> ${uuid}`)
 
     // useEffect(() => {
-    //     // console.log(`UUID --> ${uuid}`)
-    //     RAW.push(users.find(elem => elem.login.uuid === uuid))
-    //     console.log(`RAW --> ${JSON.stringify(RAW)}`)
-    // ,[uuid]})
+    //     if(uuid === 'uuid is empty') {
+    //         console.log(uuid)
+    //     }
+    //     else{
+    //         let raw = users.find(elem => elem.login.uuid === uuid)
+    //         setInfo(raw)
+    //         console.log(`RAW nat --> ${info}`)
+    //     }
+    // },[uuid])
 
-    // console.log(`RAW --> ${JSON.stringify(raw)}`)
-    // console.log(`RAW typeof --> ${typeof info}`)
+    // console.log(`RAW --> ${JSON.stringify(info.gender)}`)
+    
+    // console.log(`RAW typeof --> ${typeof UUID}`)
 
     return (
+
         <div className='user-full-info'>
             <header className="modal-header">
                 <div className="foto"></div>
                 <div className="col">
-                    <h3 className="name">{users[0].name.first} {RAW.nat} </h3>
+                    <h3 className="name">{users[0].name.first}</h3>
                     <p className="age">45 years 7/12/1987</p>
                 </div>
             </header>
