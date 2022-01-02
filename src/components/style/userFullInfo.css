@@ -1,37 +1,52 @@
-.modal-header{
-    display: flex;
-    /* justify-content: space-between; */
-    border: 1px solid blue;
+.user-full-info{
+    font-size: 27px;
 }
-.photo{
-    width: 75px;
-    height: 75px;
+
+.user-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.5); */
+}
+.user-avatar{
+    width: 10ch;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.user-photo{
+    width: 105px;
+    height: 105px;
     border-radius: 50%;
     background-color: #bbb;
 }
-.col{
-    padding: 9px 12px 10px 20px;
+.passport{
     display: flex;
+    flex: auto;
     flex-direction: column;
     justify-content: space-between;
-}
-.field{
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 10px;
-    border: 1px solid red;
-}
-.field:hover{
-    background-color: #eee;
+    /* border: 1px solid red; */
 }
 .name{
     letter-spacing: 1px;
 }
+
+.field{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.field:hover{
+    background-color: #eee;
+}
 .left-p{
-    flex: 2;
+    width: 10ch;    
+    color: #000;
+    text-align: right;
+    padding-right: 15px;
     font-weight: 600;
-    padding-left: 10px;
-    border: 1px solid red;
 }
 .right-p{
     flex: 6;

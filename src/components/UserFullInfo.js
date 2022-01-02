@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
+import { random } from "../data/random";
 import "./style/userFullInfo.css";
 
 function UserFullInfo() {
@@ -16,14 +17,12 @@ function UserFullInfo() {
         if (uuid === "uuid is empty") {
             console.log(uuid);
         } else {
-            let raw = users.find(elem => elem.login.uuid === uuid)
-            setUser(raw)
-            console.log(`RAW --> ${JSON.stringify(raw)}`);
+            setUser(random)
             setChoosed(true)
         }
     }, [uuid])
 
-    console.log(`USER --> ${JSON.stringify(user)}`)
+    // console.log(`USER --> ${JSON.stringify(user)}`)
 
     // console.log(`RAW --> ${JSON.stringify(user.name)}`);
     // console.log(`USER NAT --> ${user.nat}`);
@@ -33,15 +32,15 @@ function UserFullInfo() {
     if (choosed) {
         return (
             <div className="user-full-info">
-                <header className="modal-header">
-                    <div className="avatar">
+                <header className="user-header">
+                    <div className="user-avatar">
                         <img
                             src={user.picture.medium}
-                            className="photo"
+                            className="user-photo"
                             alt=""
                         />
                     </div>
-                    <div className="col">
+                    <div className="passport">
                         <h3 className="name">
                             {user.name.first} {user.name.last}
                         </h3>
@@ -109,3 +108,17 @@ function UserFullInfo() {
     }
 }
 export default UserFullInfo;
+
+
+// useEffect(() => {
+//     if (uuid === "uuid is empty") {
+//         console.log(uuid);
+//     } else {
+//         let raw = users.find(elem => elem.login.uuid === uuid)
+//         setUser(raw)
+//         console.log(`RAW --> ${JSON.stringify(raw)}`);
+//         setChoosed(true)
+//     }
+// }, [uuid])
+
+

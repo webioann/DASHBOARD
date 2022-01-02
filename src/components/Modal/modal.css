@@ -30,6 +30,7 @@
 
 .modal-window{
     display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 1rem;
     border-radius: 1rem;
