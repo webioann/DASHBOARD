@@ -137,35 +137,35 @@ html,body{
 }
 
 
-@media (max-width: var(--media-xs)) {
+@media (max-width: 575.98px) {
     html,body{
     font-size: 14px;
     }
 }
-@media (min-width: var(--media-sm)) {
+@media (min-width: 576px) {
     html,body{
         font-size: 15px;
     }
 }
 
-@media (min-width: var(--media-md)) {
+@media (min-width: 768px) {
     html,body{
     font-size: 16px;
     }
 }
 
-@media (min-width: var(992px)) {
+@media (min-width: 992px) {
     html,body{
     font-size: 16px;
     }
 }
 
-@media (min-width: var(--media-xl)) {
+@media (min-width: 1200px) {
     html,body{
     font-size: 17px;
     }
 }
-@media (min-width: var(--media-xxl)) {
+@media (min-width: 1400px) {
     html,body{
         font-size: 17px;
     }

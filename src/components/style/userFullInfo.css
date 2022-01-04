@@ -1,5 +1,5 @@
 .user-full-info{
-    font-size: 27px;
+    font-size: 22px;
 }
 
 .user-header{
@@ -7,7 +7,7 @@
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 10px;
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.5); */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     /* border: 1px solid green; */
 }
 .user-avatar{

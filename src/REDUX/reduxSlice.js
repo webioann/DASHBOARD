@@ -51,7 +51,7 @@ export const {
     fetchData,
     putFilteredData,
     getCurrentData,
-    putDataForModal,
+    getUserFullData,
     getUserLoginUuid,
     getCurrentPage,
     setRequestSize,
