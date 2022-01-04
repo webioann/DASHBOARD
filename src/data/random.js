@@ -10,6 +10,7 @@ export const random = {
             "city": "kilcoole",
             "state": "waterford",
             "postcode": "93027",
+            "country": "Ireland",
             "coordinates": {
             "latitude": "20.9267",
             "longitude": "-7.9310"

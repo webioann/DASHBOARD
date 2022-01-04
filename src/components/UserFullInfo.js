@@ -41,10 +41,10 @@ function UserFullInfo() {
                         />
                     </div>
                     <div className="passport">
-                        <h3 className="name">
+                        <h2 className="name">
                             {user.name.first} {user.name.last}
-                        </h3>
-                        <p className="age">45 years 7/12/1987</p>
+                        </h2>
+                        <p className="age">{user.dob.age} years ( {new Date(user.dob.date).toLocaleDateString()} )</p>
                     </div>
                 </header>
                 <div className="field">
