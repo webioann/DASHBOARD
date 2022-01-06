@@ -9,7 +9,6 @@ export const reduxSlice = createSlice({
         filteredData: [],
         currentData: [],
         userFullData: [],
-        userLoginUuid: "uuid is empty",
         currentPage: 1,
         requestSize: 50,
         usersOnPage: 20,
@@ -33,9 +32,6 @@ export const reduxSlice = createSlice({
         getUserFullData: (state, actions) => {
             state.userFullData = actions.payload;
         },
-        getUserLoginUuid: (state, actions) => {
-            state.userLoginUuid = actions.payload;
-        },
         getCurrentPage: (state, actions) => {
             state.currentPage = actions.payload;
         },
@@ -52,7 +48,6 @@ export const {
     putFilteredData,
     getCurrentData,
     getUserFullData,
-    getUserLoginUuid,
     getCurrentPage,
     setRequestSize,
 } = reduxSlice.actions;

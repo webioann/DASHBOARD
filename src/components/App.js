@@ -37,12 +37,13 @@ function App() {
     newRender.current++
     console.log(`RENDER --> ${newRender.current} times`)
   })
-  //------
+  //---------------------------------------------
 
   // ===== CUSTOM HOOKS CALL PLACE ================
   const fff = useFilters() //we receive the filtered data
   const sss = usePageCutter() //slicing data for one page
   const { loading,error } = useFetchData()
+  //-----------------------------------------------
 
   if ( !loading && !error ) {
     return (

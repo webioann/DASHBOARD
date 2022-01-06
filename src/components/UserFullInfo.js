@@ -11,10 +11,12 @@ function UserFullInfo() {
     const [userr, setUserr] = useState([]);
 
     useEffect(() => {
-        fullInfo ? setUserr(fullInfo) : console.log(fullInfo);
+        // fullInfo ? setUserr(fullInfo) : console.log(fullInfo);
+        setUserr(fullInfo)
         setUser(random)
         setChoosed(true)
-        console.log(`FULL INFO --> ${JSON.stringify(userr)}`)
+        console.log(`FULL INFO --> ${JSON.stringify(fullInfo.name)}`)
+        console.log(`USERR --> ${userr}`);
     }, [fullInfo])
 
     if (choosed) {
@@ -98,15 +100,5 @@ function UserFullInfo() {
 export default UserFullInfo;
 
 
-// useEffect(() => {
-//     if (uuid === "uuid is empty") {
-//         console.log(uuid);
-//     } else {
-//         let raw = users.find(elem => elem.login.uuid === uuid)
-//         setUser(raw)
-//         console.log(`RAW --> ${JSON.stringify(raw)}`);
-//         setChoosed(true)
-//     }
-// }, [uuid])
 
 
