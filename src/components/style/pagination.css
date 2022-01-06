@@ -5,6 +5,7 @@
 }
 .num-light,
 .num-dark{
+  width: 3ch;
   display: flex;
   justify-content: center;
   align-items: center;

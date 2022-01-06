@@ -14,6 +14,7 @@ function Pagination() {
   const { pageNumberArray,lastPage } = useButtonCreator()
 
   const goToPage = (event) => {
+    // console.log(`currentPage --> ${currentPage} ID --> ${event.target.id}`);
     dispatch(getCurrentPage(Number(event.target.id)))
   }
 
