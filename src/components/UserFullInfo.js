@@ -1,5 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
+import nations from "../data/nations";
+
 import { random } from "../data/random";
 import "./style/userFullInfo.css";
 
@@ -10,11 +12,15 @@ function UserFullInfo() {
     const [user, setUser] = useState([]);
     const [userr, setUserr] = useState([]);
 
+    const [nat,setNat] = useState('')
+
     useEffect(() => {
         // fullInfo ? setUserr(fullInfo) : console.log(fullInfo);
         setUserr(fullInfo)
         setUser(random)
         setChoosed(true)
+        let natio = nations.find(item => item.code === random.nat)
+        setNat(natio.nameEng)
         console.log(`FULL INFO --> ${JSON.stringify(fullInfo.name)}`)
         console.log(`USERR --> ${userr}`);
     }, [fullInfo])
@@ -43,7 +49,9 @@ function UserFullInfo() {
                 </div>
                 <div className="field">
                     <p className="left-p">Nationality:</p>
-                    <p className="right-p"> {user.nat}</p>
+                    <p className="right-p">
+                        {nat}
+                    </p>
                 </div>
                 <div className="field">
                     <p className="left-p">Phone:</p>

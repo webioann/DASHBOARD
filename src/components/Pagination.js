@@ -1,4 +1,4 @@
-import React from "react"
+import React,{ useEffect,useRef } from "react"
 import { useSelector,useDispatch } from "react-redux"
 import { getCurrentPage } from '../Redux/reduxSlice'
 import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-icons/md"
@@ -10,8 +10,15 @@ function Pagination() {
   const dispatch = useDispatch()
   const themeMode = useSelector(state => state.dialect.themeMode)
   const currentPage = useSelector(state => state.redux.currentPage)
+  // const prevButton= useRef(1)
 
   const { pageNumberArray,lastPage } = useButtonCreator()
+
+  // useEffect(() => {
+  //   prevButton.current = currentPage
+  //   console.log(`CURRENT_PAGE --> ${currentPage}`);
+  //   console.log(`PREV_BUTTON --> ${prevButton.current}`);
+  // },[currentPage])
 
   const goToPage = (event) => {
     // console.log(`currentPage --> ${currentPage} ID --> ${event.target.id}`);

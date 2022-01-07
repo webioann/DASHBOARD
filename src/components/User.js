@@ -35,7 +35,7 @@ function User() {
                             <p className="age cell">
                                 {user.dob.age} years ( {new Date(user.dob.date).toLocaleDateString()} )
                             </p>
-                            <NatBadge  user={user} /> 
+                            <NatBadge  user_nat={user.nat} /> 
                         </div>
                     </div>
                     <div className='contacts'>

@@ -11,27 +11,27 @@ const useButtonCreator = () => {
 
     const [pageNumberArray,setPNA] = useState([])
     const [lastPage,setLast] = useState('')
-    let fullArray = []
 
     useEffect(() => {
         dispatch(getCurrentPage(1)) // after any filteredData changes, the first pagination button becomes active
 
         let totalPages = Math.ceil( filteredData.length / usersOnPage )
+        let fullArray = []
         for (let i = 1; i <= totalPages; i++) {
             fullArray.push(i)
         }
         let penultPage = fullArray.length -1
         let lastPage = fullArray.length
+        let tempArray = []
+
         if( totalPages <= 7 ) {
             setPNA(fullArray)
         }
         else if( totalPages > 7) {
-            let tempArray = [1,2,3,4,'...',penultPage,lastPage]
-            setPNA(tempArray)
-            console.log(`TEMP_ARRAY ==> ${tempArray}`);
+            tempArray = [1,2,3,4,'...',penultPage,lastPage];
+            setPNA(tempArray);
         }
         setLast(fullArray.length)
-
     },[filteredData])
 
     return { pageNumberArray,lastPage }
