@@ -16,7 +16,7 @@ function RequestSize() {
     }
     
     const small = 50
-    const medium = 140
+    const medium = 180
     const big = 250
 
     return (

@@ -67,11 +67,6 @@
   color: var(--dk-active);
 }
 
-.blocked-arrow-light:hover,
-.blocked-arrow-light:hover{
-  cursor: not-allowed;
-}
-
 @media (min-width: 576px) {
   .pages{
     margin-bottom: 0;

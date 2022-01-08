@@ -10,18 +10,10 @@ function Pagination() {
   const dispatch = useDispatch()
   const themeMode = useSelector(state => state.dialect.themeMode)
   const currentPage = useSelector(state => state.redux.currentPage)
-  // const prevButton= useRef(1)
 
   const { pageNumberArray,lastPage } = useButtonCreator()
 
-  // useEffect(() => {
-  //   prevButton.current = currentPage
-  //   console.log(`CURRENT_PAGE --> ${currentPage}`);
-  //   console.log(`PREV_BUTTON --> ${prevButton.current}`);
-  // },[currentPage])
-
   const goToPage = (event) => {
-    // console.log(`currentPage --> ${currentPage} ID --> ${event.target.id}`);
     dispatch(getCurrentPage(Number(event.target.id)))
   }
 
@@ -41,20 +33,21 @@ function Pagination() {
     <div className="pages">
       <MdOutlineKeyboardArrowLeft 
         onClick={prevPage} 
-        className={currentPage === 1 
-          ? `blocked-arrow-${themeMode}` : `arrow-${themeMode}`} />
-        {pageNumberArray.map((pageNumber,index) => (
-          <span className={currentPage === pageNumber 
-            ? `num-${themeMode} active-${themeMode}` : `num-${themeMode}`}
-            key={index}
-            id={pageNumber}
-            onClick={goToPage}>
-            {pageNumber}
-          </span>
-        ))}
+        className={currentPage === 1 ? `blocked-arrow-${themeMode}` : `arrow-${themeMode}`} 
+      />
+      {pageNumberArray.map((pageNumber,index) => (
+        <span className={currentPage === pageNumber 
+          ? `num-${themeMode} active-${themeMode}` : `num-${themeMode}`}
+          key={index}
+          id={pageNumber}
+          onClick={goToPage}>
+          {pageNumber}
+        </span>
+      ))}
       <MdOutlineKeyboardArrowRight 
         onClick={nextPage} 
-        className={currentPage === lastPage ? `blocked-arrow-${themeMode}` : `arrow-${themeMode}`} />
+        className={currentPage === lastPage ? `blocked-arrow-${themeMode}` : `arrow-${themeMode}`} 
+      />
     </div>
   );
 }

@@ -27,9 +27,9 @@
 
 .active-light:hover{
     background-color: var(--lt-active);
-    cursor: not-allowed;
+    cursor: default;
 }
 .active-dark:hover{
     background-color: var(--dk-active);
-    cursor: not-allowed;
+    cursor: default;
 }
