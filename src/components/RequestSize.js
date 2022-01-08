@@ -17,7 +17,7 @@ function RequestSize() {
     
     const small = 50
     const medium = 180
-    const big = 250
+    const big = 550
 
     return (
         <div className="request-size">

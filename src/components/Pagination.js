@@ -14,7 +14,16 @@ function Pagination() {
   const { pageNumberArray,lastPage } = useButtonCreator()
 
   const goToPage = (event) => {
-    dispatch(getCurrentPage(Number(event.target.id)))
+    if( event.target.id !== '...>' ||  event.target.id !== '<...') {
+      dispatch(getCurrentPage(Number(event.target.id)))
+    }
+    if( event.target.id === '...>' ) {
+      dispatch(getCurrentPage('DOTS_UP'))
+    }
+    if( event.target.id === '<...' ) {
+      dispatch(getCurrentPage('DOTS_DOWN'))
+    }
+
   }
 
   const nextPage = () => {
