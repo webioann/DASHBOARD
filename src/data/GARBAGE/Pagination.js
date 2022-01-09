@@ -1,8 +1,8 @@
 import React,{ useEffect,useRef } from "react"
 import { useSelector,useDispatch } from "react-redux"
-import { getCurrentPage } from '../Redux/reduxSlice'
+import { getCurrentPage } from '../../Redux/reduxSlice'
 import { MdOutlineKeyboardArrowRight,MdOutlineKeyboardArrowLeft } from "react-icons/md"
-import useButtonCreator from "../hooks/useButtonCreator"
+import useButtonCreator from "../../hooks/useButtonCreator"
 import "./style/pagination.css"
 
 function Pagination() {

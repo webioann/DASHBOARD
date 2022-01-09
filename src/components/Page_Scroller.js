@@ -2,7 +2,7 @@ import React from "react"
 import { useSelector,useDispatch } from "react-redux"
 import { getCurrentPage } from '../Redux/reduxSlice'
 import useButtonCreator from "../hooks/useButtonCreator"
-import "./page-scroller.scss"
+import "./style/page-scroller.scss"
 
 function Page_Scroller() {
     const dispatch = useDispatch()

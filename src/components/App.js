@@ -17,7 +17,6 @@ import GenderFilterMale from './GenderFilterMale'
 import Title from './Title'
 import Group from './Group'
 import Footer from './Footer'
-import Pagination from './Pagination'
 import RequestSize from './RequestSize'
 import Modal from './Modal/Modal'
 import Histogram from './Histogram/Histogram'
@@ -81,7 +80,6 @@ function App() {
         </Box>
         <Footer>
           <Page_Scroller/>
-          {/* <Pagination/> */}
           <RequestSize/>
         </Footer>
       </ContainerFluid>
