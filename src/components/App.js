@@ -22,6 +22,7 @@ import RequestSize from './RequestSize'
 import Modal from './Modal/Modal'
 import Histogram from './Histogram/Histogram'
 import UserFullInfo from './UserFullInfo'
+import Page_Scroller from './Page_Scroller'
 // ===== Hooks and others =====
 import useFetchData from '../hooks/useFetchData.js'
 import usePageCutter from '../hooks/usePageCutter.js'
@@ -79,7 +80,8 @@ function App() {
           </Main>
         </Box>
         <Footer>
-          <Pagination/>
+          <Page_Scroller/>
+          {/* <Pagination/> */}
           <RequestSize/>
         </Footer>
       </ContainerFluid>

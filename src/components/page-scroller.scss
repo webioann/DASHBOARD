@@ -1,0 +1,43 @@
+.pages-scroller{
+    max-width: 400px;
+    overflow-x: auto;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+    .numy-row{
+        display: flex;
+        margin-bottom: 5px;
+        // background-color: green;
+        padding: 0 5px;
+        // border: 1px solid red;
+        .numy-light,
+        .numy-dark{
+            min-width: 25px;
+            min-height: 25px; 
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .numy-light{
+            color: var(--lt-all-box-text);
+        }
+        .numy-dark{
+            color: var(--dk-all-box-text);
+        }
+        .numy-light:hover{
+            background-color: var(--lt-hover);
+        }
+        .numy-dark:hover{
+            background-color: var(--dk-user-hover);
+        }
+    }
+}
+@media (min-width: 576px) {
+    .pages-scroller{
+        margin-bottom: 0;
+    }
+}
