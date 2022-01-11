@@ -6,7 +6,9 @@ import { random } from "../data/random";
 import "./style/userFullInfo.css";
 
 function UserFullInfo() {
-    const fullInfo = useSelector((state) => state.redux.userFullData);
+    // const fullInfo = useSelector((state) => state.redux.userFullData);
+    const uuid = useSelector((state) => state.redux.uuid);
+    const currentData = useSelector(state => state.redux.currentData)
 
     const [choosed, setChoosed] = useState(false);
     const [user, setUser] = useState([]);
@@ -15,15 +17,23 @@ function UserFullInfo() {
     const [nat,setNat] = useState('')
 
     useEffect(() => {
-        // fullInfo ? setUserr(fullInfo) : console.log(fullInfo);
-        setUserr(fullInfo)
+        // setUserr(fullInfo)
+        if( uuid === 'uuid is empty' ) {
+            setUserr(uuid);
+        }
+        else{
+            let raw = currentData.filter(item => item.login.uuid === uuid)
+            setUserr(raw);
+            // console.log(`USERR --> ${userr.name.last}`);
+            console.log(`USERRRRR --> ${JSON.stringify(userr[0].name)}`);
+            // console.log(`USERRRRRrrrrrrrrrrrrr --> ${userr[0].name.last}`);
+
+        }
         setUser(random)
         setChoosed(true)
-        let natio = nations.find(item => item.code === random.nat)
+        let natio = nations.find(nation => nation.code === random.nat)
         setNat(natio.nameEng)
-        console.log(`FULL INFO --> ${JSON.stringify(fullInfo.name)}`)
-        console.log(`USERR --> ${userr}`);
-    }, [fullInfo])
+    }, [uuid])
 
     if (choosed) {
         return (
@@ -106,7 +116,6 @@ function UserFullInfo() {
     }
 }
 export default UserFullInfo;
-
 
 
 
