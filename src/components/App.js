@@ -26,6 +26,8 @@ import Page_Scroller from './Page_Scroller'
 import useFetchData from '../hooks/useFetchData.js'
 import usePageCutter from '../hooks/usePageCutter.js'
 import useFilters from '../hooks/useFilters.js'
+import useButtonCreator from "../hooks/useButtonCreator"
+
 import { title_nat_filters,title_gender_filters } from '../data/multiLang'
 
 
@@ -42,6 +44,7 @@ function App() {
   // ===== CUSTOM HOOKS CALL PLACE ================
   const fff = useFilters() //we receive the filtered data
   const sss = usePageCutter() //slicing data for one page
+  const { pageNumberArray } = useButtonCreator()
   const { loading,error } = useFetchData()
   //-----------------------------------------------
 
@@ -79,7 +82,7 @@ function App() {
           </Main>
         </Box>
         <Footer>
-          <Page_Scroller/>
+          <Page_Scroller pageNumberArray={pageNumberArray}/>
           <RequestSize/>
         </Footer>
       </ContainerFluid>

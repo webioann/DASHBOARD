@@ -1,20 +1,13 @@
 import React from "react"
 import { useSelector,useDispatch } from "react-redux"
 import { getCurrentPage } from '../Redux/reduxSlice'
-import useButtonCreator from "../hooks/useButtonCreator"
 import "./style/page-scroller.scss"
 
-function Page_Scroller() {
+function Page_Scroller({ pageNumberArray }) {
     const dispatch = useDispatch()
     const themeMode = useSelector(state => state.dialect.themeMode)
     const currentPage = useSelector(state => state.redux.currentPage)
-    const { pageNumberArray } = useButtonCreator()
-
-    const goToPage = (event) => {
-        dispatch(getCurrentPage(Number(event.target.id)))
-    }
     
-
     return (
         <div className="pages-scroller">
             <div className="numy-row">
@@ -23,7 +16,7 @@ function Page_Scroller() {
                     ? `numy-${themeMode} active-${themeMode}` : `numy-${themeMode}`}
                     key={index}
                     id={pageNumber}
-                    onClick={goToPage}>
+                    onClick={() => dispatch(getCurrentPage(Number(pageNumber)))}>
                     {pageNumber}
                 </span>
                 ))}
