@@ -24,6 +24,6 @@
 }
 @media (min-width: 992px) {
     .main{
-        flex: 4.5;
+        flex: 4;
     }
 }
