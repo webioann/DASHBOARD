@@ -55,8 +55,8 @@ function App() {
           <FiltersButton/>
         </MobilButtonsPanel>
         <Modal>
-          <UserFullInfo/>
-          {/* <Histogram/> */}
+          {/* <UserFullInfo/> */}
+          <Histogram/>
         </Modal>
         <Box>
           <SideBar>

@@ -8,12 +8,11 @@ function Burger() {
     const dispatch = useDispatch();
     const themeMode = useSelector((state) => state.dialect.themeMode);
 
-    const showPanel = () => {
-        dispatch(panelShow());
-    };
     return (
         <span className={`burger-box-${themeMode}`}>
-            <FiFilter className={`burger-${themeMode}`} onClick={showPanel} />
+            <FiFilter 
+                className={`burger-${themeMode}`} 
+                onClick={() => dispatch(panelShow())} />
         </span>
     );
 }

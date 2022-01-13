@@ -11,7 +11,8 @@ function Cross() {
 
     return (
         <span className={`cross-box-${themeMode}`}>
-            <ImCross className={`cross-${themeMode}`}
+            <ImCross 
+                className={`cross-${themeMode}`}
                 onClick={() => dispatch(panelHide())}/>
         </span>
     )

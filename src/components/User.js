@@ -22,7 +22,11 @@ function User() {
                 {users.map((user) => (
                     <li className={`user-${themeMode}`} 
                         key={user.login.uuid}
-                        onClick={() => {dispatch(getUuid(user.login.uuid))}}
+                        onClick={() => {
+                            dispatch(getUuid(user.login.uuid))
+                            // let time = Date.now()
+                            // console.log(`UUID --> ${user.login.uuid} == ${time}`);
+                        }}
                         >
                         <div className="pass">
                         <div className="avatar">

@@ -12,9 +12,7 @@ function ChartButton() {
         <span className={`chart-button-box-${themeMode}`}>
             <FaChartLine
                 className={`chart-button-${themeMode}`}
-                onClick={() => {
-                    dispatch(showModal(true));
-                }}
+                onClick={() => dispatch(showModal(true))}
             />
         </span>
     );
