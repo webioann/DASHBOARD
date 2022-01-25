@@ -12,7 +12,7 @@ export const reduxSlice = createSlice({
         currentPage: 1,
         requestSize: 50,
         usersOnPage: 20,
-        uuid: 'uuid is empty',
+        uuid: '',
     },
     reducers: {
         getGender: (state, actions) => {

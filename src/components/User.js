@@ -4,7 +4,7 @@ import NatBadge from './NatBadge'
 import UserNull from './UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-import { getUserFullData,getUuid } from '../Redux/reduxSlice.js'
+import { getUuid } from '../Redux/reduxSlice.js'
 import './style/user.css'
 
 function User() {
@@ -22,12 +22,7 @@ function User() {
                 {users.map((user) => (
                     <li className={`user-${themeMode}`} 
                         key={user.login.uuid}
-                        onClick={() => {
-                            dispatch(getUuid(user.login.uuid))
-                            // let time = Date.now()
-                            // console.log(`UUID --> ${user.login.uuid} == ${time}`);
-                        }}
-                        >
+                        onClick={() => {dispatch(getUuid(user.login.uuid))}}>
                         <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
