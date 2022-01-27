@@ -105,7 +105,7 @@ html,body{
     margin-right: auto;
     margin-left: auto;
 }
-/*    ===== CUSTOM SCROLLBAR =====    */
+/* =========== CUSTOM SCROLLBAR ========  */
 ::-webkit-scrollbar{
     width: 10px;
     height: 4px;
@@ -126,7 +126,7 @@ html,body{
     background-color: rgba(0,0,0,0.2);
 }
 
-/* ============================== */
+/* ============== GLOBAL CLASSES ================ */
 .icon-light{
     color: var(--lt-contr);
     margin-right: 0.5rem;

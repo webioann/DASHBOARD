@@ -20,7 +20,6 @@ import Footer from './Footer'
 import RequestSize from './RequestSize'
 import Modal from './Modal/Modal'
 import Histogram from './Histogram/Histogram'
-import UserFullInfo from './UserFullInfo'
 import Page_Scroller from './Page_Scroller'
 // ===== Hooks and others =====
 import useFetchData from '../hooks/useFetchData.js'
@@ -55,26 +54,25 @@ function App() {
           <FiltersButton/>
         </MobilButtonsPanel>
         <Modal>
-          <UserFullInfo/>
-          {/* <Histogram/> */}
+          <Histogram/>
         </Modal>
         <Box>
           <SideBar>
-          <Group >
-                <LangButton/>
-                <ThemeToggle/>
-                <ChartButton/> 
-                <Cross/>
+            <Group >
+              <LangButton/>
+              <ThemeToggle/>
+              <ChartButton/> 
+              <Cross/>
             </Group>
             <Group flexDir={'col'}>
-                <Title text={title_nat_filters}/>
-                <NatFilterList />
+              <Title text={title_nat_filters}/>
+              <NatFilterList />
             </Group>
             <Group flexDir={'col'}>
-                <Title text={title_gender_filters}/>
-                <GenderFilterBoth/>
-                <GenderFilterFemale/>
-                <GenderFilterMale/>
+              <Title text={title_gender_filters}/>
+              <GenderFilterBoth/>
+              <GenderFilterFemale/>
+              <GenderFilterMale/>
             </Group>
           </SideBar>
           <Main>

@@ -5,45 +5,36 @@ import { random } from "../data/random";
 import "./style/userFullInfo.css";
 
 function UserFullInfo() {
-    // const fullInfo = useSelector((state) => state.redux.userFullData);
-    const uuid = useSelector((state) => state.redux.uuid);
+
+    const uuid = useSelector(state => state.redux.uuid);
     const currentData = useSelector(state => state.redux.currentData)
 
     const [choosed, setChoosed] = useState(false);
     const [user, setUser] = useState([]);
     const [userr, setUserr] = useState([]);
-
-    let time = Date.now()
-
     const [nat,setNat] = useState('')
 
     useEffect(() => {
-        if( uuid ) {
-            setChoosed(true)
-        } 
-        else{ 
-            return setChoosed(false)
-        }
-    },[])
-    
 
-    useEffect(() => {
-        if( choosed ) {
-            setUser(random)
-            let natio = nations.find(nation => nation.code === random.nat)
-            setNat(natio.nameEng)
+        if( uuid.length > 15 ) {
             let temp = currentData.filter(item => item.login.uuid === uuid)
             setUserr(temp)
             console.log(`TEMP -> ${JSON.stringify(userr)}`);
-    
-        } 
-        else{ return null}
+        }
+        else{
+            console.log(`UUID is undedained`);
+        }
 
+    },[uuid])
+
+    useEffect(() => {
+        setUser(random)
+        let natio = nations.find(nation => nation.code === random.nat)
+        setNat(natio.nameEng)
+        setChoosed(true)
     }, [])
 
-    // console.log(`USER_DATA --> ${JSON.stringify(userr.name)}== ${time}`);
-    // console.log(`USER_GENDER --> ${userr.gender}== ${time}`);
-    console.log(`UUID --> ${uuid}`);
+    // console.log(`UUID --> ${uuid.length}`);
 
 
     if (choosed) {
@@ -128,9 +119,5 @@ function UserFullInfo() {
 }
 export default UserFullInfo;
 
-// if( uuid.length < 15 ) {
-//     return null
-// }
-// else{
 
 

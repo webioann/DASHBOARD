@@ -33,6 +33,10 @@ module.exports = {
                 use:[MiniCssExtractPlugin.loader,'css-loader','postcss-loader','sass-loader' ]
             },
             {
+                test: /\.less$/i,
+                use:[MiniCssExtractPlugin.loader,'css-loader','postcss-loader','less-loader' ]
+            },
+            {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {loader: "babel-loader",
