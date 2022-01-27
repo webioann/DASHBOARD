@@ -2,8 +2,7 @@ import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { showModal } from '../../Redux/dialectSlice'
 import { ImCross } from "react-icons/im"
-
-import './modal.css'
+import './modal.less'
 
 function Modal(props) {
 

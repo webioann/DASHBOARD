@@ -1,0 +1,12 @@
+.box{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: calc(100vh - 85px);  /*90px it is footer height 75px plus padding 15px*/
+}
+
+@media (min-width: 576px) {
+    .box{
+        height: calc(100vh - 65px); /* 65px it is footer height 50px plus padding 15px*/
+    }
+}

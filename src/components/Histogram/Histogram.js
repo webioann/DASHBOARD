@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import  nations  from '../../data/nations'
 import useHistogramData from '../../hooks/useHistogramData'
 import useGenderHistogram from '../../hooks/useGenderHistogram'
-import './histogram.css'
+import './histogram.less'
 
 function Histogram() {
 
