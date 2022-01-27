@@ -5,7 +5,7 @@ import UserNull from '../UserNull/UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
 import { getUuid } from '../../Redux/reduxSlice.js'
-import './user.css'
+import './user.scss'
 
 function User() {
 
@@ -20,10 +20,10 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                    <li className={`user-${themeMode}`} 
-                        key={user.login.uuid}
-                        onClick={() => {dispatch(getUuid(user.login.uuid))}}>
-                        <div className="pass">
+                <li className={`user-${themeMode}`} 
+                    key={user.login.uuid}
+                    onClick={() => {dispatch(getUuid(user.login.uuid))}}>
+                    <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
                         </div>
