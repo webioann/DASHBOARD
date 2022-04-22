@@ -6,7 +6,7 @@ export const multyLang = {
     },
     natSubTitle: {
         eng: 'nationality filters',
-        rus: 'фильтрация по национальности',
+        rus: 'по национальности',
     },
     genderSubTitle: {
         eng: 'gender filter',

@@ -23,8 +23,6 @@ function Gender_Filter({ type }) {
     else if( type === 'male' ) {
         text = useTranslator(multyLang.maleGender)
     }
-
-    
     return (
         <div className="row">
             <div className={(gender === buttonId) 

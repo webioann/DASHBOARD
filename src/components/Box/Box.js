@@ -1,5 +1,5 @@
-import React from "react";
-import "./box.css";
+import React from "react"
+import "./box.css"
 
 function Box(props) {
     return (
@@ -7,6 +7,5 @@ function Box(props) {
             {props.children}
         </div>
     )
-    
 }
 export default Box;
