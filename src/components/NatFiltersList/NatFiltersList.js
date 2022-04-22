@@ -2,7 +2,7 @@ import React from 'react'
 import nations from '../../data/nations'
 import { useDispatch,useSelector } from "react-redux"
 import { getNatId } from '../../Redux/reduxSlice'
-import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im";
+import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im"
 import './nat-filter-list.css'
 
 function NatFiltersList() {
@@ -26,7 +26,7 @@ function NatFiltersList() {
                 key={nation.code}
                 onClick={chooseNationality} 
                 id={nation.code}>
-                <i className={`icon-${themeMode}`}>
+                <i className={`checkbox-${themeMode}`}>
                     {(activeNationality === nation.code) 
                     ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                 </i>

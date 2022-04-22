@@ -127,13 +127,15 @@ html,body{
 }
 
 /* ============== GLOBAL CLASSES ================ */
-.icon-light{
+.checkbox-light{
     color: var(--lt-contr);
     margin-right: 0.5rem;
+    pointer-events: none;
 }
-.icon-dark{
+.checkbox-dark{
     color: var(--dk-contr);
-    margin-right: 0.5rem;    
+    margin-right: 0.5rem;
+    pointer-events: none;    
 }
 
 .lang-icon-light{

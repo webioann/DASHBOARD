@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import nations from '../../data/nations'
 // import './style/user.css'
 

@@ -1,17 +1,5 @@
 
 export const multyLang = {
-    emptyList: {
-        eng: 'nothing was found for these parameters',
-        rus: 'по этим параметрам ничего не найдено',
-    },
-    natSubTitle: {
-        eng: 'nationality filters',
-        rus: 'по национальности',
-    },
-    genderSubTitle: {
-        eng: 'gender filter',
-        rus: 'фильтрация по полу',
-    },
     boothGender: {
         eng: 'booth gender',
         rus: 'обеих полов',
@@ -48,9 +36,22 @@ export const tool_tip_reqestSise = {
 }
 export const title_nat_filters = {
     eng: 'nationality filters',
-    rus: 'фильтрация по национальности',
+    rus: 'по национальности',
 }
 export const title_gender_filters = {
     eng: 'gender filter',
     rus: 'фильтрация по полу',
 }
+/* emptyList: {
+    eng: 'nothing was found for these parameters',
+    rus: 'по этим параметрам ничего не найдено',
+},
+natSubTitle: {
+    eng: 'nationality filters',
+    rus: 'по национальности',
+},
+genderSubTitle: {
+    eng: 'gender filter',
+    rus: 'фильтрация по полу',
+},
+ */

@@ -28,7 +28,7 @@ function Gender_Filter({ type }) {
             <div className={(gender === buttonId) 
                 ? `button-${themeMode} active-${themeMode}` : `button-${themeMode}`}
                 onClick={() => {dispatch(getGender(buttonId))}}>
-                <i className={`icon-${themeMode}`}>
+                <i className={`checkbox-${themeMode}`}>
                     {gender === buttonId ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                 </i>
                 { text }
