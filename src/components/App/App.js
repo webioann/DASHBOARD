@@ -5,7 +5,7 @@ import FiltersButton from '../FiltersButton/FiltersButton'
 import Box from '../Box/Box'
 import SideBar from '../SideBar/SideBar'
 import Main from '../Main/Main'
-import User from '../User/User'
+import Users from '../Users/Users'
 import NatFiltersList from '../NatFiltersList/NatFiltersList'
 import LangButton from '../LangButton/LangButton'
 import ChartButton from '../ChartButton/ChartButton'
@@ -21,6 +21,7 @@ import Histogram from '../Histogram/Histogram'
 import Pagination from '../Pagination/Pagination'
 import Chart from '../Chart/Chart'
 import RangeBox from '../RangeBox/RangeBox'
+import UserFullData from '../UserFullData/UserFullData'
 
 // ===== Hooks and others =====
 import useFetchData from '../../hooks/useFetchData.js'
@@ -54,6 +55,7 @@ function App() {
         </MobilButtonsPanel>
         <Modal>
           <Chart>
+            <UserFullData/>
             <Histogram/>
             <RangeBox/>
           </Chart>
@@ -78,7 +80,7 @@ function App() {
             </Group>
           </SideBar>
           <Main>
-            <User/>
+            <Users/>
           </Main>
         </Box>
         <Footer>
