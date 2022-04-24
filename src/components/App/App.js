@@ -19,6 +19,9 @@ import RequestSize from '../RequestSize/RequestSize'
 import Modal from '../Modal/Modal'
 import Histogram from '../Histogram/Histogram'
 import Pagination from '../Pagination/Pagination'
+import Chart from '../Chart/Chart'
+import RangeBox from '../RangeBox/RangeBox'
+
 // ===== Hooks and others =====
 import useFetchData from '../../hooks/useFetchData.js'
 import usePageCutter from '../../hooks/usePageCutter.js'
@@ -50,7 +53,10 @@ function App() {
           <FiltersButton/>
         </MobilButtonsPanel>
         <Modal>
-          <Histogram/>
+          <Chart>
+            <Histogram/>
+            <RangeBox/>
+          </Chart>
         </Modal>
         <Box>
           <SideBar>
