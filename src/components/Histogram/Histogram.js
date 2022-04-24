@@ -8,7 +8,7 @@ import './histogram.less'
 function Histogram() {
 
     const lang = useSelector((state) => state.dialect.lang)
-    const requestSize = useSelector(state => state.redux.requestSize)
+    const requestSize = useSelector(state => state.redux.requestSize) 
     const fraction = useHistogramData()
     const { totalMen,totalWomen } = useGenderHistogram()
     
@@ -23,7 +23,7 @@ function Histogram() {
             { nations.map( unit  => { if (unit.code !== 'ALL') {  // ignored first unit with key 'ALL'
                 return <li className="chart-item" key={unit.code} >
                     <div className="chart-title">
-                        { lang === 'eng' ? unit.nameEng : unit.nameRus }
+                        { lang === 'eng' ? unit.nameEng : unit.nameRus } { unit.dataVolum }
                     </div>
                     <div className="hist-box">
                         <div className="histogram" 
@@ -47,7 +47,7 @@ function Histogram() {
                         {`${ lang === 'eng' ? 'men' : 'чоловіки'}  ${totalMen}%`}
                     </div>
                     <div style={{width: `${totalWomen}%`}} className="range-women">
-                        {`${ lang === 'eng' ? 'women' : 'жінки'}   ${totalWomen}%`}
+                        {`${ lang === 'eng' ? 'women' : 'жінки'} ${totalWomen}%`}
                     </div>
                 </div>
             </div>
