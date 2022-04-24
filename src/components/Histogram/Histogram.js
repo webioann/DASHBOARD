@@ -44,10 +44,10 @@ function Histogram() {
                 </header>
                 <div className="range">
                     <div style={{width: `${totalMen}%`}} className="range-men">
-                        {`men  ${totalMen}%`}
+                        {`${ lang === 'eng' ? 'men' : 'чоловіки'}  ${totalMen}%`}
                     </div>
                     <div style={{width: `${totalWomen}%`}} className="range-women">
-                        {`women  ${totalWomen}%`}
+                        {`${ lang === 'eng' ? 'women' : 'жінки'}   ${totalWomen}%`}
                     </div>
                 </div>
             </div>
