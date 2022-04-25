@@ -1,4 +1,4 @@
-export const random = {
+export const random = [{
         "gender": "male",
         "name": {
             "title": "mr",
@@ -50,4 +50,4 @@ export const random = {
             "thumbnail": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
         },
     "nat": "IE"
-};
+}];

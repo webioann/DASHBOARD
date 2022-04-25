@@ -4,33 +4,20 @@ import { useSelector } from 'react-redux'
 function UserFullData() {
 
     const oneUserId = useSelector(state => state.redux.uuid)
-    const currentData = useSelector((state) => state.redux.currentData)
-    const[favorit,setFavorit] = useState([])
+    const data = useSelector((state) => state.redux.data)
+    const[favorit,setFavorit] = useState(data.filter(unit => unit.login.uuid === oneUserId))
 
-    useEffect(() => {
-        if(oneUserId !== "") {
-            let raw = currentData.filter(unit => unit.login.uuid === oneUserId)
-            setFavorit(raw)
-        }
-        else{
-            setFavorit([])
-        }
-    },[currentData])
 
     console.log(`UUID => ${oneUserId}`);
-    console.log(`fav-array = ${JSON.stringify(currentData.filter(unit => unit.login.uuid === oneUserId))}`)
-    console.log(`fav-array222 = ${favorit[0]}`)
+    console.log(`fav-array = ${JSON.stringify(data.filter(unit => unit.login.uuid === oneUserId))}`)
+    console.log(favorit)
 
 
-    if( favorit !== [] ) {
+    if( favorit ) {
         return (
             <div>
                 <p>UserFullDataId === {oneUserId}</p>
-                {favorit.map(one => (
-                    <li>{one.name.first}</li>
-                )
 
-                )}
             </div>
         )
     }
