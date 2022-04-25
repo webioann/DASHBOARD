@@ -20,7 +20,7 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                <li className={`user-${themeMode}`} key={user.login.uuid} onDoubleClick={() => {dispatch(getUuid(user.login.uuid))}}>
+                <li className={`user-${themeMode}`} key={user.login.uuid} onClick={() => {dispatch(getUuid(user.login.uuid))}}>
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 

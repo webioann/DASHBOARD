@@ -9,7 +9,8 @@ function UserFullData() {
 
     useEffect(() => {
         if(oneUserId !== "") {
-            setFavorit(currentData.filter(unit => unit.login.uuid === oneUserId))
+            let raw = currentData.filter(unit => unit.login.uuid === oneUserId)
+            setFavorit(raw)
         }
         else{
             setFavorit([])
@@ -17,11 +18,14 @@ function UserFullData() {
     },[currentData])
 
     console.log(`UUID => ${oneUserId}`);
+    console.log(`fav-array = ${JSON.stringify(currentData.filter(unit => unit.login.uuid === oneUserId))}`)
+    console.log(`fav-array222 = ${favorit[0]}`)
 
-    if( oneUserId !== "" ) {
+
+    if( favorit !== [] ) {
         return (
             <div>
-                UserFullDataId === {oneUserId}
+                <p>UserFullDataId === {oneUserId}</p>
                 {favorit.map(one => (
                     <li>{one.name.first}</li>
                 )
