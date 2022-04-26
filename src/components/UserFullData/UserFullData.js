@@ -8,7 +8,7 @@ function UserFullData() {
     const oneUserId = useSelector(state => state.redux.uuid)
     const currentData = useSelector((state) => state.redux.currentData)
     const[favorit,setFavorit] = useState("start")
-    const [nati,setNat] = useState('all')
+    const [nationality,setNat] = useState('all')
 
 
     useEffect(() => {
@@ -17,8 +17,9 @@ function UserFullData() {
 
     useEffect(() => {
         if(favorit !== "start") {
-            let natio = nations.find(unit => unit.code === favorit.nat)
+            let natio = nations.find(nation => nation.code === favorit.nat)
             setNat('natio')
+            console.log(`nat ${natio}`);
         }
         else{
             setNat("all")
@@ -54,7 +55,7 @@ function UserFullData() {
                     <div className="field">
                         <p className="left-p">Nationality:</p>
                         <p className="right-p">
-                            {nati}
+                            {nationality}
                         </p>
                     </div>
                     <div className="field">
