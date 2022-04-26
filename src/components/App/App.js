@@ -81,19 +81,15 @@ function App() {
           <RequestSize/>
         </Footer>
         {/*====== modal for histogram chart ===== */}
-        <Modal>
+        {/* <Modal>
           <Chart_Container>
-          <UserFullData/>
             <Histogram/>
             <RangeBox/>
           </Chart_Container>
+        </Modal> */}
+        <Modal>
+          <UserFullData/>
         </Modal>
-        {/* <Modal>
-          <Chart_Container>
-            <UserFullData/>
-          </Chart_Container>
-        </Modal>
- */}
 
       </ContainerFluid>
     )

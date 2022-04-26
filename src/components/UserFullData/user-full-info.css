@@ -1,0 +1,60 @@
+.user-full-info{
+    font-size: 22px;
+}
+.field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.field:hover{
+    background-color: #eee;
+}
+
+.user-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    /* border: 1px solid green; */
+}
+.user-avatar{
+    width: 10ch;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.user-photo{
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #bbb;
+}
+.passport{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+    /* border: 1px solid red; */
+}
+.name{
+    letter-spacing: 2px;
+}
+
+.left-p{
+    width: 10ch;    
+    color: #000;
+    text-align: right;
+    padding-right: 15px;
+    font-weight: 600;
+}
+.right-p{
+    flex: 6;
+    overflow: hidden;
+    
+}
+#big-letter::first-letter{
+    text-transform: uppercase;
+}
