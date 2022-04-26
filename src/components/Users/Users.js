@@ -1,15 +1,14 @@
 import React from 'react'
-import { useSelector,useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import NatBadge from '../NatBadge/NatBadge'
+import Button_Full_Info from '../Button_Full_Info/Button_Full_Info'
 import UserNull from '../UserNull/UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-import { getUuid } from '../../Redux/reduxSlice.js'
 import './users.scss'
 
 function User() {
 
-    const dispatch = useDispatch()
     const themeMode = useSelector(state => state.dialect.themeMode)
     const users = useSelector(state => state.redux.currentData)
 
@@ -20,7 +19,8 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                <li className={`user-${themeMode}`} key={user.login.uuid} onClick={() => {dispatch(getUuid(user.login.uuid))}}>
+                <li className={`user-${themeMode}`} key={user.login.uuid}>
+
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
@@ -32,9 +32,13 @@ function User() {
                             <p className="age cell">
                                 {user.dob.age} years ( {new Date(user.dob.date).toLocaleDateString()} )
                             </p>
-                            <NatBadge  user_nat={user.nat} /> 
+                            <div className='row'>
+                                <NatBadge  user_nat={user.nat} /> 
+                                <Button_Full_Info uuid={user.login.uuid}/>
+                            </div>
                         </div>
                     </div>
+
                     <div className='contacts'>
                         <div className="mail cell">
                             <i className={`icon-${themeMode}`}><AiOutlineMail/></i>
@@ -45,6 +49,7 @@ function User() {
                             <p>{user.phone}</p>
                         </div>
                     </div>
+
                     <div className="location">
                         <p className='cell'>/ {user.location.country}  /</p>
                         <p className='cell'>{user.location.state} , {user.location.city}  </p>

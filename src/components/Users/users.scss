@@ -26,6 +26,12 @@
             height: 75px;
             display: flex;
             flex-direction: column;
+            .row{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid red;
+            }
         }
     }
     .contacts{
