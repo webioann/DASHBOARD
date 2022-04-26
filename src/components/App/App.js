@@ -19,7 +19,7 @@ import RequestSize from '../RequestSize/RequestSize'
 import Modal from '../Modal/Modal'
 import Histogram from '../Histogram/Histogram'
 import Pagination from '../Pagination/Pagination'
-import Chart from '../Chart/Chart'
+import Chart_Container from '../Chart_Container/Chart_Container'
 import RangeBox from '../RangeBox/RangeBox'
 import UserFullData from '../UserFullData/UserFullData'
 
@@ -53,13 +53,6 @@ function App() {
         <MobilButtonsPanel>
           <FiltersButton/>
         </MobilButtonsPanel>
-        <Modal>
-          <Chart>
-            <UserFullData/>
-            <Histogram/>
-            <RangeBox/>
-          </Chart>
-        </Modal>
         <Box>
           <SideBar>
             <Group >
@@ -87,6 +80,15 @@ function App() {
           <Pagination pageNumberArray={pageNumberArray}/>
           <RequestSize/>
         </Footer>
+        {/*====== modal for histogram chart ===== */}
+        <Modal>
+          <Chart_Container>
+            <UserFullData/>
+            <Histogram/>
+            <RangeBox/>
+          </Chart_Container>
+        </Modal>
+
       </ContainerFluid>
     )
   }else if (loading) {

@@ -1,15 +1,15 @@
 import React from 'react'
 import { useSelector } from "react-redux"
 import  nations  from '../../data/nations'
-import './chart.less'
+import './chart_container.less'
 
-function Chart(props) {
+function Chart_Container(props) {
 
     const lang = useSelector((state) => state.dialect.lang)
     const requestSize = useSelector(state => state.redux.requestSize) 
 
     return (
-        <div className="chart">
+        <div className="chart-container">
             <header>
                 <h3>
                     { lang === 'eng' ? nations[0].chartTitleEng : nations[0].chartTitleRus }
@@ -21,4 +21,4 @@ function Chart(props) {
     )
 }
 
-export default Chart;
+export default Chart_Container;
