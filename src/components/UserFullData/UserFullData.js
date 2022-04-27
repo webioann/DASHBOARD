@@ -1,5 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import { useSelector } from 'react-redux'
+import useGetNationality from '../../hooks/useGetNationality'
+
+
 import nations from "../../data/nations"
 import './user-full-info.css'
 
@@ -12,19 +15,23 @@ function UserFullData() {
 
 
     useEffect(() => {
-        setFavorit(currentData.filter(unit => unit.login.uuid === oneUserId))
+        let user_full_data = currentData.filter(unit => unit.login.uuid === oneUserId)
+        setFavorit(user_full_data)
+        // console.log(`user_full_info ${JSON.stringify(user_full_data)}`);
     },[oneUserId])
 
-    useEffect(() => {
-        if(favorit !== "start") {
-            let natio = nations.find(nation => nation.code === favorit.nat)
-            setNat('natio')
-            console.log(`nat ${natio}`);
-        }
-        else{
-            setNat("all")
-        }
-    },[favorit])
+    // useEffect(() => {
+    //     if(favorit !== "start") {
+    //         let natio = nations.find(nation => nation.code === favorit.nat)
+    //         setNat('natio')
+    //         console.log(`nat ${natio}`);
+    //     }
+    //     else{
+    //         setNat("all")
+    //     }
+    // },[favorit])
+
+    console.log(`favorit ${favorit}`);
 
     if( favorit !== "start" ) {
         return (
@@ -55,7 +62,8 @@ function UserFullData() {
                     <div className="field">
                         <p className="left-p">Nationality:</p>
                         <p className="right-p">
-                            {nationality}
+                            {user.nat}
+                            { useGetNationality(user.nat) }
                         </p>
                     </div>
                     <div className="field">
@@ -100,10 +108,6 @@ function UserFullData() {
                     <div className="field">
                         <p className="left-p">Username:</p>
                         <p className="right-p">{user.login.username}</p>
-                    </div>
-                    <div className="field">
-                        <p className="left-p">Login:</p>
-                        <p className="right-p">roootookek12</p>
                     </div>
                     <div className="field">
                         <p className="left-p">Password: </p>

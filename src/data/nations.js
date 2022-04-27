@@ -20,7 +20,5 @@ const nations = [
     { code:'NZ', size: 0,  dataVolum:  0,   nameEng:"New Zealand",     nameRus: "Новозеландцы",       color:'darkOrange'},
     { code:'TR', size: 0,  dataVolum:  0,   nameEng:"Turkish",         nameRus: "Турки",              color:'tomato'},
     { code:'US', size: 0,  dataVolum:  0,   nameEng:"American",        nameRus: "Американцы",         color:'cadetBlue'},
-
 ]
-    
 export default nations;
