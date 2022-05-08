@@ -25,26 +25,3 @@ const useChartDataCreator = () => {
     return fraction 
 }
 export default useChartDataCreator;
-
-
-//     useEffect(() => {
-//     if( window.matchMedia('(max-width: 400px)').matches) {
-//         setFraction( 100 / maxValue)
-//     }
-//     if( window.matchMedia('(max-width: 576px)').matches) {
-//         setFraction( 250 / maxValue)
-//     }
-//     if( window.matchMedia('(max-width: 768px)').matches) {
-//         setFraction( 400 / maxValue)
-//     }
-//     if( window.matchMedia('(max-width: 992px)').matches) {
-//         setFraction( 500 / maxValue)
-//     }
-//     if( window.matchMedia('(min-width: 992px)').matches) {
-//         setFraction( 500 / maxValue)
-//     }
-// },[maxValue])
-
-
-
-

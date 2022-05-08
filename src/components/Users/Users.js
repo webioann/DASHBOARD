@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import NatBadge from '../NatBadge/NatBadge'
-import { showModal } from "../../Redux/dialectSlice"
+import { showChart,showModal } from "../../Redux/dialectSlice"
 import { getUuid } from '../../Redux/reduxSlice.js'
 import UserNull from '../UserNull/UserNull'
 import { FaPhone } from 'react-icons/fa'
@@ -13,7 +13,6 @@ function User() {
     const themeMode = useSelector(state => state.dialect.themeMode)
     const users = useSelector(state => state.redux.currentData)
     const dispatch = useDispatch()
-
     if( users.length === 0 ) {        
         return <UserNull/>
     }
@@ -24,6 +23,7 @@ function User() {
                 <li className={`user-${themeMode}`} 
                     onClick={() => {
                         dispatch(getUuid(user.login.uuid))
+                        dispatch(showChart(false))
                         dispatch(showModal(true))
                     }}
                     key={user.login.uuid}>

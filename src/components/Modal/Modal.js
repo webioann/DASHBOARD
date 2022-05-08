@@ -7,14 +7,14 @@ import './modal.less'
 function Modal(props) {
 
     const dispatch = useDispatch()
-    const active = useSelector(state => state.dialect.modalVisibility) 
+    const active = useSelector(state => state.dialect.modal) 
 
     return (
         <div  className={ active ? 'modal-container active-modal' : 'modal-container' }>
             <div className={ active ? 'modal-window active-modal-window' : 'modal-window'}>
                 <div className="close-modal">
                     <i className="cross">
-                        <ImCross onClick={() => {dispatch(showModal(false))}}/>
+                        <ImCross onClick={() => dispatch(showModal(false))}/>
                     </i>
                 </div>
                 { props.children }

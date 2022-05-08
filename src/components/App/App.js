@@ -1,4 +1,6 @@
 import React,{ useRef,useEffect } from 'react'
+import { useSelector } from "react-redux"
+
 import ContainerFluid from '../ContainerFluid/ContainerFluid'
 import MobilButtonsPanel from '../MobileButtonsPanel/MobilButtonsPanel'
 import FiltersButton from '../FiltersButton/FiltersButton'
@@ -31,6 +33,8 @@ import useButtonCreator from "../../hooks/useButtonCreator"
 import { title_nat_filters,title_gender_filters } from '../../data/multiLang'
 
 function App() {
+
+  const chart = useSelector((state) => state.dialect.chart)
   
   // --- it is RENDER COUNTER function
   const newRender = useRef(1)
@@ -46,8 +50,6 @@ function App() {
   const { pageNumberArray } = useButtonCreator()
   const { loading,error } = useFetchData()
   //-----------------------------------------------
-
-  const SS = true
 
   if ( !loading && !error ) {
     return (
@@ -84,12 +86,12 @@ function App() {
         </Footer>
 
         <Modal>
-          { SS ? 
-          <Chart_Container>
-            <Histogram/>
-            <RangeBox/>
-          </Chart_Container>
-          :<UserFullData/>
+          { chart 
+            ? <Chart_Container>
+                <Histogram/>
+                <RangeBox/>
+              </Chart_Container>
+            : <UserFullData/>
           }
         </Modal>
 

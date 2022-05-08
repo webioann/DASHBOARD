@@ -61,6 +61,7 @@
     color: var(--lt-all-box-text);
     &:hover{
         background-color: var(--lt-user-hover);
+        cursor: pointer;
     }
 }
 .user-dark{
@@ -68,6 +69,7 @@
     color: var(--dk-all-box-text);
     &:hover{
         background-color: var(--dk-user-hover);
+        cursor: pointer;
     }
 }
 .user-light:last-child,
