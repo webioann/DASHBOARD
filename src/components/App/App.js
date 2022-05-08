@@ -47,6 +47,8 @@ function App() {
   const { loading,error } = useFetchData()
   //-----------------------------------------------
 
+  const SS = true
+
   if ( !loading && !error ) {
     return (
       <ContainerFluid>
@@ -80,15 +82,15 @@ function App() {
           <Pagination pageNumberArray={pageNumberArray}/>
           <RequestSize/>
         </Footer>
-        {/*====== modal for histogram chart ===== */}
-        {/* <Modal>
+
+        <Modal>
+          { SS ? 
           <Chart_Container>
             <Histogram/>
             <RangeBox/>
           </Chart_Container>
-        </Modal> */}
-        <Modal>
-          <UserFullData/>
+          :<UserFullData/>
+          }
         </Modal>
 
       </ContainerFluid>

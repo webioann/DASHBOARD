@@ -6,7 +6,7 @@ function NatBadge({ user_nat }) {
     let currentNation = nations.find(nation => nation.code === user_nat)
     
     const cell = {
-        // paddingTop: '5px',
+        paddingTop: '5px',
         paddingLeft: '15px', 
         marginRight: '5px',
     }

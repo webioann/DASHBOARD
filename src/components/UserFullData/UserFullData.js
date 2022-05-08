@@ -1,9 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import useGetNationality from '../../hooks/useGetNationality'
-
-
-import nations from "../../data/nations"
 import './user-full-info.css'
 
 function UserFullData() {
@@ -11,25 +8,11 @@ function UserFullData() {
     const oneUserId = useSelector(state => state.redux.uuid)
     const currentData = useSelector((state) => state.redux.currentData)
     const[favorit,setFavorit] = useState("start")
-    const [nationality,setNat] = useState('all')
-
 
     useEffect(() => {
         let user_full_data = currentData.filter(unit => unit.login.uuid === oneUserId)
         setFavorit(user_full_data)
-        // console.log(`user_full_info ${JSON.stringify(user_full_data)}`);
     },[oneUserId])
-
-    // useEffect(() => {
-    //     if(favorit !== "start") {
-    //         let natio = nations.find(nation => nation.code === favorit.nat)
-    //         setNat('natio')
-    //         console.log(`nat ${natio}`);
-    //     }
-    //     else{
-    //         setNat("all")
-    //     }
-    // },[favorit])
 
     console.log(`favorit ${favorit}`);
 
@@ -62,7 +45,6 @@ function UserFullData() {
                     <div className="field">
                         <p className="left-p">Nationality:</p>
                         <p className="right-p">
-                            {user.nat}
                             { useGetNationality(user.nat) }
                         </p>
                     </div>

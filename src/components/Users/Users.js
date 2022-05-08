@@ -1,7 +1,8 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
 import NatBadge from '../NatBadge/NatBadge'
-import Button_Full_Info from '../Button_Full_Info/Button_Full_Info'
+import { showModal } from "../../Redux/dialectSlice"
+import { getUuid } from '../../Redux/reduxSlice.js'
 import UserNull from '../UserNull/UserNull'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
@@ -11,6 +12,7 @@ function User() {
 
     const themeMode = useSelector(state => state.dialect.themeMode)
     const users = useSelector(state => state.redux.currentData)
+    const dispatch = useDispatch()
 
     if( users.length === 0 ) {        
         return <UserNull/>
@@ -19,7 +21,12 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                <li className={`user-${themeMode}`} key={user.login.uuid}>
+                <li className={`user-${themeMode}`} 
+                    onClick={() => {
+                        dispatch(getUuid(user.login.uuid))
+                        dispatch(showModal(true))
+                    }}
+                    key={user.login.uuid}>
 
                     <div className="pass">
                         <div className="avatar">
@@ -32,10 +39,7 @@ function User() {
                             <p className="age cell">
                                 {user.dob.age} years ( {new Date(user.dob.date).toLocaleDateString()} )
                             </p>
-                            <div className='row'>
-                                <NatBadge  user_nat={user.nat} /> 
-                                <Button_Full_Info uuid={user.login.uuid}/>
-                            </div>
+                            <NatBadge  user_nat={user.nat} /> 
                         </div>
                     </div>
 
