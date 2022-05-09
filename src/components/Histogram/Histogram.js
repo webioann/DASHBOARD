@@ -11,18 +11,19 @@ function Histogram() {
     
     return (
         <ul className='histogram'>
-            { nations.map( unit  => { if (unit.code !== 'ALL') {  // ignored first unit with key 'ALL'
-                return <li className="chart-item" key={unit.code} >
-                    <div className="chart-title">
-                        { lang === 'eng' ? unit.nameEng : unit.nameRus }
-                    </div>
-                    <div className="hist-box">
-                        <div className="histogram-item" 
-                            style={{ backgroundColor: unit.color, width: `${unit.dataVolum * fraction}px`}}>
-                                {unit.dataVolum}
-                        </div> 
-                    </div>
-                </li>
+            { nations.map( unit  => {
+                 if(unit.code !== 'ALL') {  // ignored first unit with key 'ALL'
+                    return <li className="chart-item" key={unit.code} >
+                        <div className="chart-title">
+                            { lang === 'eng' ? unit.nameEng : unit.nameRus }
+                        </div>
+                        <div className="hist-box">
+                            <div className="histogram-item" 
+                                style={{ backgroundColor: unit.color, width: `${unit.dataVolum * fraction}px`}}>
+                                    {unit.dataVolum}
+                            </div> 
+                        </div>
+                    </li>
                 }else{
                     return null
                 }
