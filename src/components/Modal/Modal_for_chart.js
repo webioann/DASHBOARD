@@ -4,8 +4,6 @@ import { show_chart_modal } from '../../Redux/dialectSlice'
 import { ImCross } from "react-icons/im"
 import { FaRandom,FaSortAmountUp,FaSortAmountDownAlt } from 'react-icons/fa'
 import { sort_random,sort_up,sort_down } from '../../Redux/filterSlice'
-
-// import Sorter from '../Sorter/Sorter'
 import './modal.less'
 
 function Modal_for_chart({ children }) {
