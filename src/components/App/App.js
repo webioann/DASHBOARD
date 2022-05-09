@@ -19,6 +19,8 @@ import Group from '../Group/Group'
 import Footer from '../Footer/Footer'
 import RequestSize from '../RequestSize/RequestSize'
 import Modal from '../Modal/Modal'
+import Modal_for_chart from '../Modal/Modal_for_chart'
+import Modal_for_user from '../Modal/Modal_for_user'
 import Histogram from '../Histogram/Histogram'
 import Pagination from '../Pagination/Pagination'
 import Chart_Container from '../Chart_Container/Chart_Container'
@@ -34,8 +36,6 @@ import { title_nat_filters,title_gender_filters } from '../../data/multiLang'
 
 function App() {
 
-  const chart = useSelector((state) => state.dialect.chart)
-  
   // --- it is RENDER COUNTER function
   const newRender = useRef(1)
   useEffect(() => {
@@ -85,7 +85,7 @@ function App() {
           <RequestSize/>
         </Footer>
 
-        <Modal>
+        {/* <Modal>
           { chart 
             ? <Chart_Container>
                 <Histogram/>
@@ -93,7 +93,17 @@ function App() {
               </Chart_Container>
             : <UserFullData/>
           }
-        </Modal>
+        </Modal> */}
+        <Modal_for_chart>
+          <Chart_Container>
+            <Histogram/>
+            <RangeBox/>
+          </Chart_Container>
+        </Modal_for_chart>
+
+        <Modal_for_user>
+          <UserFullData/>
+        </Modal_for_user>
 
       </ContainerFluid>
     )

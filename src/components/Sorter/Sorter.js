@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaRandom,FaSortAmountUp,FaSortAmountDownAlt } from 'react-icons/fa'
 import { sort_random,sort_up,sort_down } from '../../Redux/filterSlice'
-
 import './sorter.scss'
 
 function Sorter() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import NatBadge from '../NatBadge/NatBadge'
-import { showChart,showModal } from "../../Redux/dialectSlice"
+import { showChart,showModal, show_user_modal } from "../../Redux/dialectSlice"
 import { getUuid } from '../../Redux/reduxSlice.js'
 import UserNull from '../UserNull/UserNull'
 import { FaPhone } from 'react-icons/fa'
@@ -25,6 +25,8 @@ function User() {
                         dispatch(getUuid(user.login.uuid))
                         dispatch(showChart(false))
                         dispatch(showModal(true))
+                        
+                        dispatch(show_user_modal(true))
                     }}
                     key={user.login.uuid}>
 

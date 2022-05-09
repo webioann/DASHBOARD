@@ -5,8 +5,12 @@ export const dialectSlice = createSlice({
     initialState: {
         lang: 'eng',
         themeMode: 'light',
+
         modal: false,
         chart: false,
+
+        chart_modal: false,
+        user_modal: false,
 
         sideBarStatus: 'hide',
     },
@@ -19,11 +23,17 @@ export const dialectSlice = createSlice({
         showModal: (state,actions) => { state.modal = actions.payload},
         showChart: (state,actions) => { state.chart = actions.payload},
 
+        show_chart_modal: (state,actions) => { state.chart_modal = actions.payload},
+        show_user_modal: (state,actions) => { state.user_modal = actions.payload},
+
         sideBarShow: state => {state.sideBarStatus = 'show'},
         sideBarHide: state => {state.sideBarStatus = 'hide'},
     }
 })
 
-export const { langEng,langRus,lightMode,darkMode,showModal,showChart,sideBarShow,sideBarHide } = dialectSlice.actions
+export const { langEng,langRus,lightMode,darkMode,showModal,showChart,sideBarShow,sideBarHide,  
+    show_chart_modal,show_user_modal
+
+} = dialectSlice.actions
 
 export default dialectSlice.reducer

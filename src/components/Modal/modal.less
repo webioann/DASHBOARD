@@ -26,10 +26,13 @@
         color: #333333;
         transform: scale(0.7);
         transition: all 0.8s;
-        .close-modal{
+        .top{
             display: flex;
             justify-content: flex-end;
-            .cross{
+            .sort-random,
+            .sort-up,
+            .sort-down,
+            .close-cross{
                 width: 50px;
                 height: 50px;
                 padding: 10px;
@@ -45,8 +48,13 @@
                     cursor: pointer;
                 }
             }
+            .active-sorter{
+                background-color: #eee;
+            }
         }
-        
+        .for-chart{
+            justify-content: space-between;
+        }
     }
     .acive-modal-window{
         transform: scale(1);

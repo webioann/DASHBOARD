@@ -1,7 +1,7 @@
 import React from "react"
 import { FaChartLine } from "react-icons/fa"
 import { useDispatch, useSelector } from "react-redux"
-import { showModal,showChart } from "../../Redux/dialectSlice"
+import { showModal,showChart, show_chart_modal } from "../../Redux/dialectSlice"
 import "./chart-button.css"
 
 function ChartButton() {
@@ -11,6 +11,8 @@ function ChartButton() {
     const show_chart = () => {
         dispatch(showModal(true))
         dispatch(showChart(true))
+
+        dispatch(show_chart_modal(true))
     }
     
     return (
