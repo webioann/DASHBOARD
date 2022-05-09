@@ -1,6 +1,4 @@
 import React,{ useRef,useEffect } from 'react'
-import { useSelector } from "react-redux"
-
 import ContainerFluid from '../ContainerFluid/ContainerFluid'
 import MobilButtonsPanel from '../MobileButtonsPanel/MobilButtonsPanel'
 import FiltersButton from '../FiltersButton/FiltersButton'
@@ -18,7 +16,6 @@ import Title from '../Title/Title'
 import Group from '../Group/Group'
 import Footer from '../Footer/Footer'
 import RequestSize from '../RequestSize/RequestSize'
-import Modal from '../Modal/Modal'
 import Modal_for_chart from '../Modal/Modal_for_chart'
 import Modal_for_user from '../Modal/Modal_for_user'
 import Histogram from '../Histogram/Histogram'
