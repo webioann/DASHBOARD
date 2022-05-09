@@ -84,16 +84,7 @@ function App() {
           <Pagination pageNumberArray={pageNumberArray}/>
           <RequestSize/>
         </Footer>
-
-        {/* <Modal>
-          { chart 
-            ? <Chart_Container>
-                <Histogram/>
-                <RangeBox/>
-              </Chart_Container>
-            : <UserFullData/>
-          }
-        </Modal> */}
+        
         <Modal_for_chart>
           <Chart_Container>
             <Histogram/>

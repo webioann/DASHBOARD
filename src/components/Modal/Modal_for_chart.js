@@ -12,18 +12,25 @@ function Modal_for_chart({ children }) {
 
     const dispatch = useDispatch()
     const active = useSelector((state) => state.dialect.chart_modal)
+    const active_sorter = useSelector((state) => state.filter.sort_by)
 
     return (
         <div  className={ active ? 'modal-container active-modal' : 'modal-container' }>
             <div className={ active ? 'modal-window active-modal-window' : 'modal-window'}>
                 <div className="top for-chart">
-                    <i className="sort-random">
+                    <i className={ active_sorter === 'sort random' 
+                        ? 'sort-random active-sorter'
+                        : 'sort-random'}>
                         <FaRandom onClick={() => dispatch(sort_random())}/>
                     </i>
-                    <i className="sort-up">
+                    <i className={ active_sorter === 'sort up' 
+                        ? 'sort-up active-sorter'
+                        : 'sort-up'}>
                         <FaSortAmountUp onClick={() => dispatch(sort_up())}/>
                     </i>
-                    <i className="sort-down">
+                    <i className={ active_sorter === 'sort down' 
+                        ? 'sort-down active-sorter'
+                        : 'sort-down'}>
                         <FaSortAmountDownAlt onClick={() => dispatch(sort_down())}/>
                     </i>
                     <i className="close-cross">
