@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import NatBadge from '../NatBadge/NatBadge'
-import ToolTip from '../ToolTip/ToolTip'
 import { show_user_modal } from "../../Redux/dialectSlice"
 import { getUuid } from '../../Redux/reduxSlice.js'
 import UserNull from '../UserNull/UserNull'
@@ -27,7 +26,6 @@ function User() {
                         dispatch(show_user_modal(true))
                     }}
                     >
-
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
@@ -42,7 +40,6 @@ function User() {
                             <NatBadge  user_nat={user.nat} /> 
                         </div>
                     </div>
-
                     <div className='contacts'>
                         <div className="mail cell">
                             <i className={`icon-${themeMode}`}><AiOutlineMail/></i>
@@ -53,7 +50,6 @@ function User() {
                             <p>{user.phone}</p>
                         </div>
                     </div>
-
                     <div className="location">
                         <p className='cell'>/ {user.location.country}  /</p>
                         <p className='cell'>{user.location.state} , {user.location.city}  </p>

@@ -34,13 +34,12 @@ function RequestSize() {
                     onClick={setSize}>
                     {medium}
                 </div>
-                
-                    <div className={requestSize === big 
-                        ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                        id={big}
-                        onClick={setSize}>
-                        {big}
-                    </div>
+                <div className={requestSize === big 
+                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                    id={big}
+                    onClick={setSize}>
+                    {big}
+                </div>
                 
             </div>
         </ToolTip>

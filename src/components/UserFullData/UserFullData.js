@@ -27,7 +27,6 @@ function UserFullData() {
                                 alt=""
                                 />
                         </div>
-
                         <div className="passport">
                             <h2 className="name">
                                 {user.name.first} {user.name.last}
@@ -39,7 +38,6 @@ function UserFullData() {
                         <p className="left-p">Gender: </p>
                         <p className="right-p">{user.gender}</p>
                     </div>
-
                     <div className="field">
                         <p className="left-p">Nationality:</p>
                         <p className="right-p">
@@ -50,8 +48,6 @@ function UserFullData() {
                         <p className="left-p">Phone:</p>
                         <p className="right-p">{user.phone}</p>
                     </div>
-
-                    
                     <div className="field">
                         <p className="left-p">Email:</p>
                         <p className="right-p">{user.email}</p>
@@ -60,26 +56,21 @@ function UserFullData() {
                         <p className="left-p">Country:</p>
                         <p className="right-p">{user.location.country}</p>
                     </div>
-
                     <div className="field">
-                        <p className="left-p">Street:</p>
-                        <p className="right-p">{user.location.postcode}</p>
+                        <p className="left-p">State:</p>
+                        <p className="right-p" id="big-letter">
+                            {user.location.state}
+                        </p>
                     </div>
-
-
-
                     <div className="field">
                         <p className="left-p">City:</p>
                         <p className="right-p" id="big-letter">
                         {user.location.city}
                         </p>
                     </div>
-
                     <div className="field">
-                        <p className="left-p">State:</p>
-                        <p className="right-p" id="big-letter">
-                            {user.location.state}
-                        </p>
+                        <p className="left-p">Street:</p>
+                        <p className="right-p">{user.location.postcode}</p>
                     </div>
                     <div className="field">
                         <p className="left-p">Postcode:</p>
@@ -93,13 +84,11 @@ function UserFullData() {
                         <p className="left-p">Password: </p>
                         <p className="right-p">{user.login.password}</p>
                     </div>
-
                 </li>))}
             </ul>
         )
     }
     else{ return null }
 }
-
 export default UserFullData;
 
