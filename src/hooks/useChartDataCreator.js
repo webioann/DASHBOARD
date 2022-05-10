@@ -10,23 +10,23 @@ const useChartDataCreator = () => {
     const [maxValue,setMaxValue] = useState(0)
     const [fraction,setFraction] = useState('')
 
-    useEffect(() => {
+    useEffect(() => { // assign a value to the key "dataVolum" corresponding value in all objects of the array
         let sumArray = []
         nations.map(unit => {
             let overlap = data.filter(item => item.nat === unit.code)
             let volum = overlap.length
             sumArray.push(volum)
-            Object.assign(unit , { dataVolum: volum }) // assign a value to the key "dataVolum" corresponding value 
+            Object.assign(unit , { dataVolum: volum })
         })
         sumArray.sort((a,b) => a - b)
-        setMaxValue(sumArray[sumArray.length -1])
+        setMaxValue(sumArray[sumArray.length -1]) // === finds the greatest value of the number of persons of a particular nationality ===
     },[data])
 
-    useEffect(() => {
+    useEffect(() => { // === divides 300 pixels by the maximum "datavalue" to fit the graph into the smartphone screen ===
         setFraction( 300 / maxValue ) 
     },[maxValue])
 
-    useEffect(() => {
+    useEffect(() => { // === creates a new array depending on the selected sort filter ===
         if(activefilter === 'sort random') {
             let rand = nations.sort((a,b) => {
                 if(a.code < b.code) {
