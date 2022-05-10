@@ -32,7 +32,10 @@ function Modal_for_chart({ children }) {
                         <FaSortAmountDownAlt onClick={() => dispatch(sort_down())}/>
                     </i>
                     <i className="close-cross">
-                        <ImCross onClick={() => dispatch(show_chart_modal(false))}/>
+                        <ImCross onClick={() => {
+                            dispatch(show_chart_modal(false))
+                            dispatch(sort_random())
+                        }}/>
                     </i>
                 </div>
                 { children }

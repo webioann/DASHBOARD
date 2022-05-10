@@ -14,8 +14,6 @@ function UserFullData() {
         setFavorit(user_full_data)
     },[oneUserId])
 
-    console.log(`favorit ${favorit}`);
-
     if( favorit !== "start" ) {
         return (
             <ul>
