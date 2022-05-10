@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import NatBadge from '../NatBadge/NatBadge'
+import ToolTip from '../ToolTip/ToolTip'
 import { show_user_modal } from "../../Redux/dialectSlice"
 import { getUuid } from '../../Redux/reduxSlice.js'
 import UserNull from '../UserNull/UserNull'
@@ -20,7 +21,8 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                <li className={`user-${themeMode}`} 
+                    <ToolTip text='click for get full info'>
+                    <li className={`user-${themeMode}`} 
                     onClick={() => {
                         dispatch(getUuid(user.login.uuid))
                         dispatch(show_user_modal(true))
@@ -58,7 +60,10 @@ function User() {
                         <p className='cell'>{user.location.state} , {user.location.city}  </p>
                         <p className='cell'>{user.location.street.number},{user.location.street.name} street,</p>
                     </div>
-                </li>))}
+                </li>
+                </ToolTip>
+                )
+                )}
             </ul> 
         )
     }

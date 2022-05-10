@@ -20,32 +20,30 @@ function RequestSize() {
     const big = 543
 
     return (
-        <div className="request-size">
-            <div  style={{position: 'relative'}}
-                className={requestSize === small 
-                ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                id={small}
-                onClick={setSize}>
-                {small}
-                <ToolTip text={'text'}/>
+        <ToolTip text='request size into the server by data'>
+            <div className="request-size">
+                <div className={requestSize === small 
+                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                    id={small}
+                    onClick={setSize}>
+                    {small}
+                </div>
+                <div className={requestSize === medium
+                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                    id={medium}
+                    onClick={setSize}>
+                    {medium}
+                </div>
+                
+                    <div className={requestSize === big 
+                        ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                        id={big}
+                        onClick={setSize}>
+                        {big}
+                    </div>
+                
             </div>
-            <div style={{position: 'relative'}}
-                className={requestSize === medium
-                ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                id={medium}
-                onClick={setSize}>
-                {medium}
-                <ToolTip text={'text'}/>
-            </div>
-            <div  style={{position: 'relative'}}
-                className={requestSize === big 
-                ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
-                id={big}
-                onClick={setSize}>
-                {big}
-                <ToolTip text={'text'}/>
-            </div>
-        </div>
+        </ToolTip>
     )
 }
 export default RequestSize;

@@ -11,13 +11,14 @@ function ChartButton() {
     const themeMode = useSelector((state) => state.dialect.themeMode)
     
     return (
-        <span className={`chart-button-box-${themeMode}`}>
-            <ToolTip text={'statictic'}/>
-            <FaChartLine
-                className={`chart-button-${themeMode}`}
-                onClick={() => dispatch(show_chart_modal(true))}
-            />
-        </span>
+        <ToolTip text='statistic in modal'>
+            <span className={`chart-button-box-${themeMode}`}>
+                <FaChartLine
+                    className={`chart-button-${themeMode}`}
+                    onClick={() => dispatch(show_chart_modal(true))}
+                />
+            </span>
+        </ToolTip>
     )
 }
 export default ChartButton;

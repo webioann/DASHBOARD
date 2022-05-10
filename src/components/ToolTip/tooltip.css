@@ -1,20 +1,15 @@
-/* === THIS CODE MUST BE INCLUDEN IN PARENTE DIV CSS-CODE
-.wraper{
+.tooltip-wraper{
     position: relative;
 }
-.wraper:hover > .tool-tip{
+.tooltip-wraper:hover > .tooltip{
     transform: translateY(0px);
     visibility: visible;
     opacity: 1;
 }
-
-} */
-
-.tool-tip{
+.tooltip{
     position: absolute;
     top: -30px;
-    /* left: 15px; */
-    right: 15px;
+    right: 0;
     padding: 5px;
     border-radius: 3px;
     background-color: #fff;
@@ -26,5 +21,7 @@
     z-index: 10;
     transition: all 600ms linear;
     color: var(--text-dark);
-    font-weight: 500;
+    font-weight: 700;
+
+    font-size: 1rem;
 }

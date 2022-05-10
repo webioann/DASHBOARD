@@ -1,12 +1,15 @@
 import React from 'react'
-import './tool-tip.css'
+import './tooltip.css'
 
-function ToolTip(props) {
+function ToolTip({ text,children }) {
 
     return (
-        <span className='tool-tip'>
-            {props.text}
-        </span>
+        <div className='tooltip-wraper'>
+            <span className='tooltip'>
+                { text }
+            </span>
+            { children }
+        </div>
     )
 }
 export default ToolTip;

@@ -10,14 +10,17 @@
     margin-right: 5px;
     position: relative;
 }
-/* .chart-button-box-light,
-.chart-button-box-dark
-:hover > .tool-tip{
+.chart-button-box-light:hover > .tool-tip{
     transform: translateY(0px);
     visibility: visible;
     opacity: 1;
 }
- */
+.chart-button-box-dark:hover > .tool-tip{
+    transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
+}
+
 .chart-button-box-light{
     background-color: var(--lt-hover);
 }
