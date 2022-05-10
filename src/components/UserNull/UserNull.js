@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector} from 'react-redux'
 import useTranslator from '../../hooks/useTranslator'
-import { emptyList } from '../../data/multiLang'
+import { emptyList } from '../../data/textContent'
 import './user-null.css'
 
 function UserNull() {

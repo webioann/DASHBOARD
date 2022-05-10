@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux"
-import  nations  from '../../data/nations'
+import { rangeTitle } from '../../data/textContent'
 import useGenderHistogram from '../../hooks/useGenderHistogram'
 import './range-box.scss'
 
@@ -11,7 +11,7 @@ function RangeBox() {
 
     return (
         <div className="range-box">
-            <h3 className='header'>{ lang === 'eng' ? nations[0].rangeTitleEng : nations[0].rangeTitleRus }</h3>
+            <h3 className='header'>{ lang === 'eng' ? rangeTitle.eng : rangeTitle.ukr }</h3>
             <div className="range">
                 <div style={{width: `${totalMen}%`}} className="range-men">
                     {`${ lang === 'eng' ? 'men' : 'чоловіки'}  ${totalMen}%`}
@@ -23,5 +23,4 @@ function RangeBox() {
         </div>
     )
 }
-
 export default RangeBox;

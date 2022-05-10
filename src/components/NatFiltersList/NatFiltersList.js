@@ -30,7 +30,7 @@ function NatFiltersList() {
                     {(activeNationality === nation.code) 
                     ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                 </i>
-                { lang === 'eng' ? nation.nameEng : nation.nameRus }
+                { lang === 'eng' ? nation.nameEng : nation.nameUkr }
             </li>))}   
         </ul>
     )

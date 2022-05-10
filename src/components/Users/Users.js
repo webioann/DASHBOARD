@@ -21,13 +21,12 @@ function User() {
         return (
             <ul className='user-box'>
                 {users.map((user) => (
-                    <ToolTip text='click for get full info'>
-                    <li className={`user-${themeMode}`} 
+                    <li className={`user-${themeMode}`} key={user.login.uuid} 
                     onClick={() => {
                         dispatch(getUuid(user.login.uuid))
                         dispatch(show_user_modal(true))
                     }}
-                    key={user.login.uuid}>
+                    >
 
                     <div className="pass">
                         <div className="avatar">
@@ -61,7 +60,6 @@ function User() {
                         <p className='cell'>{user.location.street.number},{user.location.street.name} street,</p>
                     </div>
                 </li>
-                </ToolTip>
                 )
                 )}
             </ul> 

@@ -14,7 +14,7 @@ function Histogram() {
                  if(unit.code !== 'ALL') {  // ignored first unit with key 'ALL'
                     return <li className="chart-item" key={unit.code} >
                         <div className="chart-title">
-                            { lang === 'eng' ? unit.nameEng : unit.nameRus }
+                            { lang === 'eng' ? unit.nameEng : unit.nameUkr }
                         </div>
                         <div className="hist-box">
                             <div className="histogram-item" 

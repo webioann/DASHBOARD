@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch,useSelector } from "react-redux"
 import { getGender } from '../../Redux/reduxSlice'
-import { multyLang } from '../../data/multiLang'
+import { boothGender,femaleGender,maleGender } from '../../data/textContent'
 import useTranslator from '../../hooks/useTranslator'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im"
 import './gender-filter.css'
@@ -15,13 +15,13 @@ function Gender_Filter({ type }) {
     const themeMode = useSelector(state => state.dialect.themeMode)
 
     if( type === 'both-sex' ) {
-        text = useTranslator(multyLang.boothGender)
+        text = useTranslator(boothGender)
     }
     else if( type === 'female' ) {
-        text = useTranslator(multyLang.femaleGender)
+        text = useTranslator(femaleGender)
     }
     else if( type === 'male' ) {
-        text = useTranslator(multyLang.maleGender)
+        text = useTranslator(maleGender)
     }
     return (
         <div className="row">

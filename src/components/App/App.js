@@ -29,7 +29,7 @@ import useFetchData from '../../hooks/useFetchData.js'
 import usePageCutter from '../../hooks/usePageCutter.js'
 import useFilters from '../../hooks/useFilters.js'
 import useButtonCreator from "../../hooks/useButtonCreator"
-import { title_nat_filters,title_gender_filters } from '../../data/multiLang'
+import { title_nat_filters,title_gender_filters } from '../../data/textContent'
 
 function App() {
 

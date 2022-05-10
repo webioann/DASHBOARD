@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
-import { langEng,langRus } from '../../Redux/dialectSlice'
+import { langEng,langUkr } from '../../Redux/dialectSlice'
 import './lang-button.less'
 
 function LangButton() {
@@ -12,9 +12,9 @@ function LangButton() {
 
     const toggler = (event) => {
         let id = event.target.id
-        if( margin === 0 && id === 'rus') {
+        if( margin === 0 && id === 'ukr') {
             setMargin(40)
-            dispatch(langRus())
+            dispatch(langUkr())
         }
         else if( margin === 40 && id === 'eng') {
             setMargin(0)
@@ -30,10 +30,10 @@ function LangButton() {
                     onClick={toggler}>
                     eng
                 </span>
-                <span className={ lang === 'rus' ? `switcher shade-${themeMode}` : 'switcher'}
-                    id = 'rus'
+                <span className={ lang === 'ukr' ? `switcher shade-${themeMode}` : 'switcher'}
+                    id = 'ukr'
                     onClick={toggler}>
-                    rus
+                    ukr
                 </span>
             </div>
             <div className="slider-box">

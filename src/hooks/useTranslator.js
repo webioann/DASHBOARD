@@ -9,7 +9,7 @@ const useTranslator = ( key ) => {
     useEffect(() => {
         lang === 'eng' 
         ? setTranslation(key.eng) 
-        : setTranslation(key.rus) 
+        : setTranslation(key.ukr) 
     },[lang])
 
     return translation

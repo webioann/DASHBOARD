@@ -2,7 +2,7 @@ import React from 'react'
 import ToolTip from '../ToolTip/ToolTip'
 import {useDispatch,useSelector} from "react-redux"
 import { setRequestSize } from '../../Redux/reduxSlice'
-// import { tool_tip_reqestSise } from '../../data/multiLang'
+import { tool_tip_reqestSise } from '../../data/textContent'
 import './request-size.css'
 
 function RequestSize() {
@@ -20,7 +20,7 @@ function RequestSize() {
     const big = 543
 
     return (
-        <ToolTip text='request size into the server by data'>
+        <ToolTip text={tool_tip_reqestSise}>
             <div className="request-size">
                 <div className={requestSize === small 
                     ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
