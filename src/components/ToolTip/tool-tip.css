@@ -1,20 +1,26 @@
 /* === THIS CODE MUST BE INCLUDEN IN PARENTE DIV CSS-CODE
-.sizer-light:hover > .tool-tip{
+.wraper{
+    position: relative;
+}
+.wraper:hover > .tool-tip{
     transform: translateY(0px);
     visibility: visible;
     opacity: 1;
+}
+
 } */
+
 .tool-tip{
     position: absolute;
     top: -30px;
-    left: 15px;
+    /* left: 15px; */
+    right: 15px;
     padding: 5px;
     border-radius: 3px;
     background-color: #fff;
     border: 1px solid var(--lt-active);
     white-space: nowrap;
     transform: translateY(2px);
-    transform: scale(0.95);
     visibility: hidden;
     opacity: 0;
     z-index: 10;
@@ -22,4 +28,3 @@
     color: var(--text-dark);
     font-weight: 500;
 }
-
