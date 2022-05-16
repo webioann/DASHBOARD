@@ -11,10 +11,9 @@ function Chart_Container(props) {
     return (
         <div className="chart-container">
             <header>
-                <h3>
-                    { lang === 'eng' ? chartTitle.eng : chartTitle.ukr }
-                </h3>
-                <span>{requestSize}</span>
+                <h2>
+                    { lang === 'eng' ? chartTitle.eng : chartTitle.ukr } {requestSize}
+                </h2>
             </header>
             {props.children}
         </div>

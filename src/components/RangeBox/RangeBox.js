@@ -11,7 +11,7 @@ function RangeBox() {
 
     return (
         <div className="range-box">
-            <h3 className='header'>{ lang === 'eng' ? rangeTitle.eng : rangeTitle.ukr }</h3>
+            <h2 className='header'>{ lang === 'eng' ? rangeTitle.eng : rangeTitle.ukr }</h2>
             <div className="range">
                 <div style={{width: `${totalMen}%`}} className="range-men">
                     {`${ lang === 'eng' ? 'men' : 'чоловіки'}  ${totalMen}%`}

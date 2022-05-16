@@ -41,10 +41,16 @@
         .tel{
             display: flex;
             align-items: center;
+            i{
+                margin-right: 5px;
+            }
         }
         .mail{
             display: flex;
             align-items: center;
+            i{
+                margin-right: 5px;
+            }
         }
         
     }
