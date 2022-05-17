@@ -10,16 +10,8 @@
     cursor: pointer;
 }
 .theme-switcher-light{
-    /* border: 2px solid var(--lt-hover); */
     background-color: var(--lt-hover);
 }
 .theme-switcher-dark{
-    /* border: 2px solid var(--dk-hover); */
     background-color: var(--dk-hover);
 }
-/* @media (min-width: 576px) {
-    .theme-switcher-light,
-    .theme-switcher-dark{
-        margin-right: 0;
-    }
-} */

@@ -30,5 +30,6 @@ function Histogram() {
         </ul>
     )
 }
+
 export default Histogram;
 

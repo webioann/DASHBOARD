@@ -19,4 +19,5 @@ function Chart_Container(props) {
         </div>
     )
 }
+
 export default Chart_Container;

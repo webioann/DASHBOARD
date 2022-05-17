@@ -22,4 +22,5 @@ function Modal_for_user({ children }) {
         </div>
     )
 }
+
 export default Modal_for_user;

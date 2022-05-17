@@ -18,4 +18,5 @@ const nations = [
     { code:'TR', dataVolum:  0,   nameEng:"Turkish",         nameUkr: "Турки",              color:'tomato'},
     { code:'US', dataVolum:  0,   nameEng:"American",        nameUkr: "Американці",         color:'cadetBlue'},
 ]
+
 export default nations;

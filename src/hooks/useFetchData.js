@@ -6,7 +6,6 @@ const useFetchData = () => {
 
     const dispatch = useDispatch()
     const requestSize = useSelector(state => state.redux.requestSize) //the size of the request to the API
-
     const[loading,setLoader] = useState(true)
     const[error,setErrors] = useState(false)
     let url = `https://randomuser.me/api/?page=1&results=${requestSize}`
@@ -28,6 +27,5 @@ const useFetchData = () => {
 
     return { loading, error }
 }
+
 export default useFetchData;
-// dispatch(fetchData(results)) //put results in redux state data
-// localStorage.setItem('LOCAL_DATA',JSON.stringify(results)) //put results in localStorage

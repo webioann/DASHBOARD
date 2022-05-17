@@ -8,11 +8,12 @@ import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
 import './users.scss'
 
-function User() {
+function Users() {
 
     const themeMode = useSelector(state => state.dialect.themeMode)
     const users = useSelector(state => state.redux.currentData)
     const dispatch = useDispatch()
+
     if( users.length === 0 ) {        
         return <UserNull/>
     }
@@ -21,11 +22,9 @@ function User() {
             <ul className='user-box'>
                 {users.map((user) => (
                     <li className={`user-${themeMode}`} key={user.login.uuid} 
-                    onClick={() => {
-                        dispatch(getUuid(user.login.uuid))
-                        dispatch(show_user_modal(true))
-                    }}
-                    >
+                        onClick={() => {
+                            dispatch(getUuid(user.login.uuid))
+                            dispatch(show_user_modal(true))}}>
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
@@ -55,12 +54,11 @@ function User() {
                         <p className='cell'>{user.location.state} , {user.location.city}  </p>
                         <p className='cell'>{user.location.street.number},{user.location.street.name} street,</p>
                     </div>
-                </li>
-                )
-                )}
+                </li>))}
             </ul> 
         )
     }
 }
-export default User;
+
+export default Users;
 

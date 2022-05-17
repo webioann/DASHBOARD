@@ -25,4 +25,5 @@ function NatBadge({ user_nat }) {
         </p>
     )
 }
+
 export default NatBadge;

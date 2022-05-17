@@ -21,4 +21,5 @@ const useGenderHistogram = () => {
 
     return { totalMen,totalWomen }
 }
+
 export default useGenderHistogram;

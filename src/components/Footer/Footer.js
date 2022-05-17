@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import "./footer.css"
 
 function Footer(props) {
+
     const themeMode = useSelector((state) => state.dialect.themeMode);
 
     return (
@@ -13,4 +14,5 @@ function Footer(props) {
         </footer>
     )
 }
+
 export default Footer;

@@ -5,13 +5,14 @@ import { sideBarShow, sideBarHide } from "../../Redux/dialectSlice"
 import "./filters-button.css"
 
 function FiltersButton() {
+
     const dispatch = useDispatch()
     const themeMode = useSelector((state) => state.dialect.themeMode)
     const sideBarStatus = useSelector((state) => state.dialect.sideBarStatus)
 
     const showSideBar = () => {
-        sideBarStatus === "hide" ? dispatch(sideBarShow()) : dispatch(sideBarHide());
-    };
+        sideBarStatus === "hide" ? dispatch(sideBarShow()) : dispatch(sideBarHide())
+    }
 
     return (
         <span className={`filters-button-box-${themeMode}`}>
@@ -22,4 +23,5 @@ function FiltersButton() {
         </span>
     )
 }
+
 export default FiltersButton;

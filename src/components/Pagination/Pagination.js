@@ -4,6 +4,7 @@ import { getCurrentPage } from '../../Redux/reduxSlice'
 import "./pagination.scss"
 
 function Pagination({ pageNumberArray }) {
+
     const dispatch = useDispatch()
     const themeMode = useSelector(state => state.dialect.themeMode)
     const currentPage = useSelector(state => state.redux.currentPage)
@@ -12,8 +13,7 @@ function Pagination({ pageNumberArray }) {
         <div className="pages-scroller">
             <div className="numy-row">
                 {pageNumberArray.map((pageNumber,index) => (
-                <span className={currentPage === pageNumber 
-                    ? `numy-${themeMode} active-${themeMode}` : `numy-${themeMode}`}
+                <span className={currentPage === pageNumber ? `numy-${themeMode} active-${themeMode}` : `numy-${themeMode}`}
                     key={index}
                     id={pageNumber}
                     onClick={() => dispatch(getCurrentPage(Number(pageNumber)))}>
@@ -24,4 +24,5 @@ function Pagination({ pageNumberArray }) {
         </div>
     )
 }
+
 export default Pagination;

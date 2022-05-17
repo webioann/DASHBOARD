@@ -22,25 +22,6 @@ const useButtonCreator = () => {
         }
         setLast(fullArray.length)
         setPNA(fullArray)
-
-        // let lastPage = fullArray.length
-        // let penultPage = fullArray.length -1
-
-        // if( totalPages <= 8  ) {
-        //     setPNA(fullArray)
-        // }
-        // else if( totalPages > 8 ) {
-        //     if( currentPage === 1 ) {
-        //         let tempArray = [1,2,3,4,beforeDotsPage,'...>',penultPage,lastPage];
-        //         setPNA(tempArray);
-        //     }
-        //     if( currentPage === 'DOTS_UP' ) {
-        //         let tempArray = [1,2,'<...',beforeDotsPage + 1,beforeDotsPage + 2,beforeDotsPage + 3,'...>',lastPage];
-        //         setBeforeDotsPage(beforeDotsPage + 3)
-        //         setPNA(tempArray);
-        //     }
-        // }
-        
     },[ filteredData,currentPage ])
 
     useEffect(() => {

@@ -22,4 +22,5 @@ function ChartButton() {
         </ToolTip>
     )
 }
+
 export default ChartButton;

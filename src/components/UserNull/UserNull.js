@@ -16,5 +16,6 @@ function UserNull() {
         </div>
     )
 }
+
 export default UserNull;
 

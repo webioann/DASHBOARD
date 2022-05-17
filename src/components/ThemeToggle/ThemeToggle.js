@@ -22,4 +22,5 @@ function ThemeToggle() {
         </div>
     )
 }
+
 export default ThemeToggle;

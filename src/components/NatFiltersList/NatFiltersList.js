@@ -20,19 +20,17 @@ function NatFiltersList() {
     return (
         <ul className= 'list'>
             {nations.map((nation) => (
-            <li className={activeNationality === nation.code 
-                ? `nat-${themeMode} active-${themeMode}`
-                : `nat-${themeMode}` }
+            <li className={activeNationality === nation.code ? `nat-${themeMode} active-${themeMode}` : `nat-${themeMode}` }
                 key={nation.code}
                 onClick={chooseNationality} 
                 id={nation.code}>
                 <i className={`checkbox-${themeMode}`}>
-                    {(activeNationality === nation.code) 
-                    ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
+                    {(activeNationality === nation.code) ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                 </i>
                 { lang === 'eng' ? nation.nameEng : nation.nameUkr }
             </li>))}   
         </ul>
     )
 }
+
 export default NatFiltersList;

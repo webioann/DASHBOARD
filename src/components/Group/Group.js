@@ -8,7 +8,7 @@ function Group (props) {
 
     if(props.flexDir === 'col') {
         return (
-            <div className={`grop-${themeMode}`}
+            <div className={`group-${themeMode}`}
                 style={{flexDirection: 'column'}}>
                 { props.children }
             </div>
@@ -16,11 +16,12 @@ function Group (props) {
     }
     else{
         return (
-            <div className={`grop-${themeMode}`}
+            <div className={`group-${themeMode}`}
                 style={{flexDirection: 'row'}}>
                 { props.children }
             </div>
         )
     }
 }
+
 export default Group;

@@ -14,4 +14,5 @@ function Title(props) {
         </p>
     )
 }
+
 export default Title;

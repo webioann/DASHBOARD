@@ -44,4 +44,5 @@ function LangButton() {
         </div>
     )
 }
+
 export default LangButton;

@@ -52,7 +52,6 @@
                 margin-right: 5px;
             }
         }
-        
     }
     .location{
         width: 100%;
@@ -60,7 +59,6 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    
 }
 .user-light{
     background-color: var(--lt-all-box-bg);
@@ -82,7 +80,6 @@
 .user-dark:last-child{
     margin-bottom: 0;
 }
-
 .cell{
     padding-top: 5px; 
     padding-left: 15px; 
@@ -101,7 +98,6 @@
         }
     }
 } 
-
 @media (min-width: 768px) {
     .contacts{
         flex-direction: row;

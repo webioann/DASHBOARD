@@ -31,4 +31,5 @@ const useFilters = () => {
     
     return filteredData
 }
+
 export default useFilters;

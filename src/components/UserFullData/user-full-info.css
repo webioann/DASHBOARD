@@ -10,20 +10,17 @@
 .field:hover{
     background-color: #eee;
 }
-
 .user-header{
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    /* border: 1px solid green; */
 }
 .user-avatar{
     width: 10ch;
     display: flex;
     justify-content: center;
-    /* border: 1px solid red; */
 }
 .user-photo{
     width: 105px;
@@ -41,7 +38,6 @@
 .name{
     letter-spacing: 2px;
 }
-
 .left-p{
     width: 10ch;    
     color: #000;
@@ -52,7 +48,6 @@
 .right-p{
     flex: 6;
     overflow: hidden;
-    
 }
 #big-letter::first-letter{
     text-transform: uppercase;

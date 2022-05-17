@@ -28,5 +28,6 @@ const usePageCutter = () => {
 
     return null
 }
+
 export default usePageCutter;
 

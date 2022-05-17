@@ -7,4 +7,5 @@ const  useGetNationality = ( code ) => {
 
     return nationality
 }
+
 export default useGetNationality;

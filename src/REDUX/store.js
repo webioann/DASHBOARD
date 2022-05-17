@@ -10,4 +10,4 @@ export default configureStore({
         dialect: dialectSlice,
         filter: filterSlice,
     } 
-})
+});

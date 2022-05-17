@@ -9,4 +9,5 @@ function MobilButtonsPanel(props) {
         </div>
     )
 }
+
 export default MobilButtonsPanel;

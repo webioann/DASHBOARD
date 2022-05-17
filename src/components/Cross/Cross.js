@@ -17,4 +17,5 @@ function Cross() {
         </span>
     )
 }
+
 export default Cross;

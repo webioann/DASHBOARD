@@ -11,9 +11,7 @@ function RequestSize() {
     const requestSize = useSelector(state => state.redux.requestSize)
     const themeMode = useSelector(state => state.dialect.themeMode)
 
-    const setSize = (event) =>{
-        dispatch(setRequestSize(Number(event.target.id)))
-    }
+    const setSize = (event) => {dispatch(setRequestSize(Number(event.target.id)))}
     
     const small = 50
     const medium = 180
@@ -22,28 +20,25 @@ function RequestSize() {
     return (
         <ToolTip text={tool_tip_reqestSise}>
             <div className="request-size">
-                <div className={requestSize === small 
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                <div className={requestSize === small ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
                     id={small}
                     onClick={setSize}>
                     {small}
                 </div>
-                <div className={requestSize === medium
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                <div className={requestSize === medium ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
                     id={medium}
                     onClick={setSize}>
                     {medium}
                 </div>
-                <div className={requestSize === big 
-                    ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
+                <div className={requestSize === big ? `sizer-${themeMode} active-${themeMode}` : `sizer-${themeMode}`}
                     id={big}
                     onClick={setSize}>
                     {big}
                 </div>
-                
             </div>
         </ToolTip>
     )
 }
+
 export default RequestSize;
 

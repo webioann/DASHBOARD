@@ -25,8 +25,7 @@ function Gender_Filter({ type }) {
     }
     return (
         <div className="row">
-            <div className={(gender === buttonId) 
-                ? `button-${themeMode} active-${themeMode}` : `button-${themeMode}`}
+            <div className={(gender === buttonId) ? `button-${themeMode} active-${themeMode}` : `button-${themeMode}`}
                 onClick={() => {dispatch(getGender(buttonId))}}>
                 <i className={`checkbox-${themeMode}`}>
                     {gender === buttonId ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
@@ -36,4 +35,5 @@ function Gender_Filter({ type }) {
         </div>
     )
 }
+
 export default Gender_Filter;

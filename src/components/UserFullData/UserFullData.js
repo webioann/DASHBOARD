@@ -7,14 +7,14 @@ function UserFullData() {
 
     const oneUserId = useSelector(state => state.redux.uuid)
     const currentData = useSelector((state) => state.redux.currentData)
-    const[favorit,setFavorit] = useState("start")
+    const[favorit,setFavorit] = useState("on start")
 
     useEffect(() => {
         let user_full_data = currentData.filter(unit => unit.login.uuid === oneUserId)
         setFavorit(user_full_data)
     },[oneUserId])
 
-    if( favorit !== "start" ) {
+    if( favorit !== "on start" ) {
         return (
             <ul>
                 {favorit.map((user) => (
@@ -90,5 +90,6 @@ function UserFullData() {
     }
     else{ return null }
 }
+
 export default UserFullData;
 

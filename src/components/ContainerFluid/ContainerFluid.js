@@ -4,6 +4,7 @@ import "../App/global.css"
 import "./container-fluid.css"
 
 function ContainerFluid(props) {
+
     const themeMode = useSelector((state) => state.dialect.themeMode);
 
     return (
@@ -14,4 +15,5 @@ function ContainerFluid(props) {
         </div>
     )
 }
+
 export default ContainerFluid;

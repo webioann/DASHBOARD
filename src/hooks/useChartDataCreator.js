@@ -53,7 +53,7 @@ const useChartDataCreator = () => {
         }
     },[activefilter,data])
 
-
     return { fraction,array }
 }
+
 export default useChartDataCreator;

@@ -9,4 +9,5 @@ function Box(props) {
         </div>
     )
 }
+
 export default Box;
