@@ -12,7 +12,7 @@ import ChartButton from '../ChartButton/ChartButton'
 import Cross from '../Cross/Cross'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import Gender_Filter from '../GenderFilter/Gender_Filter'
-import Title from '../Title/Title'
+// import Title from '../Title/Title'
 import Group from '../Group/Group'
 import Footer from '../Footer/Footer'
 import RequestSize from '../RequestSize/RequestSize'
@@ -23,13 +23,12 @@ import Pagination from '../Pagination/Pagination'
 import Chart_Container from '../Chart_Container/Chart_Container'
 import RangeBox from '../RangeBox/RangeBox'
 import UserFullData from '../UserFullData/UserFullData'
-
 // ===== Hooks and others =====
 import useFetchData from '../../hooks/useFetchData.js'
 import usePageCutter from '../../hooks/usePageCutter.js'
 import useFilters from '../../hooks/useFilters.js'
 import useButtonCreator from "../../hooks/useButtonCreator"
-import { title_nat_filters,title_gender_filters } from '../../data/textContent'
+// import { title_nat_filters,title_gender_filters } from '../../data/textContent'
 
 function App() {
 
@@ -63,11 +62,9 @@ function App() {
               <Cross/>
             </Group>
             <Group flexDir={'col'}>
-              <Title text={title_nat_filters}/>
               <NatFiltersList />
             </Group>
             <Group flexDir={'col'}>
-              <Title text={title_gender_filters}/>
               <Gender_Filter type={'both-sex'}/>
               <Gender_Filter type={'female'}/>
               <Gender_Filter type={'male'}/>
