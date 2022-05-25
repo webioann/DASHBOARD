@@ -41,8 +41,8 @@ function App() {
   //---------------------------------------------
 
   // ===== CUSTOM HOOKS CALL PLACE ================
-  const fff = useFilters() //we receive the filtered data
-  const sss = usePageCutter() //slicing data for one page
+  useFilters() //we receive the filtered data
+  usePageCutter() //slicing data for one page
   const { pageNumberArray } = useButtonCreator()
   const { loading,error } = useFetchData()
   //-----------------------------------------------
