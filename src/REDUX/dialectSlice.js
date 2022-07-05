@@ -13,6 +13,7 @@ export const dialectSlice = createSlice({
         lightMode: state => { state.themeMode = 'light' },
         darkMode: state => { state.themeMode = 'dark' },
         sideBarHide: state => {state.sideBarStatus = 'hide'},
+        sideBarShow: state => {state.sideBarStatus = 'show'},
     }
 })
 
