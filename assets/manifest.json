@@ -1,7 +1,7 @@
 {
-  "name": "webpack-for-react",
-  "short_name": "webpack-for-react",
-  "description": "webpack config for react progects",
+  "name": "random_users",
+  "short_name": "random_users",
+  "description": "",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
