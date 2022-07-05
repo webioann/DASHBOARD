@@ -23,13 +23,11 @@ const useFilters = () => {
         else{
             setFilteredData( data.filter(unit => unit.gender === gender && unit.nat === nationality))
         }
-        
-    },[data,gender,nationality])
+
+    }, [data, gender, nationality])
 
     //we put the filteredData in redux.currentData for use in a Pagination.js
     dispatch(putFilteredData(filteredData)) 
-    
-    return filteredData
 }
 
 export default useFilters;

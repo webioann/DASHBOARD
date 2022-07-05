@@ -6,7 +6,9 @@ const useTranslator = ( key ) => {
     const lang = useSelector((state) => state.dialect.lang)
     const [translation,setTranslation] = useState('')
 
-    useEffect(() => {lang === 'eng' ? setTranslation(key.eng) : setTranslation(key.ukr)},[lang])
+    useEffect(() => {
+        lang === 'eng' ? setTranslation(key.eng) : setTranslation(key.ukr)
+    },[lang])
 
     return translation
 }

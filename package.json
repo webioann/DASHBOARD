@@ -1,9 +1,9 @@
 {
-  "name": "webpack-for-react",
+  "name": "random_users",
   "version": "1.0.0",
   "author": "Webioann",
   "license": "ISC",
-  "description": "webpack config for react progects",
+  "description": "",
   "homepage": "https://webioann.github.io/random_users/",
   "main": "index.js",
   "scripts": {

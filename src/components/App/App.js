@@ -1,4 +1,4 @@
-import React,{ useRef,useEffect } from 'react'
+import React from 'react'
 import ContainerFluid from '../ContainerFluid/ContainerFluid'
 import MobilButtonsPanel from '../MobileButtonsPanel/MobilButtonsPanel'
 import FiltersButton from '../FiltersButton/FiltersButton'
@@ -8,44 +8,22 @@ import Main from '../Main/Main'
 import Users from '../Users/Users'
 import NatFiltersList from '../NatFiltersList/NatFiltersList'
 import LangButton from '../LangButton/LangButton'
-import ChartButton from '../ChartButton/ChartButton'
+import ShowCharts from '../ShowCharts/ShowCharts'
 import Cross from '../Cross/Cross'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import Gender_Filter from '../GenderFilter/Gender_Filter'
-// import Title from '../Title/Title'
 import Group from '../Group/Group'
 import Footer from '../Footer/Footer'
 import RequestSize from '../RequestSize/RequestSize'
-import Modal_for_chart from '../Modal/Modal_for_chart'
-import Modal_for_user from '../Modal/Modal_for_user'
-import Histogram from '../Histogram/Histogram'
 import Pagination from '../Pagination/Pagination'
-import Chart_Container from '../Chart_Container/Chart_Container'
-import RangeBox from '../RangeBox/RangeBox'
-import UserFullData from '../UserFullData/UserFullData'
 // ===== Hooks and others =====
 import useFetchData from '../../hooks/useFetchData.js'
-import usePageCutter from '../../hooks/usePageCutter.js'
 import useFilters from '../../hooks/useFilters.js'
-import useButtonCreator from "../../hooks/useButtonCreator"
-// import { title_nat_filters,title_gender_filters } from '../../data/textContent'
 
 function App() {
 
-  // --- it is RENDER COUNTER function
-  const newRender = useRef(1)
-  useEffect(() => {
-    newRender.current++
-    console.log(`RENDER --> ${newRender.current} times`)
-  })
-  //---------------------------------------------
-
-  // ===== CUSTOM HOOKS CALL PLACE ================
   useFilters() //we receive the filtered data
-  usePageCutter() //slicing data for one page
-  const { pageNumberArray } = useButtonCreator()
-  const { loading,error } = useFetchData()
-  //-----------------------------------------------
+  const { loading, error } = useFetchData()
 
   if ( !loading && !error ) {
     return (
@@ -58,7 +36,7 @@ function App() {
             <Group >
               <LangButton/>
               <ThemeToggle/>
-              <ChartButton/> 
+              {/* <ShowCharts/>  */}
               <Cross/>
             </Group>
             <Group flexDir={'col'}>
@@ -75,18 +53,9 @@ function App() {
           </Main>
         </Box>
         <Footer>
-          <Pagination pageNumberArray={pageNumberArray}/>
+          <Pagination/>
           <RequestSize/>
         </Footer>
-        <Modal_for_chart>
-          <Chart_Container>
-            <Histogram/>
-            <RangeBox/>
-          </Chart_Container>
-        </Modal_for_chart>
-        <Modal_for_user>
-          <UserFullData/>
-        </Modal_for_user>
       </ContainerFluid>
     )
   }else if (loading) {
@@ -98,7 +67,6 @@ function App() {
         <h1>...ERROR ...</h1>
     )
   }
-
 }
 export default App;
 

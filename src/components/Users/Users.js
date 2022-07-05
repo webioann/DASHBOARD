@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import NatBadge from '../NatBadge/NatBadge'
-import { show_user_modal } from "../../Redux/dialectSlice"
 import { getUuid } from '../../Redux/reduxSlice.js'
 import UserNull from '../UserNull/UserNull'
+import Modal from '../Modal/Modal'
+import TopSimplePanel from '../Modal/TopSimplePanel'
+import UserFullData from '../UserFullData/UserFullData'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
 import './users.scss'
@@ -13,6 +15,11 @@ function Users() {
     const themeMode = useSelector(state => state.dialect.themeMode)
     const users = useSelector(state => state.redux.currentData)
     const dispatch = useDispatch()
+    const [modal,setModal] = useState(false)
+
+    const closeModal = () => {
+        setModal(false)
+    }
 
     if( users.length === 0 ) {        
         return <UserNull/>
@@ -20,11 +27,18 @@ function Users() {
     else {
         return (
             <ul className='user-box'>
+                {modal ? (
+                    <Modal modal={modal}>
+                        <TopSimplePanel  closeModal={closeModal}/>
+                        <UserFullData/>
+                    </Modal>) 
+                    : null
+                }
                 {users.map((user) => (
                     <li className={`user-${themeMode}`} key={user.login.uuid} 
                         onClick={() => {
                             dispatch(getUuid(user.login.uuid))
-                            dispatch(show_user_modal(true))}}>
+                            setModal(true) }}>
                     <div className="pass">
                         <div className="avatar">
                             <img src={user.picture.medium} className='photo' alt=''/> 
@@ -36,7 +50,10 @@ function Users() {
                             <p className="age cell">
                                 {user.dob.age} years ( {new Date(user.dob.date).toLocaleDateString()} )
                             </p>
-                            <NatBadge  user_nat={user.nat} /> 
+                            <p className='cell'>
+                                <span>NAT</span>
+                            </p>
+                            {/* <NatBadge  userNat={user.nat}/>  */}
                         </div>
                     </div>
                     <div className='contacts'>

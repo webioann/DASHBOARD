@@ -1,9 +1,9 @@
 import React from 'react'
 import { useSelector } from "react-redux"
 import { chartTitle } from '../../data/textContent'
-import './chart_container.less'
+import './charts-container.less'
 
-function Chart_Container(props) {
+function ChartsContainer(props) {
 
     const lang = useSelector((state) => state.dialect.lang)
     const requestSize = useSelector(state => state.redux.requestSize) 
@@ -20,4 +20,4 @@ function Chart_Container(props) {
     )
 }
 
-export default Chart_Container;
+export default ChartsContainer;
