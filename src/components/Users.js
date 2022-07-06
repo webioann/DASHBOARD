@@ -8,7 +8,7 @@ import TopSimplePanel from './TopSimplePanel'
 import UserFullInfo from './UserFullInfo'
 import { FaPhone } from 'react-icons/fa'
 import { AiOutlineMail } from "react-icons/ai"
-import '../CSS/users.scss'
+import '../CSS/users.less'
 
 function Users() {
 
@@ -50,10 +50,7 @@ function Users() {
                             <p className="age cell">
                                 {user.dob.age} years ( {new Date(user.dob.date).toLocaleDateString()} )
                             </p>
-                            <p className='cell'>
-                                <span>NAT</span>
-                            </p>
-                            {/* <NatBadge  userNat={user.nat}/>  */}
+                            <NatBadge  user_nat={user.nat}/> 
                         </div>
                     </div>
                     <div className='contacts'>

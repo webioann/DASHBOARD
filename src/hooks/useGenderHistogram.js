@@ -19,7 +19,7 @@ const useGenderHistogram = () => {
         setTotalWomen( 100 - RAW )
     },[data])
 
-    return { totalMen,totalWomen }
+    return { totalMen, totalWomen }
 }
 
 export default useGenderHistogram;

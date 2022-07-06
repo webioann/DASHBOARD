@@ -7,7 +7,7 @@ import '../CSS/range-box.less'
 function RangeBox() {
 
     const lang = useSelector((state) => state.dialect.lang)
-    const { totalMen,totalWomen } = useGenderHistogram()
+    const { totalMen, totalWomen } = useGenderHistogram()
 
     return (
         <div className="range-box">

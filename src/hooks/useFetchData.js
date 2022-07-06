@@ -1,6 +1,7 @@
 import { useEffect,useState } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
 import { fetchData } from '../Redux/reduxSlice'
+import { putFilteredData } from '../Redux/reduxSlice'
 
 const useFetchData = () => {
 
@@ -8,13 +9,14 @@ const useFetchData = () => {
     const requestSize = useSelector(state => state.redux.requestSize) //the size of the request to the API
     const[loading,setLoader] = useState(true)
     const[error,setErrors] = useState(false)
-    let url = `https://randomuser.me/api/?page=1&results=${requestSize}`
+    let url = `https://randomuser.me/api/1.4/?page=1&results=${requestSize}`
 
     useEffect(() => {
         fetch( url )
         .then((response) => response.json())
         .then(({results}) => {
-            dispatch(fetchData(results)) //put data in storage redux.data        
+            dispatch(fetchData(results))
+            dispatch(putFilteredData(results)) //put data in storage redux.data        
             setErrors(false)
             setLoader(false)
         })

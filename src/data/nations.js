@@ -12,10 +12,14 @@ const nations = [
     { code:'GB', dataVolum:  0,   nameEng:"British",         nameUkr: "Англійці",           color:'navy'},
     { code:'IE', dataVolum:  0,   nameEng:"Irish",           nameUkr: "Ірландці",           color:'olive'},
     { code:'IR', dataVolum:  0,   nameEng:"Iranian",         nameUkr: "Іранці",             color:'orangeRed'}, 
+    { code:'IN', dataVolum:  0,   nameEng:"Indian",          nameUkr: "Індуси",             color:'maroon'}, 
     { code:'NO', dataVolum:  0,   nameEng:"Norwegian",       nameUkr: "Норвежці",           color:'purple'},
     { code:'NL', dataVolum:  0,   nameEng:"Dutch",           nameUkr: "Нідерландці",        color:'red'},
     { code:'NZ', dataVolum:  0,   nameEng:"New Zealand",     nameUkr: "Новозеландці",       color:'darkOrange'},
+    { code:'MX', dataVolum:  0,   nameEng:"Mexican",         nameUkr: "Мексиканці",         color:'green'},
+    { code:'RS', dataVolum:  0,   nameEng:"Serbian",         nameUkr: "Серби",              color:'brown'},
     { code:'TR', dataVolum:  0,   nameEng:"Turkish",         nameUkr: "Турки",              color:'tomato'},
+    { code:'UA', dataVolum:  0,   nameEng:"Ukrainian",       nameUkr: "Українці",           color:'gold'},
     { code:'US', dataVolum:  0,   nameEng:"American",        nameUkr: "Американці",         color:'cadetBlue'},
 ]
 

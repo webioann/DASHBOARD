@@ -5,9 +5,9 @@ import { putFilteredData } from '../Redux/reduxSlice'
 const useFilters = () => {
 
     const dispatch = useDispatch()
-    const data = useSelector((state) => state.redux.data)
-    const gender = useSelector((state) => state.redux.gender)
-    const nationality = useSelector((state) => state.redux.nationality)
+    const data = useSelector(state => state.redux.data)
+    const gender = useSelector(state => state.redux.gender)
+    const nationality = useSelector(state => state.redux.nationality)
     const[filteredData,setFilteredData] = useState([])
 
     useEffect(() => {
@@ -27,7 +27,10 @@ const useFilters = () => {
     }, [data, gender, nationality])
 
     //we put the filteredData in redux.currentData for use in a Pagination.js
-    dispatch(putFilteredData(filteredData)) 
+    useEffect(() => {
+        dispatch(putFilteredData(filteredData))
+    }, [filteredData])
+    
 }
 
 export default useFilters;

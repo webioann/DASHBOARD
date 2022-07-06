@@ -1,33 +1,35 @@
 import React from 'react'
 import { useDispatch,useSelector } from "react-redux"
-import { getGender } from '../Redux/reduxSlice'
+import { setGender } from '../Redux/reduxSlice'
+import { putFilteredData } from '../Redux/reduxSlice'
+
 import { boothGender,femaleGender,maleGender } from '../data/textContent'
 import useTranslator from '../hooks/useTranslator'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im"
 import '../CSS/gender-filter.less'
 
-function GenderFilter({ type }) {
+function GenderFilter({ buttonId }) {
 
-    const buttonId = type
     let text = ''
     const dispatch = useDispatch()
     const gender = useSelector(state => state.redux.gender)
-    const themeMode = useSelector(state => state.dialect.themeMode)
+    const theme = useSelector(state => state.dialect.themeMode)
 
-    if( type === 'both-sex' ) {
+    if( buttonId === 'both-sex' ) {
         text = useTranslator(boothGender)
     }
-    else if( type === 'female' ) {
+    else if( buttonId === 'female' ) {
         text = useTranslator(femaleGender)
     }
-    else if( type === 'male' ) {
+    else if( buttonId === 'male' ) {
         text = useTranslator(maleGender)
     }
+
     return (
         <div className="row">
-            <div className={(gender === buttonId) ? `button-${themeMode} active-${themeMode}` : `button-${themeMode}`}
-                onClick={() => {dispatch(getGender(buttonId))}}>
-                <i className={`checkbox-${themeMode}`}>
+            <div className={(gender === buttonId) ? `button-${theme} active-${theme}` : `button-${theme}`}
+                onClick={() => {dispatch(setGender(buttonId))}}>
+                <i className={`checkbox-${theme}`}>
                     {gender === buttonId ? <ImCheckboxChecked/> : <ImCheckboxUnchecked/>}
                 </i>
                 { text }

@@ -12,6 +12,6 @@ export const filterSlice = createSlice({
     }
 })
 
-export const { sort_random,sort_up,sort_down } = filterSlice.actions
+export const { sort_random, sort_up, sort_down } = filterSlice.actions
 
 export default filterSlice.reducer

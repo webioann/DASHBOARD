@@ -15,38 +15,20 @@ export const reduxSlice = createSlice({
         uuid: '',
     },
     reducers: {
-        getGender: (state, actions) => {
-            state.gender = actions.payload;
-        },
-        getNatId: (state, actions) => {
-            state.nationality = actions.payload;
-        },
-        fetchData: (state, actions) => {
-            state.data = actions.payload;
-        },
-        putFilteredData: (state, actions) => {
-            state.filteredData = actions.payload;
-        },
-        getCurrentData: (state, actions) => {
-            state.currentData = actions.payload;
-        },
-        getUserFullData: (state, actions) => {
-            state.userFullData = actions.payload;
-        },
-        getCurrentPage: (state, actions) => {
-            state.currentPage = actions.payload;
-        },
-        setRequestSize: (state, actions) => {
-            state.requestSize = actions.payload;
-        },
-        getUuid: (state, actions) => {
-            state.uuid = actions.payload;
-        }
+        setGender: (state, actions) => {state.gender = actions.payload},
+        getNatId: (state, actions) => {state.nationality = actions.payload},
+        fetchData: (state, actions) => {state.data = actions.payload},
+        putFilteredData: (state, actions) => {state.filteredData = actions.payload},
+        getCurrentData: (state, actions) => {state.currentData = actions.payload},
+        getUserFullData: (state, actions) => {state.userFullData = actions.payload},
+        getCurrentPage: (state, actions) => {state.currentPage = actions.payload},
+        setRequestSize: (state, actions) => {state.requestSize = actions.payload},
+        getUuid: (state, actions) => {state.uuid = actions.payload},
     },
 });
 
 export const {
-    getGender,
+    setGender,
     getNatId,
     fetchData,
     putFilteredData,

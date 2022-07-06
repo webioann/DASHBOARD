@@ -1,9 +1,9 @@
 import React from 'react'
 import nations from '../data/nations'
 
-function NatBadge({ userNat }) {
+function NatBadge({ user_nat }) {
 
-    let currentNation = nations.find(nation => nation.code === userNat)
+    let currentNation = nations.find(nation => nation.code === user_nat)
     
     const cell = {
         paddingTop: '5px',
@@ -11,7 +11,7 @@ function NatBadge({ userNat }) {
         marginRight: '5px',
     }
     const bg = {
-        backgroundColor: currentNation.color,
+        backgroundColor: currentNation?.color,
         borderRadius: '3px',
         padding: '0 5px 3px 5px',
         color: 'beige',
@@ -20,7 +20,7 @@ function NatBadge({ userNat }) {
     return (
         <p style={cell}>
             <span style={bg}>
-                {currentNation.nameEng}
+                {currentNation?.nameEng}
             </span>
         </p>
     )

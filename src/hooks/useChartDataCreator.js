@@ -22,8 +22,8 @@ const useChartDataCreator = () => {
         setMaxValue(sumArray[sumArray.length -1]) // === finds the greatest value of the number of persons of a particular nationality ===
     },[data])
 
-    useEffect(() => { // === divides 300 pixels by the maximum "datavalue" to fit the graph into the smartphone screen ===
-        setFraction( 300 / maxValue ) 
+    useEffect(() => { // === divides 250 pixels by the maximum "datavalue" to fit the graph into the smartphone screen ===
+        setFraction( 250 / maxValue ) 
     },[maxValue])
 
     useEffect(() => { // === creates a new array depending on the selected sort filter ===
@@ -53,7 +53,7 @@ const useChartDataCreator = () => {
         }
     },[activefilter,data])
 
-    return { fraction,array }
+    return { fraction, array }
 }
 
 export default useChartDataCreator;
