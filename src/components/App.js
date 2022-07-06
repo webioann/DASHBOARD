@@ -18,7 +18,7 @@ import RequestSize from './RequestSize'
 import Pagination from './Pagination'
 import ModalForCharts from './ModalForCharts'
 import TopChartsPanel from './TopChartsPanel'
-import { useSelector } from "react-redux"
+// import { useSelector } from "react-redux"
 import RangeBox from './RangeBox'
 import Histogram from './Histogram'
 // ===== Hooks and others =====
@@ -29,7 +29,7 @@ function App() {
 
   useFilters() //we receive the filtered data
   const { loading, error } = useFetchData()
-  const modal = useSelector(state => state.dialect.chartsModal)
+  // const modal = useSelector(state => state.dialect.chartsModal)
 
   if ( !loading && !error ) {
     return (
@@ -57,14 +57,11 @@ function App() {
           <Main>
             <Users/>
           </Main>
-          {modal ? (
-            <ModalForCharts>
-              <TopChartsPanel/>
-              <Histogram/>
-              <RangeBox/>
-            </ModalForCharts>) 
-            : null
-          }
+          <ModalForCharts>
+            <TopChartsPanel/>
+            <Histogram/>
+            <RangeBox/>
+          </ModalForCharts>
         </Box>
         <Footer>
           <Pagination/>

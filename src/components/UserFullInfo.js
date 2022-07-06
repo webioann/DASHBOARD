@@ -28,9 +28,9 @@ function UserFullData() {
                                 />
                         </div>
                         <div className="passport">
-                            <h2 className="name">
+                            <h3 className="name">
                                 {user.name.first} {user.name.last}
-                            </h2>
+                            </h3>
                             <p className="age">{user.dob.age} years ( {new Date(user.dob.date).toLocaleDateString()} )</p>
                         </div>
                     </header>
