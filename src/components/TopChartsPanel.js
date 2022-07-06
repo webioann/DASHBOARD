@@ -19,33 +19,24 @@ function TopChartsPanel() {
 
     return (
         <div className="top-charts">
-            <header>
-                <h2>
-                    { lang === 'eng' ? chartTitle.eng : chartTitle.ukr } {requestSize}
-                </h2>
-            </header>
-            <section className='filters-row'>
-                <ToolTip text='default sorting'>
-                    <i className={ active_sorter === 'sort random' 
-                        ? 'sort-random active-sorter'
-                        : 'sort-random'}>
-                        <FaRandom onClick={() => dispatch(sort_random())}/>
-                    </i>
-                </ToolTip>
-                <i className={ active_sorter === 'sort up' 
-                    ? 'sort-up active-sorter'
-                    : 'sort-up'}>
-                    <FaSortAmountUp onClick={() => dispatch(sort_up())}/>
-                </i>
-                <i className={ active_sorter === 'sort down' 
-                    ? 'sort-down active-sorter'
-                    : 'sort-down'}>
-                    <FaSortAmountDownAlt onClick={() => dispatch(sort_down())}/>
-                </i>
-                <i className="close-cross">
-                    <ImCross onClick={() => dispatch(closeChartsModal())}/>
-                </i>
-            </section>
+            <i className={ active_sorter === 'sort random' 
+                ? 'sort-random active-sorter'
+                : 'sort-random'}>
+                <FaRandom onClick={() => dispatch(sort_random())}/>
+            </i>
+            <i className={ active_sorter === 'sort up' 
+                ? 'sort-up active-sorter'
+                : 'sort-up'}>
+                <FaSortAmountUp onClick={() => dispatch(sort_up())}/>
+            </i>
+            <i className={ active_sorter === 'sort down' 
+                ? 'sort-down active-sorter'
+                : 'sort-down'}>
+                <FaSortAmountDownAlt onClick={() => dispatch(sort_down())}/>
+            </i>
+            <i className="close-cross">
+                <ImCross onClick={() => dispatch(closeChartsModal())}/>
+            </i>
         </div>
     )
 }

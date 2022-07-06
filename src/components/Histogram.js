@@ -6,7 +6,7 @@ import '../CSS/histogram.less'
 function Histogram() {
 
     const lang = useSelector((state) => state.dialect.lang)
-    const { fraction,array } = useChartDataCreator()
+    const { fraction, array } = useChartDataCreator()
     
     return (
         <ul className='histogram'>

@@ -1,35 +1,27 @@
 .top-charts{
+    margin-bottom: 0.5rem;
     display: flex;
-    flex-direction: column;
-    // justify-content: flex-end;
-    header{
-        width: 100%;
-    }
-    .filters-row{
+    justify-content: space-between;
+    .sort-random,
+    .sort-up,
+    .sort-down,
+    .close-cross{
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 0.5rem;
+        color: #f85904;
+        font-size: 1.5rem;
         display: flex;
-        justify-content: space-between;
-        .sort-random,
-        .sort-up,
-        .sort-down,
-        .close-cross{
-            width: 50px;
-            height: 50px;
-            padding: 10px;
-            border-radius: 0.5rem;
-            color: #f85904;
-            font-size: 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s;
-            &:hover{
-                background-color: #eee;
-                cursor: pointer;
-            }
-        }
-        .active-sorter{
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        &:hover{
             background-color: #eee;
+            cursor: pointer;
         }
-    
+    }
+    .active-sorter{
+        background-color: #eee;
     }
 }
