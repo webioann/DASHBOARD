@@ -370,7 +370,7 @@ body {
           justify-content: space-between;
   position: relative;
   height: calc(100vh - 85px);
-  /*90px it is footer height 75px plus padding 15px*/
+  /*85px it is footer height 70px plus padding 15px*/
 }
 @media (min-width: 576px) {
   .box {
@@ -445,14 +445,6 @@ body {
   padding: 15px;
   position: relative;
   overflow-y: auto;
-}
-.main-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 @media (min-width: 576px) {
   .main {
