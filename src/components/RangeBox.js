@@ -7,15 +7,12 @@ import '../CSS/range-box.less'
 function RangeBox() {
 
     const lang = useSelector((state) => state.dialect.lang)
-    const requestSize = useSelector(state => state.redux.requestSize) 
-
     const { totalMen, totalWomen } = useGenderHistogram()
 
     return (
         <div className="range-box">
             <div className='header'>
                 <p>{lang === 'eng' ? rangeTitle.eng : rangeTitle.ukr}</p>
-                <p>Total users: {requestSize}</p>
             </div>
             <div className="range">
                 <div style={{width: `${totalMen}%`}} className="range-men">

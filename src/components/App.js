@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ContainerFluid from './ContainerFluid'
 import MobilButtonsPanel from './MobilButtonsPanel'
 import FiltersButton from './FiltersButton'

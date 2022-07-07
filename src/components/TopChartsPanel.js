@@ -1,21 +1,15 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { closeChartsModal } from '../Redux/dialectSlice'
-
 import { ImCross } from "react-icons/im"
 import { FaRandom,FaSortAmountUp,FaSortAmountDownAlt } from 'react-icons/fa'
 import { sort_random,sort_up,sort_down } from '../Redux/filterSlice'
-import ToolTip from './ToolTip'
-import { chartTitle } from '../data/textContent'
-
 import '../CSS/top-charts-panel.less'
 
 function TopChartsPanel() {
 
     const dispatch = useDispatch()
     const active_sorter = useSelector((state) => state.filter.sort_by)
-    const lang = useSelector((state) => state.dialect.lang)
-    const requestSize = useSelector(state => state.redux.requestSize) 
 
     return (
         <div className="top-charts">

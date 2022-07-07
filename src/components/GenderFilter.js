@@ -1,8 +1,6 @@
 import React from 'react'
 import { useDispatch,useSelector } from "react-redux"
 import { setGender } from '../Redux/reduxSlice'
-import { putFilteredData } from '../Redux/reduxSlice'
-
 import { boothGender,femaleGender,maleGender } from '../data/textContent'
 import useTranslator from '../hooks/useTranslator'
 import { ImCheckboxChecked,ImCheckboxUnchecked } from "react-icons/im"

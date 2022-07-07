@@ -1,4 +1,4 @@
-import { useState,useEffect,useRef } from "react"
+import { useState,useEffect } from "react"
 import { useSelector,useDispatch } from 'react-redux'
 import { getCurrentPage } from '../Redux/reduxSlice'
 
@@ -11,7 +11,6 @@ const useButtonCreator = () => {
 
     const [pageNumberArray,setPNA] = useState([])
     const [lastPage,setLast] = useState('')
-    const [beforeDotsPage,setBeforeDotsPage] = useState(5)
 
     useEffect(() => {
         let fullArray = []
