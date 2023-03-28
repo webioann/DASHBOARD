@@ -8,6 +8,6 @@
 
 ### start app in brouser 🚀
 
-```javascript
-npm start
+```bash
+npm start   or   yarn start
 ```
