@@ -1,4 +1,4 @@
-# Users dashboard on > React
+# Users dashboard on **React**
 
 ### start app 🚀
 
