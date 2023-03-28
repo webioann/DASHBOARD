@@ -1,13 +1,8 @@
-import React from 'react'
-import '../CSS/main.less'
+import React from 'react';
+import '../LESS/main.less';
 
 function Main(props) {
-
-    return (
-        <div className='main'>
-            {props.children}
-        </div>
-    )
+    return <div className="main">{props.children}</div>;
 }
 
 export default Main;

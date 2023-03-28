@@ -1,17 +1,14 @@
-import React from 'react'
-import useTranslator from '../hooks/useTranslator'
-import '../CSS/tooltip.less'
+import React from 'react';
+import useTranslator from '../hooks/useTranslator';
+import '../LESS/tooltip.less';
 
-function ToolTip({ text,children }) {
-
+function ToolTip({ text, children }) {
     return (
-        <div className='tooltip-wraper'>
-            <span className='tooltip'>
-                { useTranslator(text) }
-            </span>
-            { children }
+        <div className="tooltip-wraper">
+            <span className="tooltip">{useTranslator(text)}</span>
+            {children}
         </div>
-    )
+    );
 }
 
 export default ToolTip;

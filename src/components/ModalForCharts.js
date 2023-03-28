@@ -1,20 +1,18 @@
-import React from 'react'
-import { useSelector } from "react-redux"
-import '../CSS/modal.less'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import '../LESS/modal.less';
 
 function ModalForCharts({ children }) {
+    const modal = useSelector((state) => state.dialect.chartsModal);
 
-    const modal = useSelector(state => state.dialect.chartsModal)
-
-    if( modal ) {
+    if (modal) {
         return (
-            <div  className='modal-container'>
-                <div className='modal-window'>
-                    { children }
-                </div>
+            <div className="modal-container">
+                <div className="modal-window">{children}</div>
             </div>
-        )
+        );
+    } else {
+        return null;
     }
-    else{ return null }
 }
 export default ModalForCharts;
