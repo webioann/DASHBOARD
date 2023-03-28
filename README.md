@@ -1,3 +1,7 @@
 # Users dashboard on > React
 
-### start app 🚀 `npm start`
+### start app 🚀
+
+```javascript
+npm start
+```
