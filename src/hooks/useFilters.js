@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux'
-import { putFilteredData } from '../Redux/reduxSlice'
+import { putFilteredData } from '../redux/reduxSlice'
 
 const useFilters = () => {
 

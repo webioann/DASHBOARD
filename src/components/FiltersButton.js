@@ -1,8 +1,8 @@
 import React from 'react';
 import { FiFilter } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
-import { sideBarShow, sideBarHide } from '../Redux/dialectSlice';
-import '../LESS/filters-button.less';
+import { sideBarShow, sideBarHide } from '../redux/dialectSlice';
+import '../less/filters-button.less';
 
 function FiltersButton() {
     const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import useGetNationality from '../hooks/useGetNationality';
-import '../LESS/user-full-info.less';
+import '../less/user-full-info.less';
 
 function UserFullData() {
     const oneUserId = useSelector((state) => state.redux.uuid);

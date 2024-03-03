@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { rangeTitle } from '../data/textContent';
 import useGenderHistogram from '../hooks/useGenderHistogram';
-import '../LESS/range-box.less';
+import '../less/range-box.less';
 
 function RangeBox() {
     const lang = useSelector((state) => state.dialect.lang);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../LESS/index.less';
-import '../LESS/container-fluid.less';
+import '../less/index.less';
+import '../less/container-fluid.less';
 
 function ContainerFluid(props) {
     const themeMode = useSelector((state) => state.dialect.themeMode);

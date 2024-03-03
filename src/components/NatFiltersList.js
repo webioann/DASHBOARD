@@ -1,9 +1,9 @@
 import React from 'react';
 import nations from '../data/nations';
 import { useDispatch, useSelector } from 'react-redux';
-import { getNatId } from '../Redux/reduxSlice';
+import { getNatId } from '../redux/reduxSlice';
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
-import '../LESS/nat-filter-list.less';
+import '../less/nat-filter-list.less';
 
 function NatFiltersList() {
     const dispatch = useDispatch();

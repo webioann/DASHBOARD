@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../LESS/group.less';
+import '../less/group.less';
 
 function Group(props) {
     const themeMode = useSelector((state) => state.dialect.themeMode);

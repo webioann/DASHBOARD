@@ -1,6 +1,6 @@
 import React from 'react';
 import useTranslator from '../hooks/useTranslator';
-import '../LESS/tooltip.less';
+import '../less/tooltip.less';
 
 function ToolTip({ text, children }) {
     return (

@@ -1,7 +1,7 @@
 import { useEffect,useState } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
-import { fetchData } from '../Redux/reduxSlice'
-import { putFilteredData } from '../Redux/reduxSlice'
+import { fetchData } from '../redux/reduxSlice'
+import { putFilteredData } from '../redux/reduxSlice'
 
 const useFetchData = () => {
 

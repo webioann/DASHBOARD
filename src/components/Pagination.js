@@ -1,9 +1,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCurrentPage } from '../Redux/reduxSlice';
+import { getCurrentPage } from '../redux/reduxSlice.js';
 import useButtonCreator from '../hooks/useButtonCreator';
 import usePageCutter from '../hooks/usePageCutter.js';
-import '../LESS/pagination.less';
+import '../less/pagination.less';
 
 function Pagination() {
     const dispatch = useDispatch();

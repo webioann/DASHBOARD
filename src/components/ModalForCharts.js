@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../LESS/modal.less';
+import '../less/modal.less';
 
 function ModalForCharts({ children }) {
     const modal = useSelector((state) => state.dialect.chartsModal);

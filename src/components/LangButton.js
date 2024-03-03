@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { langEng, langUkr } from '../Redux/dialectSlice';
-import '../LESS/lang-button.less';
+import { langEng, langUkr } from '../redux/dialectSlice';
+import '../less/lang-button.less';
 
 function LangButton() {
     const dispatch = useDispatch();

@@ -1,8 +1,8 @@
 import React from 'react';
 import { ImCross } from 'react-icons/im';
 import { useDispatch, useSelector } from 'react-redux';
-import { sideBarHide } from '../Redux/dialectSlice';
-import '../LESS/cross.less';
+import { sideBarHide } from '../redux/dialectSlice';
+import '../less/cross.less';
 
 function Cross() {
     const dispatch = useDispatch();

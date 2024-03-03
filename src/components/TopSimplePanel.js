@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImCross } from 'react-icons/im';
-import '../LESS/top-simple-panel.less';
+import '../less/top-simple-panel.less';
 
 function TopSimplePanel({ closeModal }) {
     return (

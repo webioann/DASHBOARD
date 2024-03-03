@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../LESS/side-bar.less';
+import '../less/side-bar.less';
 
 function SideBar(props) {
     const sideBarStatus = useSelector((state) => state.dialect.sideBarStatus);

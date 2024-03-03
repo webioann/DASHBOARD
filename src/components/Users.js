@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import NatBadge from './NatBadge';
-import { getUuid } from '../Redux/reduxSlice.js';
+import { getUuid } from '../redux/reduxSlice.js';
 import UserNull from './UserNull';
 import Modal from './Modal';
 import TopSimplePanel from './TopSimplePanel';
 import UserFullInfo from './UserFullInfo';
 import { FaPhone } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
-import '../LESS/users.less';
+import '../less/users.less';
 
 function Users() {
     const themeMode = useSelector((state) => state.dialect.themeMode);

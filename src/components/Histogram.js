@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import useChartDataCreator from '../hooks/useChartDataCreator';
-import '../LESS/histogram.less';
+import '../less/histogram.less';
 
 function Histogram() {
     const lang = useSelector((state) => state.dialect.lang);

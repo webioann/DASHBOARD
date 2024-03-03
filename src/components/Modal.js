@@ -1,5 +1,5 @@
 import React from 'react';
-import '../LESS/modal.less';
+import '../less/modal.less';
 
 function Modal({ children }) {
     return (

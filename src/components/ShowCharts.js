@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaChartLine } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import { showChartsModal } from '../Redux/dialectSlice';
-import '../LESS/show-charts.less';
+import { showChartsModal } from '../redux/dialectSlice';
+import '../less/show-charts.less';
 
 function ShowCharts() {
     const themeMode = useSelector((state) => state.dialect.themeMode);

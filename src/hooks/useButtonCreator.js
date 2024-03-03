@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react"
 import { useSelector,useDispatch } from 'react-redux'
-import { getCurrentPage } from '../Redux/reduxSlice'
+import { getCurrentPage } from '../redux/reduxSlice'
 
 const useButtonCreator = () => {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { chartTitle } from '../data/textContent';
-import '../LESS/charts-container.less';
+import '../less/charts-container.less';
 
 function ChartsContainer(props) {
     const lang = useSelector((state) => state.dialect.lang);

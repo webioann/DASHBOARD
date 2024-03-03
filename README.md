@@ -1,6 +1,4 @@
-## Users dashboard on **React**
-
----
+# Users dashboard on React
 
 ![react](https://img.shields.io/badge/react-blue.svg?style=flat&logo=react&logoColor=white)&nbsp;
 ![redux](https://img.shields.io/badge/redux-%23593d88.svg?style=flat&logo=redux&logoColor=white)&nbsp;
@@ -11,5 +9,5 @@
 ### start app in brouser 🚀
 
 ```bash
-npm start   or   yarn start
+  npm start   or   yarn start
 ```

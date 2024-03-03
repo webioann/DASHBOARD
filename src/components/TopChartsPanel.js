@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { closeChartsModal } from '../Redux/dialectSlice';
+import { closeChartsModal } from '../redux/dialectSlice';
 import { ImCross } from 'react-icons/im';
 import { FaRandom, FaSortAmountUp, FaSortAmountDownAlt } from 'react-icons/fa';
-import { sort_random, sort_up, sort_down } from '../Redux/filterSlice';
-import '../LESS/top-charts-panel.less';
+import { sort_random, sort_up, sort_down } from '../redux/filterSlice';
+import '../less/top-charts-panel.less';
 
 function TopChartsPanel() {
     const dispatch = useDispatch();

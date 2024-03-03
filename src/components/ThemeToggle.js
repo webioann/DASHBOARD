@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { lightMode, darkMode } from '../Redux/dialectSlice';
+import { lightMode, darkMode } from '../redux/dialectSlice';
 import { FaMoon, FaRegSun } from 'react-icons/fa';
-import '../LESS/theme-toggle.less';
+import '../less/theme-toggle.less';
 
 function ThemeToggle() {
     const dispatch = useDispatch();

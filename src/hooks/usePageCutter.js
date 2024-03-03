@@ -1,6 +1,6 @@
 import { useEffect,useRef } from "react"
 import { useSelector,useDispatch } from "react-redux"
-import { getCurrentData } from '../Redux/reduxSlice'
+import { getCurrentData } from '../redux/reduxSlice'
 
 const usePageCutter = () => {
 

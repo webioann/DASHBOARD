@@ -1,10 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setGender } from '../Redux/reduxSlice';
+import { setGender } from '../redux/reduxSlice';
 import { boothGender, femaleGender, maleGender } from '../data/textContent';
 import useTranslator from '../hooks/useTranslator';
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
-import '../LESS/gender-filter.less';
+import '../less/gender-filter.less';
 
 function GenderFilter({ buttonId }) {
     let text = '';

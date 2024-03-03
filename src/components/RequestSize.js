@@ -1,9 +1,9 @@
 import React from 'react';
 import ToolTip from './ToolTip';
 import { useDispatch, useSelector } from 'react-redux';
-import { setRequestSize } from '../Redux/reduxSlice';
+import { setRequestSize } from '../redux/reduxSlice';
 import { tool_tip_reqestSise } from '../data/textContent';
-import '../LESS/request-size.less';
+import '../less/request-size.less';
 
 function RequestSize() {
     const dispatch = useDispatch();
