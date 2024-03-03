@@ -3,9 +3,7 @@ import ContainerFluid from './ContainerFluid'
 
 const Loader = () => {
     return (
-        <ContainerFluid>
-            <h1>...LOADING ...</h1>
-        </ContainerFluid>
+        <h1 style={{backgroundColor: '#333333'}}>...LOADING ...</h1>
     )
 }
 export default Loader;
