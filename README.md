@@ -11,4 +11,4 @@
 ```bash
   npm start   or   yarn start
 ```
-![MOCH](./src/assets/MOCH_IMAGE.jpg)
+![MOCH](./src/assets/users-screen.png)
