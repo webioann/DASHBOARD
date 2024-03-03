@@ -18,6 +18,7 @@ import RequestSize from './RequestSize';
 import Pagination from './Pagination';
 import ModalForCharts from './ModalForCharts';
 import TopChartsPanel from './TopChartsPanel';
+import Loader from './Loader.js'
 // import { useSelector } from "react-redux"
 import RangeBox from './RangeBox';
 import Histogram from './Histogram';
@@ -69,7 +70,7 @@ function App() {
             </ContainerFluid>
         );
     } else if (loading) {
-        return <h1>...LOADING ...</h1>;
+        return <Loader/>;
     } else if (error) {
         return <h1>...ERROR ...</h1>;
     }
