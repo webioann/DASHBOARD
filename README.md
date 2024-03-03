@@ -11,4 +11,4 @@
 ```bash
   npm start   or   yarn start
 ```
-![image](https://drive.google.com/file/d/1-Az4_AZ-cRPhuY2YuqB2vKaaY6sdAguJ/view?usp=sharing)
+![MOCH](./src/assets/MOCH_IMAGE.jpg)
