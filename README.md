@@ -8,7 +8,4 @@
 
  🚀 **[THIS IS A LINK TO THE WORKING APP](https://webioann.github.io/random_users/)** 🚀
 
-```bash
-  npm start   or   yarn start
-```
-![MOCH](./src/assets/users-screen.png)
+![app screenshot](./src/assets/users-screen.png)
