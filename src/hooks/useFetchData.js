@@ -4,7 +4,7 @@ import { fetchData } from '../redux/reduxSlice'
 import { putFilteredData } from '../redux/reduxSlice'
 
 const useFetchData = () => {
-
+    // function to fetch main data with one changeable option -  requestSize(50, 180, or 543 users)
     const dispatch = useDispatch()
     const requestSize = useSelector(state => state.redux.requestSize) //the size of the request to the API
     const[loading,setLoader] = useState(true)

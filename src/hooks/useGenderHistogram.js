@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 const useGenderHistogram = () => {
+    // hook to create data for a histogram of genders
     const data = useSelector((state) => state.redux.data);
     const dataVolum = data.length;
     const [totalMen, setTotalMen] = useState('');

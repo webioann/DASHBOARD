@@ -6,6 +6,7 @@ import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
 import '../less/nat-filter-list.less';
 
 function NatFiltersList() {
+    // sidebar list of nationalities
     const dispatch = useDispatch();
     const currentNationality = useSelector((state) => state.redux.nationality);
     const themeMode = useSelector((state) => state.dialect.themeMode);

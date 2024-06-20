@@ -3,7 +3,7 @@ import { useSelector,useDispatch } from "react-redux"
 import { getCurrentData } from '../redux/reduxSlice'
 
 const usePageCutter = () => {
-
+    // hook to slice data for pages by some params
     const dispatch = useDispatch()
     const usersOnPage = useSelector((state) => state.redux.usersOnPage)
     const currentPage = useSelector((state) => state.redux.currentPage)

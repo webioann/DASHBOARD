@@ -2,7 +2,7 @@ import React from 'react'
 import nations from '../data/nations'
 
 function NatBadge({ user_nat }) {
-
+    //colored badge of nationality
     let currentNation = nations.find(nation => nation.code === user_nat)
     
     const cell = {

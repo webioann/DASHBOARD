@@ -5,6 +5,7 @@ import { showChartsModal } from '../redux/dialectSlice';
 import '../less/show-charts.less';
 
 function ShowCharts() {
+    // open modal with charts
     const themeMode = useSelector((state) => state.dialect.themeMode);
     const dispatch = useDispatch();
 

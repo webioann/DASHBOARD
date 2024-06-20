@@ -3,7 +3,7 @@ import { useSelector,useDispatch } from 'react-redux'
 import { putFilteredData } from '../redux/reduxSlice'
 
 const useFilters = () => {
-
+    // hook to filter data by conditions(gender and nationality)
     const dispatch = useDispatch()
     const data = useSelector(state => state.redux.data)
     const gender = useSelector(state => state.redux.gender)

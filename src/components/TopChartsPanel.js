@@ -7,6 +7,7 @@ import { sort_random, sort_up, sort_down } from '../redux/filterSlice';
 import '../less/top-charts-panel.less';
 
 function TopChartsPanel() {
+    // filtering icons panel row with a cross for closing the modal window
     const dispatch = useDispatch();
     const active_sorter = useSelector((state) => state.filter.sort_by);
 

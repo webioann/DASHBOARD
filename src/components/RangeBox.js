@@ -5,6 +5,7 @@ import useGenderHistogram from '../hooks/useGenderHistogram';
 import '../less/range-box.less';
 
 function RangeBox() {
+    //  progress bar of both genders
     const lang = useSelector((state) => state.dialect.lang);
     const { totalMen, totalWomen } = useGenderHistogram();
 
