@@ -3,7 +3,7 @@ import { useSelector,useDispatch } from 'react-redux'
 import { getCurrentPage } from '../redux/reduxSlice'
 
 const useButtonCreator = () => {
-
+    // create an array with pagination page numbers
     const dispatch = useDispatch()
     const filteredData = useSelector((state) => state.redux.filteredData)
     const usersOnPage = useSelector((state) => state.redux.usersOnPage)

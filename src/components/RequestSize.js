@@ -6,6 +6,7 @@ import { tool_tip_reqestSise } from '../data/textContent';
 import '../less/request-size.less';
 
 function RequestSize() {
+    // set how many users fetch in time one request
     const dispatch = useDispatch();
     const requestSize = useSelector((state) => state.redux.requestSize);
     const themeMode = useSelector((state) => state.dialect.themeMode);
